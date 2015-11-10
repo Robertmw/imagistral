@@ -1,0 +1,26 @@
+{
+  "name": "cliw",
+  "version": "1.0.0",
+  "description": "photo editor with share on wall functionality",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Robertmw/cliw.git"
+  },
+  "keywords": [
+    "photo",
+    "editor",
+    "wall",
+    "js",
+    "es6"
+  ],
+  "author": "CLIW Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Robertmw/cliw/issues"
+  },
+  "homepage": "https://github.com/Robertmw/cliw"
+}
