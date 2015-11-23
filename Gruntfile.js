@@ -7,7 +7,7 @@ module.exports = function (grunt) {
 		less:{
 			development:{
 				files:{
-					'bin/css/style.css': 'lib/css/style.less'
+					'public/dist/css/style.css': 'public/src/css/style.less'
 				}
 			}
 		},
@@ -17,18 +17,48 @@ module.exports = function (grunt) {
 					transform: ['babelify']
 				},
 				files:{
-					'bin/js/app.min.js': ['lib/js/app.js']
+					'public/dist/js/app.min.js': ['public/src/js/app.js']
 				}
 			}
+		},
+		watch: {
+			options: {
+				dateFormat: function(time) {
+					grunt.log.writeln('The watch finished in ' + time + 'ms at' + (new Date()).toString());
+					grunt.log.writeln('Waiting for more changes...');
+				},
+			},
+			css: {
+				files: ['public/src/**/*.less', 'public/src/**/**/*.less'],
+				tasks: ['less']
+			},
+			js: {
+				files: ['public/src/**/*.js'],
+				tasks: ['browserify']
+			}
+		},
+		nodemon: {
+			dev: {
+				script: 'index.js'
+			}
+		},
+		concurrent: {
+			options: {
+				logConcurrentOutput: false
+			},
+			tasks: ['nodemon', 'watch']
 		}
 	});
 
 	// load plugins
 
+	grunt.loadNpmTasks('grunt-concurrent');
 	grunt.loadNpmTasks('grunt-browserify');
 	grunt.loadNpmTasks('grunt-contrib-less');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-nodemon');
 
 	// tasks
 
-	grunt.registerTask('default', ['browserify', 'less']);
+	grunt.registerTask('default', ['browserify', 'less', 'watch']);
 }

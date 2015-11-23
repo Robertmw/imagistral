@@ -1,0 +1,9 @@
+{
+  "name": "cliw",
+  "version": "1.0.0",
+  "description": "photo editor with share on wall functionality",
+  "dependencies": {
+    "font-awesome": "~4.5.0",
+    "jquery": "~2.1.4"
+  }
+}
