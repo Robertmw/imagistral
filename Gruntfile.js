@@ -21,6 +21,16 @@ module.exports = function (grunt) {
 				}
 			}
 		},
+		copy: {
+			target: {
+				files: [{
+					expand: true,
+					cwd: 'public/src/img',
+					src: '**/*',
+					dest: 'public/dist/img'
+				}]
+			}
+		},
 		watch: {
 			options: {
 				dateFormat: function(time) {
@@ -57,8 +67,9 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-nodemon');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 
 	// tasks
 
-	grunt.registerTask('default', ['browserify', 'less', 'watch']);
+	grunt.registerTask('default', ['browserify', 'less', 'copy', 'watch']);
 }
