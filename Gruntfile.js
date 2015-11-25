@@ -8,6 +8,7 @@ module.exports = function (grunt) {
 			development:{
 				files:{
 					'public/dist/css/style.css': 'public/src/css/style.less',
+					'public/dist/css/wall.css': 'public/src/css/wall/wall.less',
 					'public/dist/css/login.css': 'public/src/css/login.less'
 				}
 			}

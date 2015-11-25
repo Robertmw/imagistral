@@ -1,0 +1,140 @@
+@import "../reset.less";
+
+@dark-blue: #222a37;
+
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/*  header style */
+
+header{
+	display: flex;
+	align-items: center;
+	position: relative;
+
+	width: 100%;
+	height: 50px;
+	padding: 0 40px;
+
+	background-color: @dark-blue;
+}
+
+.logo{
+	width: 110px;
+	height: 40px;
+
+	background-image: url('../img/logo.png');
+	background-size: contain;
+	background-position: center;
+}
+
+.user-menu {
+	margin: 0 0 0 auto;
+	color: white;
+}
+
+/*  wall style  */
+
+.wall{
+	width: 100%;
+
+	&__image-wrapper{
+		position: relative;
+		float: left;
+
+		width: 25%;
+		height: 25vw;
+
+		padding: 5px;
+
+		overflow: hidden;
+
+		&:nth-child(2n+1){
+			.wall__image{
+				background-color: blue
+			}
+		}
+
+		&:nth-child(2n){
+			.wall__image{
+				background-color: green;
+			}
+		}
+
+		&:hover{
+			.tools{
+				transform: translateY(-100%);
+			}
+		}
+	}
+
+	&__image{
+		width: 100%;
+		height: 100%;
+
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}
+
+/* tools style  */
+
+.tools{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
+	position: absolute;
+
+	top: 100%;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	background-color: rgba(0, 0, 0, 0.7);
+
+	transition: transform 0.35s linear;
+
+	&__fav, &__share, &__zoom{
+		position: relative;
+
+		width: 20%;
+		height: 20%;
+		margin: 5px 10px;
+
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		cursor: pointer;
+	}
+
+	&__fav{
+		background-image: url('../img/heart.png');
+	}
+
+	&__share{
+		background-image: url('../img/fb.png');
+	}
+
+	&__zoom{
+		background-image: url('../img/zoom.png');
+	}
+}
