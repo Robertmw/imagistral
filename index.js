@@ -3,8 +3,8 @@ const fs = require('fs');
 const join = require('path').join;
 const express = require('express');
 const mongoose = require('mongoose');
-/*const passport = require('passport');
-const config = require('./config/config');*/
+const passport = require('passport');
+const config = require('./app/config/config');
 
 const models = join(__dirname, 'app/models');
 const port = process.env.PORT || 3000;
@@ -13,15 +13,15 @@ const app = express();
 module.exports = app;
 
 // Bootstrap models
-/*fs.readdirSync(join(__dirname, 'app/models')).forEach(function (file) {
+fs.readdirSync(join(__dirname, 'app/models')).forEach(function (file) {
   if (~file.indexOf('.js')) {
     require(join(__dirname, 'app/models', file));
   }
-});*/
+});
 
 // Bootstrap routes
-/*require('./config/passport')(passport);
-require('./config/express')(app, passport);*/
+require('./app/config/passport')(passport);
+require('./app/config/express')(app, passport);
 
 connect()
   .on('error', console.log)

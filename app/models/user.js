@@ -1,4 +1,3 @@
-'use strict';
 
 /**
  * Module dependencies.
@@ -27,7 +26,9 @@ const oAuthTypes = [
   facebook: {}
 });
 
-const validatePresenceOf = value => value && value.length;
+const validatePresenceOf = function (value) {
+  return value && value.length;
+};
 
 /**
  * Virtuals

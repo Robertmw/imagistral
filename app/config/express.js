@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Module dependencies.
  */
@@ -34,7 +32,7 @@ module.exports = function (app, passport) {
 
   app.use(express.static(config.root + '/public'));
 
-  let log = 'dev';
+  var log = 'dev';
   app.use(morgan(log));
 
   app.use(bodyParser.json());

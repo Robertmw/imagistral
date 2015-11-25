@@ -1,13 +1,8 @@
-'use strict';
-
-/*!
- * Module dependencies.
- */
 
 const fs = require('fs');
 const envFile = require('path').join(__dirname, 'env.json');
 
-let env = {};
+var env = {};
 
 // Read env.json file, if it exists, load the id's and secrets from that
 // Note that this is only in the development env
@@ -16,7 +11,9 @@ let env = {};
 if (fs.existsSync(envFile)) {
   env = fs.readFileSync(envFile, 'utf-8');
   env = JSON.parse(env);
-  Object.keys(env).forEach(key => process.env[key] = env[key]);
+  Object.keys(env).forEach(function (key) {
+    process.env[key] = env[key];
+  });
 }
 
 /**
