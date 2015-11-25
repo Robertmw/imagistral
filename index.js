@@ -36,5 +36,5 @@ function listen () {
 
 function connect () {
   var options = { server: { socketOptions: { keepAlive: 1 } } };
-  return mongoose.connect("mongodb://localhost/cliw", options).connection;
+  return mongoose.connect(config.db, options).connection;
 }
