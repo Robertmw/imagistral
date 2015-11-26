@@ -63,18 +63,6 @@ header{
 
 		overflow: hidden;
 
-		&:nth-child(2n+1){
-			.wall__image{
-				background-color: blue
-			}
-		}
-
-		&:nth-child(2n){
-			.wall__image{
-				background-color: green;
-			}
-		}
-
 		&:hover{
 			.tools{
 				transform: translateY(-100%);
@@ -138,3 +126,7 @@ header{
 		background-image: url('../img/zoom.png');
 	}
 }
+
+/* mobile version */
+
+@import 'wall-mobile.less';
