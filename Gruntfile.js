@@ -19,7 +19,8 @@ module.exports = function (grunt) {
 					transform: ['babelify']
 				},
 				files:{
-					'public/dist/js/app.min.js': ['public/src/js/app.js']
+					'public/dist/js/app.min.js': ['public/src/js/app.js'],
+					'public/dist/js/wall.min.js': ['public/src/js/wall.js']
 				}
 			}
 		},

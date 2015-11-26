@@ -7,8 +7,23 @@
 		<link rel="stylesheet" href="dist/css/wall.css">
 	</head>
 	<body>
+		<div id="filtersWrapper" class="filters">
+			<section class="search">
+				<input type="search" class="search__input" placeholder="Search">
+			</section>
+			<section class="color-filter">
+				<p class="section-title">Filter by color</p>
+				<ul class="colors">
+					<li class="color" style="background-color: #fff"></li>
+					<li class="color" style="background-color: #aebb28"></li>
+					<li class="color" style="background-color: #ffff00"></li>
+					<li class="color" style="background-color: #ff0000"></li>
+				</ul>
+			</section>
+		</div>
 		<div class="main-container">
 			<header>
+				<div id="menuBtn" class="menu"></div>
 				<div class="logo"></div>
 				<div class="user-menu">
 					<p class="username">Welcome, Robert</p>
@@ -178,5 +193,9 @@
 				</div>
 			</section>
 		</div>
+
+		<!-- script zone -->
+		<script src="libs/jquery/dist/jquery.min.js"></script>
+		<script src="dist/js/wall.min.js"></script>
 	</body>
 </html>
