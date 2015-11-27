@@ -12,55 +12,98 @@
 <body>
 	<section class="container">
 		<header>
-			<div class="editor-colors">
-				<span class="fa fa-lg fa-magic"></span>
-				
+			<div class="logo">
+				<span class="fa fa-lg fa-camera"></span>
 			</div>
-			<div class="image-title">
-				<h3>Untitled Document</h3>
-				<span class="fa fa-lg fa-pencil"></span>
+			<div class="work-title">
+				<span class="fa fa-header"></span>
+				<h4>Floating bird</h4>
 			</div>
-			<div class="user-menu">
-				<p class="username">Welcome, Robert</p>
-				<span class="fa fa-lg fa-cog"></span>
-				<span class="fa fa-lg fa-question-circle"></span>
+			<div class="work-history">
+				<span class="fa fa-lg fa-reply unavailable"></span>
+				<span class="fa fa-lg fa-share"></span>
+			</div>
+			<div class="work-buttons">
+				<div class="work--download">
+					<span class="fa fa-lg fa-cloud-download"></span>
+				</div>
+				<div class="work--upload">
+					<p>Import</p>
+				</div>
+				<div class="work--publish">
+					<p>Publish</p>
+				</div>
+				<div class="work--help">
+					<span class="fa fa-lg fa-question-circle"></span>
+				</div>
+				<div class="work--wall">
+					<span class="fa fa-lg fa-th"></span>
+				</div>
+				<div class="work--profile">
+					<img class="avatar" src="https://scontent-frt3-1.xx.fbcdn.net/hprofile-xap1/v/t1.0-1/p160x160/10383895_1080798488614634_3712605849066710036_n.jpg?oh=6c8c8762e3dfbcbaedf66cd61a674628&oe=56F7C1C8"></img>
+				</div>
 			</div>
 		</header>
-		<section class="workspace">
-
-		</section>
-		<footer>
-			<div class="logo">
-				<img src="dist/img/logo.png" alt="">
+		<aside class="sidebar">
+			<div class="toolbar-element">
+				<span class="fa fa-lg fa-mouse-pointer"></span>
 			</div>
-			<div class="toolbar">
-				<div class="tool-move">
-					<span class="fa fa-lg fa-arrows-alt"></span>
+			<div class="toolbar-element">
+				<span class="fa fa-lg fa-crop"></span>
+			</div>
+			<div class="toolbar-element">
+				<span class="fa fa-lg fa-paint-brush"></span>
+			</div>
+			<div class="toolbar-element selected">
+				<span class="fa fa-lg fa-pencil"></span>
+			</div>
+			<div class="toolbar-element">
+				<span class="fa fa-lg fa-eraser"></span>
+			</div>
+			<div class="toolbar-element">
+				<span class="fa fa-lg fa-square"></span>
+				<span class="fa fa-caret-down caret"></span>
+			</div>
+			<div class="toolbar-element">
+				<span class="fa fa-lg fa-font"></span>
+			</div>
+			<div class="toolbar-element">
+				<span class="fa fa-lg fa-bitbucket"></span>
+			</div>
+			<div class="toolbar-element">
+				<span class="fa fa-lg fa-eyedropper"></span>
+			</div>
+			<div class="toolbar-element">
+				<span class="fa fa-lg fa-search"></span>
+				<span class="fa fa-caret-down caret"></span>
+			</div>
+		</aside>
+		<section class="workspace">
+			<section class="workspace-settings-bar">
+				<div class="toggle-settings">
+					<span class="fa fa-angle-double-right"></span>
 				</div>
-				<div class="tool-draw">
-					<span class="fa fa-lg fa-pencil"></span>
-					<div class="sandbox">
-						<div class="sandbox-content">
-							<div class="tool-brush">
-								<span class="fa fa-lg fa-pencil"></span>
-							</div>
-							<div class="tool-pencil">
-								<span class="fa fa-lg fa-pencil"></span>
-							</div>
-						</div>
+				<div class="zoom-settings">
+					<span class="fa fa-minus"></span>
+					<span class="fa fa-lg fa-search"></span>
+					<span class="fa fa-plus"></span>
+					<div class="select-zoom-size">
+						<label class="current-zoom">
+							100%
+							<span class="fa fa-caret-down"></span>
+						</label>
 					</div>
 				</div>
-				<div class="tool-effects">
-					<span class="fa fa-lg fa-camera"></span>
+				<div class="canvas-settings">
+					<span class="fa fa-rotate-left"></span>
+					<span class="fa fa-rotate-right"></span>
 				</div>
-			</div>
-			<div class="social">
-				<a class="share">
-					Share
-					<span class="fa fa-share-alt"></span>
-				</a>
-			</div>
-		</footer>
+				<div class="delete">
+					<span class="fa fa-trash"></span>
+				</div>
+			</section>
+			<section class="canvas-sheet"></section>
+		</section>
 	</section>
 
 </body>
