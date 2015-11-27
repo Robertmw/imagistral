@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "babelify": "^7.2.0",
+    "font-awesome": "^4.4.0",
     "grunt": "^0.4.5",
     "grunt-browserify": "^4.0.1",
     "grunt-concurrent": "^2.1.0",
