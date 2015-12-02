@@ -28,6 +28,8 @@
     "react": "^0.14.3"
   },
   "devDependencies": {
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
     "babelify": "^7.2.0",
     "eslint": "^1.10.3",
     "eslint-plugin-react": "^3.11.2",
@@ -40,7 +42,6 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-nodemon": "^0.4.0",
     "immutable": "^3.7.5",
-    "react-dom": "^0.14.3",
-    "reactify": "^1.1.1"
+    "react-dom": "^0.14.3"
   }
 }

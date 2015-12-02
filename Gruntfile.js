@@ -14,7 +14,7 @@ module.exports = function (grunt) {
 		browserify:{
 			dist:{
 				options:{
-					transform: ['reactify']
+					transform: ['babelify']
 				},
 				files:{
 					'public/dist/js/main.min.js': ['public/src/main.js'],
