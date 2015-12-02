@@ -54,7 +54,7 @@
 			<div class="toolbar-element">
 				<span class="fa fa-lg fa-paint-brush"></span>
 			</div>
-			<div class="toolbar-element selected">
+			<div class="toolbar-element">
 				<span class="fa fa-lg fa-pencil"></span>
 			</div>
 			<div class="toolbar-element">
@@ -63,8 +63,18 @@
 			<div class="toolbar-element">
 				<span class="fa fa-lg fa-square"></span>
 				<span class="fa fa-caret-down caret"></span>
+				<div class="sandbox">
+					<ul>
+						<li>
+							<p><span class="fa fa-lg fa-square-o"></span> Square shape</p>
+						</li>
+						<li>
+							<p><span class="fa fa-lg fa-circle-o"></span> Circle shape</p>
+						</li>
+					</ul>
+				</div>
 			</div>
-			<div class="toolbar-element">
+			<div class="toolbar-element selected">
 				<span class="fa fa-lg fa-font"></span>
 			</div>
 			<div class="toolbar-element">
@@ -78,7 +88,36 @@
 				<span class="fa fa-caret-down caret"></span>
 			</div>
 		</aside>
-		<section class="workspace">
+		<aside class="toolbar-advanced-settings">
+			<p class="settings-title">Text settings</p>
+			<section class="color-settings">
+				<span>Color</span>
+				<span class="color-bucket"></span>
+			</section>
+			<section class="font-settings">
+				<span>Font size</span>
+				<input type="text" value="14">
+				<label>px</label>
+			</section>
+			<section class="font-settings">
+				<span>Font weigth</span>
+				<div class="custom-select">
+					<label class="current-value">
+						400
+						<span class="fa fa-caret-down"></span>
+					</label>
+				</div>
+			</section>
+			<section class="font-style">
+				<span>Font style</span>
+				<ul class="font-styling">
+					<li><span class="fa fa-lg fa-italic"></span></li>
+					<li><span class="fa fa-lg fa-bold"></span></li>
+					<li><span class="fa fa-lg fa-underline"></span></li>
+				</ul>
+			</section>
+		</aside>
+		<section class="workspace small">
 			<section class="workspace-settings-bar">
 				<div class="toggle-settings">
 					<span class="fa fa-angle-double-right"></span>
@@ -87,7 +126,7 @@
 					<span class="fa fa-minus"></span>
 					<span class="fa fa-lg fa-search"></span>
 					<span class="fa fa-plus"></span>
-					<div class="select-zoom-size">
+					<div class="custom-select">
 						<label class="current-zoom">
 							100%
 							<span class="fa fa-caret-down"></span>
@@ -103,8 +142,11 @@
 				</div>
 			</section>
 			<section class="canvas-sheet"></section>
+			<div class="scrollbar horizontal"><span class="cursor"></span></div>
+			<div class="scrollbar vertical"><span class="cursor"></span></div>
 		</section>
 	</section>
 
+	<script src="dist/js/main.min.js"></script>
 </body>
 </html>

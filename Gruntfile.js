@@ -8,19 +8,16 @@ module.exports = function (grunt) {
 			development:{
 				files:{
 					'public/dist/css/style.css': 'public/src/css/style.less',
-					'public/dist/css/wall.css': 'public/src/css/wall/wall.less',
-					'public/dist/css/login.css': 'public/src/css/login.less'
 				}
 			}
 		},
 		browserify:{
 			dist:{
 				options:{
-					transform: ['babelify']
+					transform: ['reactify']
 				},
 				files:{
-					'public/dist/js/app.min.js': ['public/src/js/app.js'],
-					'public/dist/js/wall.min.js': ['public/src/js/wall.js']
+					'public/dist/js/main.min.js': ['public/src/main.js'],
 				}
 			}
 		},
