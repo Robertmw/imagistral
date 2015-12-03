@@ -1,10 +1,9 @@
 var React = require('react'),
     ReactDOM = require('react-dom');
-var BaseComponent = require('../../base-component/js/base-component');
 
 const displayName = 'Header';
 
-class Header extends BaseComponent {
+class Header extends React.Component {
 
   constructor (props) {
     super(props);
