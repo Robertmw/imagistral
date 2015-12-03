@@ -1,6 +1,6 @@
 var React = require('react');
 
-module.export = class BaseComponent extends React.Component {
+module.exports = class BaseComponent extends React.Component {
  _bind(...methods) {
   methods.forEach( (method) => this[method] = this[method].bind(this) );
  }

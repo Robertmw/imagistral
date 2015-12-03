@@ -1,10 +1,10 @@
 var React = require('react'),
     ReactDOM = require('react-dom'),
-    Header = require('./components/header/js/header');
+    HeaderEl = require('./components/header/js/header');
 
 ReactDOM.render(
   <section className="container">
-    <Header/>
+    <HeaderEl />
   </section>,
-  document.getElementsByTagName('body')
+  document.querySelector('#app')
 );
