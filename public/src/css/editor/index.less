@@ -194,11 +194,6 @@ header {
 					color: @light-grey;
 				}
 			}
-
-			.sandbox {
-				opacity: 1;
-				z-index: 1;
-			}
 		}
 
 		&.selected {
@@ -233,6 +228,11 @@ header {
 		z-index: -1;
 
 		transition: opacity 0.25s ease;
+
+		&.open {
+			opacity: 1;
+			z-index: 1;
+		}
 
 		ul {
 			padding: 15px;

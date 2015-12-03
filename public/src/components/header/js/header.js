@@ -4,7 +4,11 @@ var React = require('react'),
 
 const displayName = 'Header';
 
-class HeaderEl extends BaseComponent {
+class Header extends BaseComponent {
+
+  constructor (props) {
+    super(props);
+  }
 
   render() {
     return (
@@ -13,12 +17,12 @@ class HeaderEl extends BaseComponent {
           <span className="fa fa-lg fa-camera"></span>
         </div>
         <div className="work-title">
-          <span className="fa fa-header"></span>
-          <h4>Floating bird</h4>
+          <span className={this.props.buttons.canvasTitle.icon}></span>
+          <h4>{this.props.buttons.canvasTitle.title}</h4>
         </div>
         <div className="work-history">
-          <span className="fa fa-lg fa-reply unavailable"></span>
-          <span className="fa fa-lg fa-share"></span>
+          <span className={this.props.buttons.history[0].icon}></span>
+          <span className={this.props.buttons.history[1].icon}></span>
         </div>
         <div className="work-buttons">
           <div className="work--download">
@@ -37,7 +41,7 @@ class HeaderEl extends BaseComponent {
             <span className="fa fa-lg fa-th"></span>
           </div>
           <div className="work--profile">
-            <img className="avatar" src="https://scontent-frt3-1.xx.fbcdn.net/hprofile-xap1/v/t1.0-1/p160x160/10383895_1080798488614634_3712605849066710036_n.jpg?oh=6c8c8762e3dfbcbaedf66cd61a674628&oe=56F7C1C8"></img>
+            <img className="avatar" src={this.props.user.avatar}></img>
           </div>
         </div>
       </header>
@@ -46,5 +50,12 @@ class HeaderEl extends BaseComponent {
 
 }
 
-module.exports = HeaderEl;
+Header.propTypes = {
+  buttons: React.PropTypes.object,
+  user: React.PropTypes.object
+};
+
+Header.defaultProps = {};
+
+module.exports = Header;
 
