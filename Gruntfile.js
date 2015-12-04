@@ -1,84 +1,15 @@
+/*!
+ * Imagistral's Gruntfile
+ * https://github.com/Robertmw/cliw
+ */
+
 module.exports = function (grunt) {
 
-	// project configuration
+	'use strict';
 
-	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json'),
-		less:{
-			development:{
-				files:{
-					'public/dist/css/style.css': 'public/src/css/style.less',
-					'public/dist/css/wall.css': 'public/src/css/wall/wall.less',
-					'public/dist/css/login.css': 'public/src/css/login.less'
-				}
-			}
-		},
-		browserify:{
-			dist:{
-				options:{
-					transform: ['babelify']
-				},
-				files:{
-					'public/dist/js/app.min.js': ['public/src/js/app.js'],
-					'public/dist/js/wall.min.js': ['public/src/js/wall.js']
-				}
-			}
-		},
-		copy: {
-			target: {
-				files: [{
-					expand: true,
-					cwd: 'public/src/img',
-					src: '**/*',
-					dest: 'public/dist/img'
-				},
-				{
-					expand: true,
-					cwd: 'node_modules/font-awesome/fonts',
-					src: '**/*',
-					dest: 'public/dist/fonts'
-				}]
-			}
-		},
-		watch: {
-			options: {
-				dateFormat: function(time) {
-					grunt.log.writeln('The watch finished in ' + time + 'ms at' + (new Date()).toString());
-					grunt.log.writeln('Waiting for more changes...');
-				},
-			},
-			css: {
-				files: ['public/src/**/*.less', 'public/src/**/**/*.less'],
-				tasks: ['less']
-			},
-			js: {
-				files: ['public/src/**/*.js'],
-				tasks: ['browserify']
-			}
-		},
-		nodemon: {
-			dev: {
-				script: 'index.js'
-			}
-		},
-		concurrent: {
-			options: {
-				logConcurrentOutput: false
-			},
-			tasks: ['nodemon', 'watch']
-		}
-	});
-
-	// load plugins
-
-	grunt.loadNpmTasks('grunt-concurrent');
-	grunt.loadNpmTasks('grunt-browserify');
-	grunt.loadNpmTasks('grunt-contrib-less');
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-nodemon');
-	grunt.loadNpmTasks('grunt-contrib-copy');
-
-	// tasks
+  require('load-grunt-config')(grunt);
 
 	grunt.registerTask('default', ['browserify', 'less', 'copy', 'watch']);
+	grunt.registerTask('webpack', ['webpack']);
+
 }

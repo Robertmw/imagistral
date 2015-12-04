@@ -24,10 +24,15 @@
   },
   "homepage": "https://github.com/Robertmw/cliw",
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "react": "^0.14.3"
   },
   "devDependencies": {
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
     "babelify": "^7.2.0",
+    "eslint": "^1.10.3",
+    "eslint-plugin-react": "^3.11.2",
     "font-awesome": "^4.4.0",
     "grunt": "^0.4.5",
     "grunt-browserify": "^4.0.1",
@@ -35,6 +40,17 @@
     "grunt-contrib-copy": "^0.8.2",
     "grunt-contrib-less": "^1.1.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-nodemon": "^0.4.0"
+    "grunt-nodemon": "^0.4.0",
+    "grunt-webpack": "^1.0.11",
+    "immutable": "^3.7.5",
+    "load-grunt-config": "^0.19.1",
+    "load-grunt-tasks": "^3.3.0",
+    "react-dom": "^0.14.3",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "browser": {
+    "react": "./node_modules/react/react.js",
+    "react-dom": "./node_modules/react-dom/index.js"
   }
 }
