@@ -1,6 +1,6 @@
 var React = require('react'),
     ReactDOM = require('react-dom'),
-    BaseComponent = require('../../../../base-component/js/base-component');
+    BaseComponent = require('../../../base-component/base-component');
 
 const displayName = 'SubToolElement';
 
@@ -14,7 +14,7 @@ class SubToolElement extends BaseComponent {
     let elClassName = this.props.selected ? 'sandbox open' : 'sandbox';
     let sandbox = this.props.subTool.map((subTool, index) => {
       return (
-        <li key={subTool.id}>
+        <li key={index}>
           <p><span className = {subTool.icon}></span> {subTool.label}</p>
         </li>
         );

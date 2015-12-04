@@ -1,7 +1,7 @@
 var React = require('react'),
     ReactDOM = require('react-dom'),
-    BaseComponent = require('../../../../base-component/js/base-component'),
-    SubToolElement = require('../../subTool-element/js/subTool-element');
+    BaseComponent = require('../../../base-component/base-component'),
+    SubToolElement = require('../subTool-element/subTool-element');
 
 const displayName = 'ToolElement';
 
@@ -18,9 +18,8 @@ class ToolElement extends BaseComponent {
 
   render() {
     let elClassName = this.props.selected ? 'toolbar-element selected' : 'toolbar-element';
-
     return (
-      <div className = {elClassName} onClick = {this._handleClick}>
+      <div className = {elClassName} onClick = {this._handleClick} key = {this.props.key}>
         <span className = {this.props.tool.icon}></span>
         {this.props.tool.caret !== '' && <span className = {this.props.tool.caret}></span>}
         {this.props.tool.subTools.length !== 0 && <SubToolElement subTool = {this.props.tool.subTools} selected = {this.props.selected}/>}

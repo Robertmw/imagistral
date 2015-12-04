@@ -1,7 +1,7 @@
 var React = require('react'),
     ReactDOM = require('react-dom'),
-    BaseComponent = require('../../base-component/js/base-component'),
-    ToolElement = require('../components/tool-element/js/tool-element');
+    BaseComponent = require('../base-component/base-component'),
+    ToolElement = require('./components/tool-element/tool-element');
 
 const displayName = 'Sidebar';
 
@@ -27,7 +27,7 @@ class Sidebar extends BaseComponent {
       let selected = tool.name === this.state.selected ? true : false;
       return (
           <ToolElement 
-            key = {tool.id}
+            key = {index}
             handleClick = {this._changeSelectedTool}
             tool = {tool}
             selected = {selected}
