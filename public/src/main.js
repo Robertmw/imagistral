@@ -1,7 +1,8 @@
 var React = require('react'),
     ReactDOM = require('react-dom'),
-    Header = require('./components/header/js/header'),
-    Sidebar = require('./components/sidebar/js/sidebar');
+    Header = require('./components/header/header'),
+    Sidebar = require('./components/sidebar/sidebar'),
+    Workspace = require('./components/workspace/workspace');
 
 var staticState = {
   user: {
@@ -102,6 +103,7 @@ ReactDOM.render(
       buttons = {staticState.headerButtons}
     />
     <Sidebar tools = {staticState.tools} />
+    <Workspace />
   </section>,
   document.querySelector('#app')
 );

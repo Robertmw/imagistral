@@ -1,6 +1,6 @@
 var React = require('react'),
     ReactDOM = require('react-dom'),
-    BaseComponent = require('../../base-component/js/base-component');
+    BaseComponent = require('../base-component/base-component');
 
 const displayName = 'Header';
 
