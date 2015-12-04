@@ -8,7 +8,7 @@ module.exports = {
       ]
     },
     files:{
-      'public/dist/js/main.min.js': ['public/src/main.js'],
+      'public/dist/js/main.min.js': ['public/src/js/main.js'],
     }
   }
 };
