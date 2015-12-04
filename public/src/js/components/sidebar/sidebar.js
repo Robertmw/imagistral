@@ -1,3 +1,5 @@
+import {branch} from 'baobab-react/higher-order';
+
 var React = require('react'),
     ReactDOM = require('react-dom'),
     BaseComponent = require('../base-component/base-component'),
@@ -22,6 +24,8 @@ class Sidebar extends BaseComponent {
   }
 
   render() {
+    console.log(this.props);
+    
     let tools = this.props.tools;
     let toolsWrapper = tools.map((tool, index) => {
       let selected = tool.name === this.state.selected ? true : false;
@@ -50,5 +54,9 @@ Sidebar.propTypes = {
 
 Sidebar.defaultProps = {};
 
-module.exports = Sidebar;
+export default branch(Sidebar, {
+  cursors: {
+    tools: ['tools']
+  }
+});
 
