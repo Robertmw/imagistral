@@ -5,25 +5,15 @@ const tree = new Baobab({
 		avatar: 'https://scontent-frt3-1.xx.fbcdn.net/hprofile-xap1/v/t1.0-1/p160x160/10383895_1080798488614634_3712605849066710036_n.jpg?oh=6c8c8762e3dfbcbaedf66cd61a674628&oe=56F7C1C8',
 		name: 'Robert Pamfile'
 	},
-	headerButtons: {
-		canvasTitle: {
-			icon: 'fa fa-header',
-			title: 'Floating bird'
-		},
-		history: [
-			{
-				handleClick: null,
-				icon: 'fa fa-lg fa-reply unavailable',
-				name: 'undo',
-				tooltip: 'Undo previous action'
-			},
-			{ 
-				handleClick: null,
-				icon: 'fa fa-lg fa-share',
-				name: 'uphold',
-				tooltip: 'Uphold next action'
-			}
-		]
+	canvasTitle: 'Floating bird',
+	selectedTool: 'cursor',
+	workspace: {
+		small: false,
+		hideSettings: false,
+		zoom: 100,
+		rotate: 0,
+		zoomIn: true,
+		zoomOut: true
 	},
 	tools: [
 		{

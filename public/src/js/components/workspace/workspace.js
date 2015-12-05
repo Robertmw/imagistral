@@ -1,6 +1,15 @@
-var React = require('react'),
-		ReactDOM = require('react-dom'),
-		BaseComponent = require('../base-component/base-component');
+/**
+ *
+ * Workspace Component
+ * @parent none
+ * @author Robert P.
+ *
+ */
+
+import React from 'react';
+import BaseComponent from '../base-component/base-component';
+import {branch} from 'baobab-react/higher-order';
+import * as actions from './actions';
 
 const displayName = 'Workspace';
 
@@ -8,22 +17,42 @@ class Workspace extends BaseComponent {
 
 	constructor (props) {
 		super(props);
+
+		this._bind('zoomIn', 'zoomOut');
+	}
+
+	zoomIn() {
+		this.props.actions.zoomIn();
+	}
+
+	zoomOut() {
+		this.props.actions.zoomOut();
 	}
 
 	render() {
+		const workspace = this.props.workspace;
+
+		const workspaceClass = workspace.small ? "workspace small" : "workspace";
+		const settingsClass = workspace.hideSettings ? "workspace-settings-bar small" : "workspace-settings-bar";
+		const zoomInClass = workspace.zoomIn ? "fa fa-plus" : "fa fa-plus unavailable";
+		const zoomOutClass = workspace.zoomOut ? "fa fa-minus" : "fa fa-minus unavailable";
+
 		return (
-			<section className="workspace">
-				<section className="workspace-settings-bar">
-					<div className="toggle-settings">
+			<section className={workspaceClass}>
+				<section className={settingsClass}>
+					<div 
+						className="toggle-settings"
+						onClick = {() => this.props.actions.changeSize()}
+					>
 						<span className="fa fa-angle-double-right"></span>
 					</div>
 					<div className="zoom-settings">
-						<span className="fa fa-minus"></span>
+						<span className={zoomOutClass} onClick={this.zoomOut}></span>
 						<span className="fa fa-lg fa-search"></span>
-						<span className="fa fa-plus"></span>
+						<span className={zoomInClass} onClick={this.zoomIn}></span>
 						<div className="custom-select">
 							<label className="current-zoom">
-								100%
+								{workspace.zoom + '%'}
 								<span className="fa fa-caret-down"></span>
 							</label>
 						</div>
@@ -50,5 +79,14 @@ Workspace.propTypes = {
 
 Workspace.defaultProps = {};
 
-module.exports = Workspace;
+export default branch(Workspace, {
+	cursors: {
+		workspace: ['workspace']
+	},
+	actions: {
+		zoomIn: actions.zoomIn,
+		zoomOut: actions.zoomOut,
+		changeSize: actions.changeSize
+	}
+});
 

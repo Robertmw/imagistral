@@ -1,9 +1,17 @@
-import {branch} from 'baobab-react/higher-order';
+/**
+ *
+ * Sidebar Component
+ * @parent none
+ * @author Robert P.
+ *
+ */
 
-var React = require('react'),
-    ReactDOM = require('react-dom'),
-    BaseComponent = require('../base-component/base-component'),
-    ToolElement = require('./components/tool-element/tool-element');
+import React from 'react';
+import BaseComponent from '../base-component/base-component';
+import {branch} from 'baobab-react/higher-order';
+import * as actions from './actions';
+
+import ToolElement from './components/tool-element/tool-element';
 
 const displayName = 'Sidebar';
 
@@ -12,29 +20,24 @@ class Sidebar extends BaseComponent {
   constructor (props) {
     super(props);
 
-    this.state = {
-      selected: ''
-    }
-
-    this._bind('_changeSelectedTool');
+    this._bind('_handleClick');
   }
 
-  _changeSelectedTool (element) {
-    this.setState({selected: element.name});
+  _handleClick(newTool) {
+    this.props.actions.changeTool(newTool);
+    this.props.actions.resizeWorkspace();
   }
 
   render() {
-    console.log(this.props);
-    
-    let tools = this.props.tools;
-    let toolsWrapper = tools.map((tool, index) => {
-      let selected = tool.name === this.state.selected ? true : false;
+    const tools = this.props.tools;
+    const toolsWrapper = tools.map((tool, index) => {
+      let selected = tool.name === this.props.selected ? true : false;
       return (
           <ToolElement 
             key = {index}
-            handleClick = {this._changeSelectedTool}
             tool = {tool}
             selected = {selected}
+            handleClick = {this._handleClick}
           />
       );
     });
@@ -56,7 +59,12 @@ Sidebar.defaultProps = {};
 
 export default branch(Sidebar, {
   cursors: {
-    tools: ['tools']
+    tools: ['tools'],
+    selected: ['selectedTool']
+  },
+  actions: {
+    changeTool: actions.changeTool,
+    resizeWorkspace: actions.resizeWorkspace
   }
 });
 

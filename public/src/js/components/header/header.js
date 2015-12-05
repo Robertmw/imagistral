@@ -1,6 +1,13 @@
-var React = require('react'),
-    ReactDOM = require('react-dom'),
-    BaseComponent = require('../base-component/base-component');
+/**
+ *
+ * Header Component
+ * Created by Robert P.
+ *
+ */
+
+import React from 'react';
+import BaseComponent from '../base-component/base-component';
+import {branch} from 'baobab-react/higher-order';
 
 const displayName = 'Header';
 
@@ -17,12 +24,12 @@ class Header extends BaseComponent {
           <span className="fa fa-lg fa-camera"></span>
         </div>
         <div className="work-title">
-          <span className={this.props.buttons.canvasTitle.icon}></span>
-          <h4>{this.props.buttons.canvasTitle.title}</h4>
+          <span className="fa fa-header"></span>
+          <h4>{this.props.title}</h4>
         </div>
         <div className="work-history">
-          <span className={this.props.buttons.history[0].icon}></span>
-          <span className={this.props.buttons.history[1].icon}></span>
+          <span className="fa fa-lg fa-reply unavailable"></span>
+          <span className="fa fa-lg fa-share"></span>
         </div>
         <div className="work-buttons">
           <div className="work--download">
@@ -51,11 +58,17 @@ class Header extends BaseComponent {
 }
 
 Header.propTypes = {
-  buttons: React.PropTypes.object,
+  title: React.PropTypes.string,
   user: React.PropTypes.object
 };
 
-Header.defaultProps = {};
+Header.defaultProps = {
+  title: "Untitled"
+};
 
-module.exports = Header;
-
+export default branch(Header, {
+  cursors: {
+    title: ['canvasTitle'],
+    user: ['user']
+  }
+})

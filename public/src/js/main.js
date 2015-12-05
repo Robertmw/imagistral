@@ -12,7 +12,9 @@ class App extends Component {
 	render() {
 		return(
 			<section className="container">
+				<Header />
 				<Sidebar />
+				<Workspace />
 			</section>
 		);
 	}
