@@ -81,7 +81,29 @@ const tree = new Baobab({
 		}
 	],
 	toolSettings: {
-		visible: false
+		visible: false,
+		color: 'ffffff',
+		text: {
+			fontFamily: 'Arial',
+			fontSize: 14,
+			fontStyle: {
+				bold: false,
+				italic: false,
+				underline: false
+			},
+			textAlign: 'left'
+		},
+		eraser: {
+			size: 10
+		},
+		pencil: {
+			size: 10
+		},
+		brush: {
+			size: 10,
+			mode: 'pencil',
+			hardness: 0
+		}
 	}
 });
 

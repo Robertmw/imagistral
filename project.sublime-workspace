@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"_",
+				"_animateWrapper"
+			],
+			[
 				"too",
 				"ToolSettings"
 			],
@@ -30,10 +34,6 @@
 			[
 				"sele",
 				"selectedTool"
-			],
-			[
-				"_",
-				"_handleClick"
 			],
 			[
 				"tool",
@@ -267,6 +267,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "public/src/js/state.js",
+			"settings":
+			{
+				"buffer_size": 1835,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/src/js/components/tool-settings/tool-settings.js",
+			"settings":
+			{
+				"buffer_size": 1873,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -405,23 +421,27 @@
 	},
 	"expanded_folders":
 	[
+		"/E/xampp/htdocs/cliw",
 		"/E/xampp/htdocs/cliw/public",
 		"/E/xampp/htdocs/cliw/public/src",
+		"/E/xampp/htdocs/cliw/public/src/css/editor",
 		"/E/xampp/htdocs/cliw/public/src/js",
 		"/E/xampp/htdocs/cliw/public/src/js/components",
-		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/components/tool-element",
-		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings"
+		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings",
+		"/E/xampp/htdocs/cliw/public/src/js/components/workspace"
 	],
 	"file_history":
 	[
-		"/E/xampp/htdocs/cliw/public/src/js/state.js",
+		"/E/xampp/htdocs/cliw/public/src/css/editor/index.less",
 		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/tool-settings.js",
+		"/E/xampp/htdocs/cliw/public/src/css/style.less",
+		"/E/xampp/htdocs/cliw/public/src/css/animate.css",
+		"/E/xampp/htdocs/cliw/public/src/js/state.js",
 		"/E/xampp/htdocs/cliw/public/src/js/main.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/actions.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/workspace/workspace.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/sidebar.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/workspace/actions.js",
-		"/E/xampp/htdocs/cliw/public/src/css/editor/index.less",
 		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/components/tool-element/tool-element.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/header/header.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/components/actions.js",
@@ -437,7 +457,6 @@
 		"/E/xampp/htdocs/cliw/tehnologii.md",
 		"/E/xampp/htdocs/cliw/Gruntfile.js",
 		"/E/xampp/htdocs/cliw/public/src/js/app.js",
-		"/E/xampp/htdocs/cliw/public/src/css/style.less",
 		"/C/Users/Robert/Desktop/[Training] Timetable/Gruntfile.js",
 		"/E/xampp/htdocs/cliw/public/src/css/reset.less",
 		"/E/xampp/htdocs/cliw/package.json",
@@ -540,8 +559,7 @@
 		"/C/Users/Robert/Desktop/IA/Backup/SpacesSearch/ISolver.cs",
 		"/C/Users/Robert/Desktop/IA/Backup/SpacesSearch/BreadthFirstSolver.cs",
 		"/C/Users/Robert/Desktop/IA/Backup/SpacesSearch/DepthFirstSolver.cs",
-		"/C/Users/Robert/Desktop/IA/Backup/SpacesSearch/BestFirstSolver.cs",
-		"/C/Users/Robert/Desktop/IA/Backup/SpacesSearch/Side.cs"
+		"/C/Users/Robert/Desktop/IA/Backup/SpacesSearch/BestFirstSolver.cs"
 	],
 	"find":
 	{
@@ -713,8 +731,67 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "public/src/js/state.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1835,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1802,
+								1802
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "public/src/js/components/tool-settings/tool-settings.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1873,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								571,
+								571
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 229.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],

@@ -23,13 +23,11 @@ class ToolSettings extends BaseComponent {
 	}
 
 	componentWillReceiveProps (newProps) {
-		//if (newProps.toolSettings.visible != this.props.toolSettings.visible) {
-			if (newProps.toolSettings.visible) {
-				this.setState({wrapperClass: 'toolbar-advanced-settings animated fadeInLeft'});
-			} else {
-				this.setState({wrapperClass: 'toolbar-advanced-settings animated fadeOutLeft'});
-			}
-		//}
+		if (newProps.toolSettings.visible) {
+			this.setState({wrapperClass: 'toolbar-advanced-settings animated fadeInLeft'});
+		} else {
+			this.setState({wrapperClass: 'toolbar-advanced-settings animated fadeOutLeft'});
+		}
 	}
 
 	render() {
