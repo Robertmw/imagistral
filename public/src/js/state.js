@@ -79,7 +79,10 @@ const tree = new Baobab({
 			caret: 'fa fa-caret-down caret',
 			subTools: [],
 		}
-	]
+	],
+	toolSettings: {
+		visible: false
+	}
 });
 
 export default tree;

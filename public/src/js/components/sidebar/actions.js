@@ -9,8 +9,10 @@ export function resizeWorkspace(tree) {
 
 	if (singleTools.indexOf(currentTool) >= 0) {
 		tree.set(['workspace', 'small'], false);
+		tree.set(['toolSettings', 'visible'], false);
 	} else {
 		tree.set(['workspace', 'small'], true);
+		tree.set(['toolSettings', 'visible'], true);
 	}
 
 }
