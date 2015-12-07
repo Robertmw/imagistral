@@ -20,12 +20,16 @@ class Sidebar extends BaseComponent {
   constructor (props) {
     super(props);
 
-    this._bind('_handleClick');
+    this._bind('_handleClick', '_handleChange');
   }
 
   _handleClick(newTool) {
     this.props.actions.changeTool(newTool);
     this.props.actions.resizeWorkspace();
+  }
+
+  _handleChange(event) {
+    this.props.actions.changeColor(event.target.value);
   }
 
   render() {
@@ -45,6 +49,7 @@ class Sidebar extends BaseComponent {
     return (
       <aside className="sidebar">
           {toolsWrapper}
+          <input type="color" className = "colorPicker" onChange = {this._handleChange} value={this.props.color} />
       </aside>
     );
   }
@@ -60,11 +65,13 @@ Sidebar.defaultProps = {};
 export default branch(Sidebar, {
   cursors: {
     tools: ['tools'],
-    selected: ['selectedTool']
+    selected: ['selectedTool'],
+    color: ['color']
   },
   actions: {
     changeTool: actions.changeTool,
-    resizeWorkspace: actions.resizeWorkspace
+    resizeWorkspace: actions.resizeWorkspace,
+    changeColor: actions.changeColor
   }
 });
 

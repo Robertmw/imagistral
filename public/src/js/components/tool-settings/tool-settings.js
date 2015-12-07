@@ -40,7 +40,7 @@ class ToolSettings extends BaseComponent {
 						<p className="settings-title">Text settings</p>
 						<section className="color-settings">
 							<span>Color</span>
-							<span className="color-bucket"></span>
+							<input type="color" value="#ff0000" />
 						</section>
 						<section className="font-settings">
 							<span>Font size</span>

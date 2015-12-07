@@ -16,3 +16,7 @@ export function resizeWorkspace(tree) {
 	}
 
 }
+
+export function changeColor(tree, color) {
+	tree.set('color', color);
+}
