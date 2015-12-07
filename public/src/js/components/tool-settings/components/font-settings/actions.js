@@ -18,14 +18,12 @@ export function changeFontFamily(tree, value) {
 	tree.set(['toolSettings', 'text', 'fontFamily'], value);
 }
 
-export function changeTextAlign(tree, value) {
-	tree.set(['toolSettings', 'text', 'textAlign'], value);
-
-	console.log(tree.get());
+export function changeFontWeight(tree, value) {
+	tree.set(['toolSettings', 'text', 'fontWeight'], value);
 }
 
 export function changeFontStyle(tree, value) {
-	const state = tree.get(['toolSettings', 'text']);
+/*	const state = tree.get(['toolSettings', 'text']);
 	let fontStyle = objToArray(state.fontStyle);
 	let index = fontStyle.indexOf(value);
 
@@ -33,8 +31,8 @@ export function changeFontStyle(tree, value) {
 		fontStyle.splice(index, 1);
 	} else {
 		fontStyle.push(value);
-	}
+	}*/
 
-	tree.set(['toolSettings', 'text', 'fontStyle'], fontStyle);
+	tree.set(['toolSettings', 'text', 'fontStyle'], value);
 }
 
