@@ -8,10 +8,8 @@ export function resizeWorkspace(tree) {
 	const singleTools = ['cursor', 'eraser', 'picker', 'zoom', 'square'];
 
 	if (singleTools.indexOf(currentTool) >= 0) {
-		tree.set(['workspace', 'small'], false);
 		tree.set(['toolSettings', 'visible'], false);
 	} else {
-		tree.set(['workspace', 'small'], true);
 		tree.set(['toolSettings', 'visible'], true);
 	}
 

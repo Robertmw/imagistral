@@ -32,20 +32,12 @@ class Workspace extends BaseComponent {
 	render() {
 		const workspace = this.props.workspace;
 
-		const workspaceClass = workspace.small ? "workspace small" : "workspace";
-		const settingsClass = workspace.hideSettings ? "workspace-settings-bar small" : "workspace-settings-bar";
 		const zoomInClass = workspace.zoomIn ? "fa fa-plus" : "fa fa-plus unavailable";
 		const zoomOutClass = workspace.zoomOut ? "fa fa-minus" : "fa fa-minus unavailable";
 
 		return (
-			<section className={workspaceClass}>
-				<section className={settingsClass}>
-					<div 
-						className="toggle-settings"
-						onClick = {() => this.props.actions.changeSize()}
-					>
-						<span className="fa fa-angle-double-right"></span>
-					</div>
+			<section className="workspace">
+				<section className="workspace-settings-bar">
 					<div className="zoom-settings">
 						<span className={zoomOutClass} onClick={this.zoomOut}></span>
 						<span className="fa fa-lg fa-search"></span>
@@ -74,19 +66,13 @@ class Workspace extends BaseComponent {
 
 }
 
-Workspace.propTypes = {
-};
-
-Workspace.defaultProps = {};
-
 export default branch(Workspace, {
 	cursors: {
 		workspace: ['workspace']
 	},
 	actions: {
 		zoomIn: actions.zoomIn,
-		zoomOut: actions.zoomOut,
-		changeSize: actions.changeSize
+		zoomOut: actions.zoomOut
 	}
 });
 
