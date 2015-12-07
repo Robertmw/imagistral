@@ -1,0 +1,884 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"_",
+				"_animateWrapper"
+			],
+			[
+				"too",
+				"ToolSettings"
+			],
+			[
+				"cur",
+				"currentTool"
+			],
+			[
+				"cure",
+				"currentToolName"
+			],
+			[
+				"ac",
+				"actions"
+			],
+			[
+				"zom",
+				"zoomOut"
+			],
+			[
+				"zoom",
+				"zoomIn"
+			],
+			[
+				"sele",
+				"selectedTool"
+			],
+			[
+				"tool",
+				"ToolElement"
+			],
+			[
+				"caret",
+				"caretDropdown"
+			],
+			[
+				"prop",
+				"propTypes"
+			],
+			[
+				"header",
+				"headerButtons"
+			],
+			[
+				"Header",
+				"HeaderEl"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"fonts-",
+				"font-size"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"task",
+				"taskList"
+			],
+			[
+				"time",
+				"timetable"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"cart",
+				"cartAppComponent"
+			],
+			[
+				"ty",
+				"types"
+			],
+			[
+				"new",
+				"newEntry"
+			],
+			[
+				"ans",
+				"answerRandom"
+			],
+			[
+				"me",
+				"message"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"re",
+				"responses"
+			],
+			[
+				"ad",
+				"addMessage"
+			],
+			[
+				"user",
+				"userMessage"
+			],
+			[
+				"Mes",
+				"MessageStore"
+			],
+			[
+				"over",
+				"overflow"
+			],
+			[
+				"borderbott",
+				"border-bottom-color"
+			],
+			[
+				"paddi",
+				"padding-left"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"base",
+				"BaseComponent"
+			],
+			[
+				"AP",
+				"AppConstants"
+			],
+			[
+				"App",
+				"AppDispatcher"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"adap",
+				"adaptedWidth"
+			],
+			[
+				"vioe",
+				"viewportHeight"
+			],
+			[
+				"adp",
+				"adaptedWidth"
+			],
+			[
+				"viewport",
+				"viewportHeight"
+			],
+			[
+				"angu",
+				"angular-route"
+			],
+			[
+				"b",
+				"browserify"
+			],
+			[
+				"app",
+				"appendChild"
+			],
+			[
+				"load",
+				"loadingContainer"
+			],
+			[
+				"media",
+				"mediaPopUp"
+			],
+			[
+				"medi",
+				"mediaPopUp"
+			],
+			[
+				"med",
+				"mediaPopUp"
+			],
+			[
+				"image",
+				"imageContainer"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"box-s",
+				"box-sizing"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"fons",
+				"font-size"
+			],
+			[
+				"listst",
+				"list-style"
+			],
+			[
+				"rou",
+				"route"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"call",
+				"callback"
+			],
+			[
+				"search",
+				"searching"
+			],
+			[
+				"fil",
+				"filterUser"
+			],
+			[
+				"dept",
+				"deptOnly"
+			],
+			[
+				"Filter",
+				"FilterUsers"
+			],
+			[
+				"find",
+				"findById"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "public/src/js/state.js",
+			"settings":
+			{
+				"buffer_size": 1835,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/src/js/components/tool-settings/tool-settings.js",
+			"settings":
+			{
+				"buffer_size": 1873,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 242.0,
+		"last_filter": "babel",
+		"selected_items":
+		[
+			[
+				"babel",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"javascip",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"javasc	",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"jav",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"markdo",
+				"Set Syntax: Markdown"
+			],
+			[
+				"less",
+				"Set Syntax: LESS"
+			],
+			[
+				"babe",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"jso",
+				"Set Syntax: JSON"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"jisn",
+				"Build With: JSHint"
+			],
+			[
+				"jshi",
+				"JSHint"
+			],
+			[
+				"jsh",
+				"JSHint"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"pascal",
+				"Set Syntax: Pascal"
+			],
+			[
+				"htm",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"jos",
+				"Set Syntax: JSON"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 424.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": true,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/xampp/htdocs/cliw",
+		"/E/xampp/htdocs/cliw/public",
+		"/E/xampp/htdocs/cliw/public/src",
+		"/E/xampp/htdocs/cliw/public/src/css/editor",
+		"/E/xampp/htdocs/cliw/public/src/js",
+		"/E/xampp/htdocs/cliw/public/src/js/components",
+		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings",
+		"/E/xampp/htdocs/cliw/public/src/js/components/workspace"
+	],
+	"file_history":
+	[
+		"/E/xampp/htdocs/cliw/public/src/css/editor/index.less",
+		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/tool-settings.js",
+		"/E/xampp/htdocs/cliw/public/src/css/style.less",
+		"/E/xampp/htdocs/cliw/public/src/css/animate.css",
+		"/E/xampp/htdocs/cliw/public/src/js/state.js",
+		"/E/xampp/htdocs/cliw/public/src/js/main.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/actions.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/workspace/workspace.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/sidebar.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/workspace/actions.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/components/tool-element/tool-element.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/header/header.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/components/actions.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/components/tool-element/actions.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/base-component/base-component.js",
+		"/E/xampp/htdocs/cliw/public/src/components/sidebar/components/subtool-element/js/subTool-element.js",
+		"/E/xampp/htdocs/cliw/public/src/components/sidebar/components/tool-element/js/tool-element.js",
+		"/E/xampp/htdocs/cliw/public/src/components/sidebar/js/sidebar.js",
+		"/E/xampp/htdocs/cliw/public/src/main.js",
+		"/E/xampp/htdocs/cliw/public/index.html",
+		"/E/xampp/htdocs/cliw/public/src/components/header/js/header.js",
+		"/E/xampp/htdocs/cliw/public/src/components/base-component/js/base-component.js",
+		"/E/xampp/htdocs/cliw/tehnologii.md",
+		"/E/xampp/htdocs/cliw/Gruntfile.js",
+		"/E/xampp/htdocs/cliw/public/src/js/app.js",
+		"/C/Users/Robert/Desktop/[Training] Timetable/Gruntfile.js",
+		"/E/xampp/htdocs/cliw/public/src/css/reset.less",
+		"/E/xampp/htdocs/cliw/package.json",
+		"/C/Users/Robert/Desktop/[Training] Timetable/public/index.html",
+		"/C/Users/Robert/Desktop/[Training] Timetable/index.js",
+		"/E/xampp/htdocs/cliw/index.js",
+		"/E/xampp/htdocs/cliw/bower.json",
+		"/E/xampp/htdocs/license/bower.json",
+		"/E/xampp/htdocs/cliw/.gitignore",
+		"/E/xampp/htdocs/license/.bowerrc",
+		"/E/xampp/htdocs/cliw/.bowerrc",
+		"/E/xampp/htdocs/license/Gruntfile.js",
+		"/E/xampp/htdocs/license/test/mainController.test.js",
+		"/C/Users/Robert/Desktop/[Training] Timetable/test/mainController.test.js",
+		"/C/Users/Robert/Desktop/[Training] Timetable/README.md",
+		"/C/Users/Robert/Desktop/[Training] Timetable/.gitignore",
+		"/C/Users/Robert/Desktop/[Training] Timetable/public/src/directives/timetable/timetable.html",
+		"/C/Users/Robert/Desktop/[Training] Timetable/public/data.json",
+		"/C/Users/Robert/Desktop/[Training] Timetable/public/src/controllers/mainController.js",
+		"/C/Users/Robert/Desktop/[Training] Timetable/public/src/style/timetable.less",
+		"/C/Users/Robert/Desktop/[Training] Timetable/public/src/services/dataLoader.js",
+		"/C/Users/Robert/Desktop/[Training] Timetable/public/src/directives/global-header/global-header.js",
+		"/C/Users/Robert/Desktop/[Training] Timetable/public/src/app-module.js",
+		"/C/Users/Robert/Desktop/[Training] Timetable/public/src/directives/addEvent/addEvent.js",
+		"/C/Users/Robert/Desktop/[Training] Timetable/public/src/directives/addEvent/addEvent.html",
+		"/C/Users/Robert/Desktop/[Training] Timetable/public/src/style/style.less",
+		"/C/Users/Robert/Desktop/[Training] Timetable/public/src/directives/timetable/timetable.js",
+		"/C/Users/Robert/Desktop/[Training] Timetable/public/src/directives/global-header/global-header.html",
+		"/C/Users/Robert/Desktop/[Training] Timetable/public/src/style/header.less",
+		"/C/Users/Robert/Desktop/[Training] Timetable/public/src/directives/add-event/addEvent.html",
+		"/C/Users/Robert/Desktop/[Training] Timetable/public/src/directives/add-event/addEvent.js",
+		"/C/Users/Robert/Desktop/[Training] Timetable/public/src/directives/timetable/timetable-html.html",
+		"/E/xampp/htdocs/license/public/src/routes/routes.controller.js",
+		"/E/xampp/htdocs/license/public/src/core/maps.service.js",
+		"/E/xampp/htdocs/license/public/src/directives/globalMap/globalMap.directive.js",
+		"/E/xampp/htdocs/license/public/src/core/user.service.js",
+		"/E/xampp/htdocs/license/public/src/core/toastr.service.js",
+		"/E/xampp/htdocs/license/public/src/main/main.controller.js",
+		"/E/xampp/htdocs/license/public/src/directives/mainMenu/mainMenu.directive.js",
+		"/E/xampp/htdocs/license/public/src/directives/mainHeader/mainHeader.directive.js",
+		"/C/Users/Robert/Desktop/[Training] Timetable/public/src/directives/header/header.js",
+		"/C/Users/Robert/Desktop/[Training] Timetable/public/src/directives/header/header.html",
+		"/C/Users/Robert/Desktop/[Training] Timetable/public/src/directives/header/template.html",
+		"/C/Users/Robert/Desktop/[Training] Timetable/bower.json",
+		"/C/Users/Robert/Desktop/[Training] Timetable/.bowerrc",
+		"/C/Users/Robert/Desktop/[Training] Timetable/package.json",
+		"/E/xampp/htdocs/license/public/index.html",
+		"/E/xampp/htdocs/license/public/src/main/main.html",
+		"/E/xampp/htdocs/license/public/src/directives/mainHeader/mainHeader.html",
+		"/C/Users/Robert/Desktop/[Training] Timetable/public/src/controllers/mainController-controller.js",
+		"/E/xampp/htdocs/license/public/src/app.module.js",
+		"/C/Users/Robert/Desktop/[Training] Timetable/public/src/style/reset.less",
+		"/E/xampp/htdocs/license/package.json",
+		"/C/Users/Robert/Desktop/[Training] Timetable/public/css/style.css",
+		"/C/Users/Robert/Desktop/[Training] Timetable/karma.conf.js",
+		"/E/xampp/htdocs/license/karma.conf.js",
+		"/C/Users/Robert/Desktop/[Training] Timetable/css/style.css",
+		"/C/Users/Robert/Desktop/[Training] Timetable/index.html",
+		"/E/xampp/htdocs/license/.eslintrc",
+		"/C/Users/Robert/Desktop/[Training] Timetable/.eslintrc",
+		"/E/xampp/htdocs/fiipractic/package.json",
+		"/C/Users/Robert/Desktop/[Training] Timetable/wiki/SinglePageApplication.md",
+		"/C/Users/Robert/Desktop/asdas/style.css",
+		"/C/Users/Robert/Desktop/asdas/index.html",
+		"/C/Users/Robert/Desktop/IC690875.png",
+		"/C/Users/Robert/Desktop/123/index.html",
+		"/C/Users/Robert/Desktop/123/index.js",
+		"/E/xampp/htdocs/[Training] Timetable/index.html",
+		"/E/xampp/htdocs/[Training] Timetable/style.css",
+		"/C/Users/Robert/Desktop/problema 1.c",
+		"/C/Users/Robert/Desktop/asdasd/main.c",
+		"/C/Users/Robert/Desktop/ex.java",
+		"/C/Users/Robert/Desktop/asdasd/find.c",
+		"/E/xampp/htdocs/fiipractic/.bowerrc",
+		"/C/Users/Robert/Desktop/asdasd/users.txt",
+		"/C/Users/Robert/Desktop/asdasd/a.out",
+		"/E/xampp/htdocs/fiipractic/bower.json",
+		"/C/Users/Robert/Desktop/index.html",
+		"/E/xampp/htdocs/reactPlayv1/app/components/cartApp/cartApp.types.js",
+		"/E/xampp/htdocs/reactPlayv1/app/index.html",
+		"/E/xampp/htdocs/reactPlayv1/app/components/cartApp/cartApp.reducer.js",
+		"/E/xampp/htdocs/reactPlayv1/app/components/cartApp/cartApp.component.js",
+		"/E/xampp/htdocs/reactPlayv1/app/components/cartApp/cartApp.actions.js",
+		"/E/xampp/htdocs/reactPlayv1/app/index.js",
+		"/E/xampp/htdocs/reactPlayv1/Gruntfile.js",
+		"/E/xampp/htdocs/reactPlayv1/app/components/cartApp/index.html",
+		"/E/xampp/htdocs/reactPlayv1/app/dispatcher/dispatcher.js",
+		"/E/xampp/htdocs/reactPlayv1/package.json",
+		"/E/xampp/htdocs/reactPlayv1/app/components/cartApp/constants/actionTypes.js",
+		"/E/xampp/htdocs/reactPlayv1/app/components/cartApp/constants/actions.js",
+		"/C/Users/Robert/Desktop/diana.txt",
+		"/C/Users/Robert/Desktop/SearchNode.java",
+		"/C/Users/Robert/Desktop/State.java",
+		"/C/Users/Robert/Desktop/FWGCState.java",
+		"/C/Users/Robert/Desktop/DFSSerach.java",
+		"/C/Users/Robert/Desktop/Solver.java",
+		"/C/Users/Robert/Desktop/Farmer.java",
+		"/C/Users/Robert/Desktop/Planner.class",
+		"/C/Users/Robert/Desktop/IA/Backup/SpacesSearch/MainForm.cs",
+		"/C/Users/Robert/Desktop/IA/Backup/SpacesSearch/ISolver.cs",
+		"/C/Users/Robert/Desktop/IA/Backup/SpacesSearch/BreadthFirstSolver.cs",
+		"/C/Users/Robert/Desktop/IA/Backup/SpacesSearch/DepthFirstSolver.cs",
+		"/C/Users/Robert/Desktop/IA/Backup/SpacesSearch/BestFirstSolver.cs"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+			"C:\\Users\\Robert\\Desktop\\[Training] Timetable\\public\\src",
+			"C:\\Users\\Robert\\Desktop\\[Training] Timetable\\public\\src\\style",
+			"E:\\xampp\\htdocs\\starting-with-react\\client\\src"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"class",
+			"hover",
+			"_handleClick",
+			"selected: false",
+			"props",
+			"ToolElement",
+			"Sidebar",
+			"\"",
+			"value",
+			"bucket",
+			"eraser",
+			"pencil",
+			"class",
+			"Header",
+			"aStringProp",
+			"HeaderEl",
+			"ExampleComponent",
+			"class",
+			"Header",
+			"app",
+			"tool",
+			"h3",
+			"bin",
+			":00",
+			"end",
+			"start",
+			"label",
+			"title:",
+			"tasks",
+			"day:",
+			"day",
+			"value",
+			"'",
+			"title",
+			"linear",
+			"item",
+			"display",
+			"scope",
+			"headerLink",
+			"2\"",
+			"2",
+			"button",
+			"console.log",
+			"model",
+			"name",
+			"add",
+			"headerController",
+			"00A27C",
+			"span",
+			"button",
+			" !important",
+			"</li>",
+			"<p",
+			"/th>",
+			"!important",
+			"option",
+			"button",
+			"important",
+			"button",
+			"xampp/htdocs/[Training] Timetable",
+			"h1",
+			"28 Noiembrie",
+			"components/cartApp/",
+			"cartAppComponent",
+			":",
+			"cartApp",
+			"break;",
+			"_",
+			",",
+			"console.log",
+			"match",
+			"Date()",
+			"this.",
+			"AppActions",
+			"AppStore",
+			"f(",
+			"this.match",
+			"user",
+			"class",
+			"section",
+			"<section class=\"user-info\">\n			<input type=\"text\" placeholder=\"Username\">\n			<p class=\"btn-txt\">Start to chat</p>\n		</section>",
+			"button",
+			"9aca40",
+			"2196f3",
+			"25px",
+			"div",
+			"Test",
+			"AppStore",
+			"AppActions",
+			"CartStore",
+			"CART_",
+			"FluxCartConstants",
+			"TestConstants",
+			"TestActions",
+			"FluxCartActions",
+			"FluxCartConstants",
+			"Todo",
+			"$rootScope",
+			"vm",
+			"Position",
+			"position",
+			"company",
+			"myEmail",
+			"myPassword",
+			"myEmail",
+			"final",
+			"register",
+			"\" ",
+			"login",
+			"authMenuLink",
+			"LoginCtrl",
+			"myFirstName",
+			"myPass",
+			"GetByUsername",
+			"Username",
+			"username",
+			"myEmail",
+			"login",
+			"galleryEls",
+			"\"",
+			"naturalWidth",
+			"clientWidth",
+			"clientHeight",
+			"clientWidth",
+			"imageHeight",
+			"imageWidth",
+			"$img",
+			"\"date\": \"22/08/2015\","
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "E:\\xampp\\htdocs\\cliw"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "public/src/js/state.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1835,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1802,
+								1802
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "public/src/js/components/tool-settings/tool-settings.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1873,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								571,
+								571
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 229.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 32.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.exec":
+	{
+		"height": 98.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 254.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
