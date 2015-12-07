@@ -57,7 +57,7 @@ class Workspace extends BaseComponent {
 						<span className="fa fa-trash"></span>
 					</div>
 				</section>
-				<canvas className="canvas-sheet"></canvas>
+				<canvas id="mainCanvas" className="canvas-sheet"></canvas>
 				<div className="scrollbar horizontal"><span className="cursor"></span></div>
 				<div className="scrollbar vertical"><span className="cursor"></span></div>
 			</section>
