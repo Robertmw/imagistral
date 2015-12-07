@@ -400,6 +400,61 @@ header {
 		}
 	}
 
+	.font--weight {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		padding: 15px 0;
+		border-bottom: 1px solid @dark;
+
+		color: white;
+
+		.weight {
+			&--container {
+				position: relative;
+				width: 100px;
+				height: 25px;
+				padding: 5px;
+				border: 1px solid @grey;
+				margin-left: auto;
+
+				background-color: @dark;
+
+				color: @light-grey;
+				text-align: center;
+				font-size: 13px;
+				
+				cursor: pointer;
+			}
+
+			&--wrapper {
+				width: 100%;
+				border: 0;
+				margin: -1px 0 0 0;
+				background: transparent;
+
+				color: @light-grey;
+
+				outline: none;
+
+				option {
+					width: 100%;
+					padding: 3px 0;
+					border: none;
+					border-bottom: 1px solid @grey;
+					background-color: @grey;
+
+
+					color: @light-grey;
+
+					-webkit-appearance: none;
+					outline: none;
+				}
+			}
+		}
+	}
+
 	.font--align {
 		padding: 15px 0;
 

@@ -18,7 +18,7 @@ class FontSettings extends BaseComponent {
 	constructor(props) {
 		super(props);
 
-		this._bind('_changeFontSize', '_changeFontStyle', '_changeFontFamily', '_changeTextAlign');
+		this._bind('_changeFontSize', '_changeFontStyle', '_changeFontFamily', '_changeTextAlign', '_changeFontWeight');
 	}
 
 	_changeFontSize(event) {
@@ -37,6 +37,11 @@ class FontSettings extends BaseComponent {
 		this.props.actions.changeTextAlign(event.target.id);
 	}
 
+	_changeFontWeight(event) {
+		this.props.actions.changeFontWeight(event.target.value);
+	}
+
+
 	render() {
 		const props = this.props.settings;
 
@@ -48,10 +53,6 @@ class FontSettings extends BaseComponent {
 			{
 				name: 'bold',
 				class: 'fa fa-lg fa-bold'
-			},
-			{
-				name: 'underline',
-				class: 'fa fa-lg fa-underline'
 			}
 		];
 		const renderButtons = styleButtons.map((btn, index) => {
@@ -86,16 +87,27 @@ class FontSettings extends BaseComponent {
 			)
 		});
 
+		const fontWeights = ['thin', 'normal', 'bold'];
+		const renderWeights = fontWeights.map((el, index) => {
+			return (
+				<option
+					key = {index}
+					value = {el}
+					selected = {props.fontWeight === el ? true : false}
+				>{el}</option>
+			);
+		});
+
 		const fontAligns = ['left', 'center', 'right'];
 		const renderAligns = fontAligns.map((el, index) => {
 			let css = (props.textAlign.indexOf(el) > -1) ? 'align--option active' : 'align--option';
 			return (
-				<p 
+				<span 
 					className = {css}
 					id = {el}
 					key = {index}
 					onClick = {this._changeTextAlign}
-				>{el}</p>
+				>{el}</span>
 			);
 		});
 
@@ -119,6 +131,14 @@ class FontSettings extends BaseComponent {
 						{renderButtons}
 					</ul>
 				</section>
+				<section className="font--weight">
+					<h3>Font weight</h3>
+					<div className="weight--container">
+						<select className="weight--wrapper" onChange={this._changeFontWeight}>
+							{renderWeights}
+						</select>
+					</div>
+				</section>
 				<section className="font--align">
 					<h3>Text align</h3>
 					<div className="align--wrapper">
@@ -139,6 +159,7 @@ export default branch(FontSettings, {
 		changeFontSize: actions.changeFontSize,
 		changeFontStyle: actions.changeFontStyle,
 		changeFontFamily: actions.changeFontFamily,
-		changeTextAlign: actions.changeTextAlign
+		changeTextAlign: actions.changeTextAlign,
+		changeFontWeight: actions.changeFontWeight
 	}
 });

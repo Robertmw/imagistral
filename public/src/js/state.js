@@ -70,6 +70,7 @@ const tree = new Baobab({
 			fontFamily: 'Arial',
 			fontSize: 14,
 			fontStyle: [],
+			fontWeight: 'normal',
 			textAlign: 'left'
 		},
 		eraser: {
