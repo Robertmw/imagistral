@@ -10,6 +10,8 @@ import React from 'react';
 import BaseComponent from '../base-component/base-component';
 import {branch} from 'baobab-react/higher-order';
 
+import FontSettings from './components/font-settings/font-settings';
+
 const displayName = 'Sidebar';
 
 class ToolSettings extends BaseComponent {
@@ -18,11 +20,11 @@ class ToolSettings extends BaseComponent {
 		super(props);
 
 		this.state = {
-			wrapperClass: 'toolbar-advanced-settings'
+			wrapperClass: ''
 		};
 	}
 
-	componentWillReceiveProps (newProps) {
+	componentWillReceiveProps(newProps) {
 		if (newProps.toolSettings.visible) {
 			this.setState({wrapperClass: 'toolbar-advanced-settings animated fadeInLeft'});
 		} else {
@@ -30,42 +32,24 @@ class ToolSettings extends BaseComponent {
 		}
 	}
 
+	_getToolSettings(selectedTool) {
+		switch (selectedTool) {
+			case 'text':
+				return (<FontSettings />);
+				break;
+
+			default: 
+				return false;
+		}
+	}
+
 	render() {
 		const props = this.props.toolSettings;
+		const toolElement = this._getToolSettings(this.props.selectedTool);
 
 		return (
-			<div>
-				{props.visible && 
-					<aside className={this.state.wrapperClass}>
-						<p className="settings-title">Text settings</p>
-						<section className="color-settings">
-							<span>Color</span>
-							<input type="color" value="#ff0000" />
-						</section>
-						<section className="font-settings">
-							<span>Font size</span>
-							<input type="text" value="14" />
-							<label>px</label>
-						</section>
-						<section className="font-settings">
-							<span>Font weigth</span>
-							<div className="custom-select">
-								<label className="current-value">
-									400
-									<span className="fa fa-caret-down"></span>
-								</label>
-							</div>
-						</section>
-						<section className="font-style">
-							<span>Font style</span>
-							<ul className="font-styling">
-								<li><span className="fa fa-lg fa-italic"></span></li>
-								<li><span className="fa fa-lg fa-bold"></span></li>
-								<li><span className="fa fa-lg fa-underline"></span></li>
-							</ul>
-						</section>
-					</aside>
-				}
+			<div className={this.state.wrapperClass}>
+				{props.visible && toolElement}
 			</div>
 		);
 	}
@@ -74,6 +58,7 @@ class ToolSettings extends BaseComponent {
 
 export default branch(ToolSettings, {
 	cursors: {
+		selectedTool: ['selectedTool'],
 		toolSettings: ['toolSettings']
 	}
 });

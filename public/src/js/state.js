@@ -46,14 +46,14 @@ const tree = new Baobab({
 			icon: 'fa fa-lg fa-square',
 			caret: 'fa fa-caret-down caret',
 			subTools: [
-				{
+				/*{
 					icon: 'fa fa-lg fa-square-o',
 					label: 'Square shape'
 				},
 				{
 					icon: 'fa fa-lg fa-circle-o',
 					label: 'Circle shape'
-				}
+				}*/
 			]
 		},
 		{
@@ -69,12 +69,6 @@ const tree = new Baobab({
 			subTools: [],
 		},
 		{
-			name: 'picker',
-			icon: 'fa fa-lg fa-eyedropper',
-			caret: '',
-			subTools: [],
-		},
-		{
 			name: 'zoom',
 			icon: 'fa fa-lg fa-search',
 			caret: 'fa fa-caret-down caret',
@@ -86,11 +80,7 @@ const tree = new Baobab({
 		text: {
 			fontFamily: 'Arial',
 			fontSize: 14,
-			fontStyle: {
-				bold: false,
-				italic: false,
-				underline: false
-			},
+			fontStyle: [],
 			textAlign: 'left'
 		},
 		eraser: {
