@@ -1,12 +1,4 @@
 /**
- * SIZE FUNCTIONS
- */
- export function changeSize(tree) {
- 	let state = tree.get(['workspace', 'hideSettings']);
- 	tree.set(['workspace', 'hideSettings'], !state);
- }
-
-/**
  * ZOOM FUNCTIONS
  */
 

@@ -1,6 +1,6 @@
 /**
  *
- * Sidebar Component
+ * Tool Element Component
  * @parent Sidebar
  * @author Robert P.
  *
@@ -14,35 +14,45 @@ const displayName = 'ToolElement';
 
 export default class ToolElement extends BaseComponent {
 
-  constructor (props) {
-    super(props);
+	constructor (props) {
+		super(props);
 
-    this._bind('_handleClick');
-  }
+		this._bind('_handleClick');
+	}
 
-  _handleClick() {
-    this.props.handleClick(this.props.tool.name);
-  }
+	_handleClick() {
+		this.props.handleClick(this.props.tool.name);
+	}
 
-  render() {
-    let elClassName = this.props.selected ? 'toolbar-element selected' : 'toolbar-element';
-    return (
-      <div 
-        className = {elClassName} 
-        key = {this.props.key}
-        onClick = {this._handleClick}
-      >
-        <span className = {this.props.tool.icon}></span>
-        {this.props.tool.caret !== '' && <span className = {this.props.tool.caret}></span>}
-        {this.props.tool.subTools.length !== 0 && <SubToolElement subTool = {this.props.tool.subTools} selected = {this.props.selected}/>}
-      </div>
-    );
-  }
+	render() {
+		let elClassName = this.props.selected ? 'toolbar-element selected' : 'toolbar-element';
+		return (
+			<div 
+				className = {elClassName} 
+				key = {this.props.key}
+				onClick = {this._handleClick}
+			>
+				<span className = {this.props.tool.icon}></span>
+				{
+					this.props.tool.caret !== '' && 
+					<span className = {this.props.tool.caret}></span>
+				}
+				{
+					this.props.tool.subTools.length !== 0 && 
+					<SubToolElement 
+						subTool = {this.props.tool.subTools}
+						selected = {this.props.selected}
+					/>
+				}
+			</div>
+		);
+	}
 
 }
 
 ToolElement.propTypes = {
-  tool: React.PropTypes.object.isRequired,
-  handleClick: React.PropTypes.func.isRequired
+	handleClick: React.PropTypes.func.isRequired,
+	selected: React.PropTypes.bool,
+	tool: React.PropTypes.object.isRequired
 };
 

@@ -9,8 +9,6 @@ const tree = new Baobab({
 	selectedTool: 'cursor',
 	color: 'ffffff',
 	workspace: {
-		small: false,
-		hideSettings: false,
 		zoom: 100,
 		rotate: 0,
 		zoomIn: true,

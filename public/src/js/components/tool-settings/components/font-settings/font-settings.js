@@ -72,11 +72,11 @@ class FontSettings extends BaseComponent {
 			return (
 				<div className="font--family--element" key={el}>
 					<input
-						type="radio"
-						name="fontFamily"
-						value={el}
 						checked = {props.fontFamily === el}
+						name="fontFamily"
 						onChange = {this._changeFontFamily}
+						type="radio"
+						value={el}
 					/>
 					<label>
 						<span className="radio--placeholder"></span>

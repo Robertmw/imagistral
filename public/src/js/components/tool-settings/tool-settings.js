@@ -1,6 +1,6 @@
 /**
  *
- * Sidebar Component
+ * Tool Settings Component
  * @parent none
  * @author Robert P.
  *
@@ -29,7 +29,9 @@ class ToolSettings extends BaseComponent {
 		if (newProps.toolSettings.visible) {
 			this.setState({wrapperClass: 'toolbar-advanced-settings animated fadeInLeft'});
 		} else {
-			this.setState({wrapperClass: 'toolbar-advanced-settings animated fadeOutLeft'});
+			if (this.state.wrapperClass != ''){
+				this.setState({wrapperClass: 'toolbar-advanced-settings animated fadeOutLeft'});
+			}
 		}
 	}
 
