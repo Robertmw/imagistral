@@ -11,6 +11,8 @@ import BaseComponent from '../base-component/base-component';
 import {branch} from 'baobab-react/higher-order';
 import * as actions from './actions';
 
+import zoom from '../../zoom';
+
 const displayName = 'Workspace';
 
 class Workspace extends BaseComponent {
@@ -18,7 +20,7 @@ class Workspace extends BaseComponent {
 	constructor (props) {
 		super(props);
 
-		this._bind('zoomIn', 'zoomOut');
+		this._bind('zoomIn', 'zoomOut', '_zoomEvent');
 	}
 
 	zoomIn() {
@@ -28,6 +30,34 @@ class Workspace extends BaseComponent {
 	zoomOut() {
 		this.props.actions.zoomOut();
 	}
+
+
+	_getclickPosition(e) {
+		var x, y;
+		if (e.pageX || e.pageY) { 
+			x = e.pageX;
+			y = e.pageY;
+		} else { 
+			x = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft; 
+			y = e.clientY + document.body.scrollTop + document.documentElement.scrollTop; 
+		} 
+
+		return {
+			x: x,
+			y: y
+		};
+	}
+
+	_zoomEvent(e) {
+		var position = this._getclickPosition(e);
+
+		zoom.to({
+			x: position.x,
+			y: position.y,
+			scale: this.props.workspace.zoom / 100
+		});
+	}
+
 
 	render() {
 		const workspace = this.props.workspace;
@@ -57,7 +87,7 @@ class Workspace extends BaseComponent {
 						<span className="fa fa-trash"></span>
 					</div>
 				</section>
-				<canvas className="canvas-sheet"></canvas>
+				<canvas className="canvas-sheet" onClick={this._zoomEvent}></canvas>
 				<div className="scrollbar horizontal"><span className="cursor"></span></div>
 				<div className="scrollbar vertical"><span className="cursor"></span></div>
 			</section>

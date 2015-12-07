@@ -1,40 +1,40 @@
-/**
- * ZOOM FUNCTIONS
- */
 
- export function zoomIn(tree) {
- 	let zoom =  tree.get(['workspace', 'zoom']);
+export function zoomIn(tree) {
+	let zoomValue =  tree.get(['workspace', 'zoom']);
 
- 	tree.set(['workspace', 'zoomIn'], true);
- 	if (zoom <= 200) {
- 		zoom += 50;
- 		tree.set(['workspace', 'zoom'], zoom);
- 	} 
+	tree.set(['workspace', 'zoomIn'], true);
+	if (zoomValue <= 200) {
+		zoomValue += 50;
+		tree.set(['workspace', 'zoom'], zoomValue);
+	} 
 
- 	if (zoom === 250) {
- 		tree.set(['workspace', 'zoomIn'], false);
- 	}
+	if (zoomValue === 250) {
+		tree.set(['workspace', 'zoomIn'], false);
+	}
 
- 	if (zoom > 50) {
- 		tree.set(['workspace', 'zoomOut'], true);
- 	}
+	if (zoomValue > 50) {
+		tree.set(['workspace', 'zoomOut'], true);
+	}
 
- }
+	let sheet = document.querySelector( 'canvas' );
 
- export function zoomOut(tree) {
- 	let zoom =  tree.get(['workspace', 'zoom']);
+}
 
- 	tree.set(['workspace', 'zoomOut'], true);
- 	if (zoom >= 100) {
- 		zoom -= 50;
- 		tree.set(['workspace', 'zoom'], zoom);
- 	} 
+export function zoomOut(tree) {
+	let zoomValue =  tree.get(['workspace', 'zoom']);
 
- 	if (zoom === 50) {
- 		tree.set(['workspace', 'zoomOut'], false);
- 	}
+	tree.set(['workspace', 'zoomOut'], true);
+	if (zoomValue >= 100) {
+		zoomValue -= 50;
+		tree.set(['workspace', 'zoom'], zoomValue);
+	} 
 
- 	if (zoom < 250) {
- 		tree.set(['workspace', 'zoomIn'], true);
- 	}
- }
+	if (zoomValue === 50) {
+		tree.set(['workspace', 'zoomOut'], false);
+	}
+
+	if (zoomValue < 250) {
+		tree.set(['workspace', 'zoomIn'], true);
+	}
+
+}
