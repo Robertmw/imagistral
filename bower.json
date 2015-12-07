@@ -1,0 +1,21 @@
+{
+  "name": "cliw",
+  "description": "photo editor with share on wall functionality",
+  "main": "index.js",
+  "authors": [
+    "CLIW Team"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "photo",
+    "editor",
+    "wall",
+    "js",
+    "es6"
+  ],
+  "homepage": "https://github.com/Robertmw/cliw",
+  "moduleType": [],
+  "devDependencies": {
+    "fabric.js": "fabric#~1.5.0"
+  }
+}

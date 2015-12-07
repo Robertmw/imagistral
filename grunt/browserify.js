@@ -4,7 +4,8 @@ module.exports = {
       transform: ['babelify'],
       external: [
         '../node_modules/react/react.js',
-        '../node_modules/react-dom/index.js'
+        '../node_modules/react-dom/index.js',
+		'../bower_components/fabric.js/dist/fabric.min.js'
       ]
     },
     files:{
