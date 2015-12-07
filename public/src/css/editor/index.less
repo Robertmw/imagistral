@@ -284,30 +284,11 @@ header {
 		font-weight: 300;
 	}
 
-	.color-settings {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-
-		padding: 15px 0;
-		border-bottom: 1px solid @dark;
-
-		color: white;
-		
-		.color-bucket {
-			display: block;
-			width: @headerHeight / 2;
-			height: @headerHeight / 2;
-			margin-left: auto;
-			box-shadow: inset 0 0 0 1px white, 0 0 0 2px @dark;
-
-			background-color: @blue;
-
-			cursor: pointer;
-		}
+	h3 {
+		line-height: 28px;
 	}
 
-	.font-settings {
+	.font--size {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -317,8 +298,7 @@ header {
 
 		color: white;
 
-		input[type="text"],
-		input[type="number"] {
+		input[type="text"] {
 			width: @headerHeight;
 			padding: 5px 0;
 			border: 1px solid @grey;
@@ -330,13 +310,9 @@ header {
 			color: @light-grey;
 			text-align: center;
 		}
-
-		.custom-select {
-			margin-left: auto;
-		}
 	}
 
-	.font-family {
+	.font--family {
 		display: block;
 
 		padding: 15px 0;
@@ -392,7 +368,7 @@ header {
 		}
 	}
 
-	.font-style {
+	.font--style {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -401,7 +377,7 @@ header {
 
 		color: white;
 
-		.font-styling {
+		.fonts--list {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
@@ -418,6 +394,34 @@ header {
 
 				&:hover,
 				.active {
+					color: white;
+				}
+			}
+		}
+	}
+
+	.font--align {
+		padding: 15px 0;
+
+		color: white;
+
+		.align {
+			&--wrapper {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				margin-top: 10px;
+			}
+
+			&--option {
+				color: @light-grey;
+				font-size: 13px;
+				font-weight: 700;
+				text-transform: uppercase;
+
+				cursor: pointer;
+
+				&.active {
 					color: white;
 				}
 			}

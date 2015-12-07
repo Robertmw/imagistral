@@ -18,6 +18,12 @@ export function changeFontFamily(tree, value) {
 	tree.set(['toolSettings', 'text', 'fontFamily'], value);
 }
 
+export function changeTextAlign(tree, value) {
+	tree.set(['toolSettings', 'text', 'textAlign'], value);
+
+	console.log(tree.get());
+}
+
 export function changeFontStyle(tree, value) {
 	const state = tree.get(['toolSettings', 'text']);
 	let fontStyle = objToArray(state.fontStyle);
@@ -31,3 +37,4 @@ export function changeFontStyle(tree, value) {
 
 	tree.set(['toolSettings', 'text', 'fontStyle'], fontStyle);
 }
+
