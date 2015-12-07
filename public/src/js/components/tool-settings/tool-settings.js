@@ -11,6 +11,7 @@ import BaseComponent from '../base-component/base-component';
 import {branch} from 'baobab-react/higher-order';
 
 import FontSettings from './components/font-settings/font-settings';
+import PencilSettings from './components/pencil-settings/pencil-settings';
 
 const displayName = 'Sidebar';
 
@@ -36,6 +37,10 @@ class ToolSettings extends BaseComponent {
 		switch (selectedTool) {
 			case 'text':
 				return (<FontSettings />);
+				break;
+
+			case 'pencil':
+				return (<PencilSettings />);
 				break;
 
 			default: 
