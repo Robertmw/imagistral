@@ -1,10 +1,12 @@
-const fabric = require('../../../../bower_components/fabric.js/dist/fabric.min.js').fabric;
-let canvas = null;
+import tree from '../state';
+import fabricjs from '../../../../bower_components/fabric.js/dist/fabric.min.js';
+import {pencil} from './draw';
 
-const init = () => {
-	canvas = new fabric.Canvas('mainCanvas', {
+export let canvas = null;
+export function engineInit(){
+	canvas = new fabricjs.fabric.Canvas('mainCanvas', {
 		backgroundColor: 'rgb(255,255,255)',
-		isDrawingMode: true,
+		selection: false,
 		width: window.innerWidth * 0.6,
 		height: window.innerHeight * 0.6,
 	});
@@ -12,7 +14,24 @@ const init = () => {
 	fabric.Object.prototype.selectable = false;
 };
 
-module.exports = {
-	init: init,
-	canvas: canvas
+const updateTool = () => {
+	const currentState = tree.get();
+	console.log(currentState);
+	switch (currentState.selectedTool) {
+		case 'pencil':
+			pencil(currentState);
+			break;
+		case 'brush':
+			console.log('brush');
+			break;
+		case 'text':
+			console.log('text');
+			break;
+		default:
+			console.log('default');
+	}
 };
+
+tree.on('update', () => {
+	updateTool();
+});
