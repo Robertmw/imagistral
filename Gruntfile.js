@@ -92,6 +92,7 @@
 		}
 	});
 
-	grunt.registerTask('default', 'The development build task', ['eslint', 'browserify', 'uglify', 'less', 'copy']);
+	grunt.registerTask('default', 'The default build task', ['dev', 'watch']);
+	grunt.registerTask('dev', 'The development build task', ['eslint', 'browserify', 'uglify', 'less', 'copy']);
 
 }
