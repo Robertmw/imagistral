@@ -49,7 +49,10 @@ class Header extends BaseComponent {
 						<span className="fa fa-lg fa-th"></span>
 					</div>
 					<div className="work--profile">
-						<img className="avatar" src={this.props.user.avatar}></img>
+						<img
+							className="avatar"
+							src={this.props.user.avatar}
+						/>
 					</div>
 				</div>
 			</header>
@@ -63,4 +66,4 @@ export default branch(Header, {
 		title: ['canvasTitle'],
 		user: ['user']
 	}
-})
+});

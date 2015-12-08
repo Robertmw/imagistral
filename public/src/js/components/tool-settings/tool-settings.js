@@ -29,7 +29,7 @@ class ToolSettings extends BaseComponent {
 		if (newProps.toolSettings.visible) {
 			this.setState({wrapperClass: 'toolbar-advanced-settings animated fadeInLeft'});
 		} else {
-			if (this.state.wrapperClass != ''){
+			if (this.state.wrapperClass !== ''){
 				this.setState({wrapperClass: 'toolbar-advanced-settings animated fadeOutLeft'});
 			}
 		}

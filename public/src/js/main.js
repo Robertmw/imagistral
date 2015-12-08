@@ -9,7 +9,6 @@ import ToolSettings from './components/tool-settings/tool-settings';
 import Workspace from './components/workspace/workspace';
 import {engineInit} from './engine/engine';
 
-
 class App extends Component {
 
 	render() {
@@ -24,6 +23,8 @@ class App extends Component {
 	}
 
 }
+
+App.prototype.displayName = "App Name";
 
 const RootedApp = root(App, tree);
 

@@ -60,8 +60,8 @@ class FontSettings extends BaseComponent {
 			return (
 				<li key = {btn.name}>
 					<span 
-						id={btn.name}
 						className={css}
+						id={btn.name}
 						onClick = {this._changeFontStyle}
 					></span>
 				</li>
@@ -71,7 +71,10 @@ class FontSettings extends BaseComponent {
 		const fontFamilies = ['Arial', 'Open Sans', 'Graffiti'];
 		const renderFonts = fontFamilies.map((el, index) => {
 			return (
-				<div className="font--family--element" key={el}>
+				<div 
+					className="font--family--element" 
+					key={el}
+				>
 					<input
 						checked = {props.fontFamily === el}
 						name="fontFamily"
@@ -81,10 +84,10 @@ class FontSettings extends BaseComponent {
 					/>
 					<label>
 						<span className="radio--placeholder"></span>
-						{el}
+						{el};
 					</label>
 				</div>
-			)
+			);
 		});
 
 		const fontWeights = ['thin', 'normal', 'bold'];
@@ -92,8 +95,8 @@ class FontSettings extends BaseComponent {
 			return (
 				<option
 					key = {index}
-					value = {el}
 					selected = {props.fontWeight === el ? true : false}
+					value = {el}
 				>{el}</option>
 			);
 		});
@@ -116,7 +119,11 @@ class FontSettings extends BaseComponent {
 				<p className="settings-title">Text settings</p>
 				<section className="font--size">
 					<h3>Font size</h3>
-					<input type="text" onChange = {this._changeFontSize} value={props.fontSize} />
+					<input 
+						onChange = {this._changeFontSize} 
+						type="text" 
+						value={props.fontSize}
+					/>
 					<label>px</label>
 				</section>
 				<section className="font--family">
@@ -134,7 +141,10 @@ class FontSettings extends BaseComponent {
 				<section className="font--weight">
 					<h3>Font weight</h3>
 					<div className="weight--container">
-						<select className="weight--wrapper" onChange={this._changeFontWeight}>
+						<select 
+							className="weight--wrapper" 
+							onChange={this._changeFontWeight}
+						>
 							{renderWeights}
 						</select>
 					</div>
