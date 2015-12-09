@@ -7,6 +7,10 @@ import Header from './components/header/header';
 import Sidebar from './components/sidebar/sidebar';
 import ToolSettings from './components/tool-settings/tool-settings';
 import Workspace from './components/workspace/workspace';
+
+import Popups from './components/popups/popups';
+
+
 import {engineInit} from './engine/engine';
 
 class App extends Component {
@@ -18,6 +22,7 @@ class App extends Component {
 				<Sidebar />
 				<ToolSettings />
 				<Workspace />
+				<Popups />
 			</section>
 		);
 	}

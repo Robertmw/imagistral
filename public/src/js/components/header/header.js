@@ -9,6 +9,7 @@
 import React from 'react';
 import BaseComponent from '../base-component/base-component';
 import {branch} from 'baobab-react/higher-order';
+import {isEmpty} from '../../utils.js';
 
 const displayName = 'Header';
 
@@ -16,22 +17,23 @@ class Header extends BaseComponent {
 
 	constructor (props) {
 		super(props);
+
+		this._bind('_checkLogin');
 	}
 
-	render() {
-		return (
-			<header>
-				<div className="logo">
-					<span className="fa fa-lg fa-camera"></span>
+	_checkLogin(user) {
+		let value;
+
+		if (isEmpty(user)) {
+			value = (
+				<div className="work-buttons">
+					<div className="work--upload">
+						<p>Login</p>
+					</div>
 				</div>
-				<div className="work-title">
-					<span className="fa fa-header"></span>
-					<h4>{this.props.title}</h4>
-				</div>
-				<div className="work-history">
-					<span className="fa fa-lg fa-reply unavailable"></span>
-					<span className="fa fa-lg fa-share"></span>
-				</div>
+			);
+		} else {
+			value = (
 				<div className="work-buttons">
 					<div className="work--download">
 						<span className="fa fa-lg fa-cloud-download"></span>
@@ -55,6 +57,29 @@ class Header extends BaseComponent {
 						/>
 					</div>
 				</div>
+			);
+		}
+
+		return value;
+	}
+
+	render() {
+		let loggedButton = this._checkLogin(this.props.user);
+
+		return (
+			<header>
+				<div className="logo">
+					<span className="fa fa-lg fa-camera"></span>
+				</div>
+				<div className="work-title">
+					<span className="fa fa-header"></span>
+					<h4>{this.props.title}</h4>
+				</div>
+				<div className="work-history">
+					<span className="fa fa-lg fa-reply unavailable"></span>
+					<span className="fa fa-lg fa-share"></span>
+				</div>
+				{loggedButton}
 			</header>
 		);
 	}

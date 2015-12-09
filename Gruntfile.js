@@ -87,7 +87,7 @@
 			},
 			js: {
 				files: ['public/src/**/*.js'],
-				tasks: ['browserify']
+				tasks: ['eslint', 'browserify']
 			}
 		}
 	});
