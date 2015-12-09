@@ -1,3 +1,3 @@
 export function openLoginPopup(tree) {
-	tree.set(['popups', 'login', 'show'], true);
+	tree.set(['popups', 'active'], 'login');
 }

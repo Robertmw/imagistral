@@ -9,6 +9,7 @@ const tree = new Baobab({
 	selectedTool: 'cursor',
 	color: 'ffffff',
 	popups: {
+		active: '',
 		login: {
 			show: false
 		},

@@ -10,30 +10,19 @@ import React from 'react';
 import BaseComponent from '../../../base-component/base-component';
 import {branch} from 'baobab-react/higher-order';
 
-import * as actions from './actions';
-
 class LoginPopup extends BaseComponent {
 
 	constructor(props) {
 		super(props);
-
-		this._bind('_handleCloseClick');
 	}
-
-	_handleCloseClick() {
-		this.props.actions.close();
-	}
-
 	render() {
-		const props = this.props.login;
-
 		return (
 			<div className="popup bounceIn animated">
 				<div className="popup__header">
 					<h3 className="popup__title">Login with</h3>
 					<span 
 						className="popup__close fa fa-lg fa-times" 
-						onClick={this._handleCloseClick}
+						onClick={this.props.handleClose}
 					/>
 				</div>
 				<div className="popup__wrapper popup__wrapper--inline">
@@ -55,11 +44,4 @@ class LoginPopup extends BaseComponent {
 
 }
 
-export default branch(LoginPopup, {
-	cursors: {
-		popups: ['popups', 'login']
-	},
-	actions: {
-		close: actions.closePopup
-	}
-});
+export default LoginPopup;
