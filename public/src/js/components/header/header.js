@@ -9,6 +9,8 @@
 import React from 'react';
 import BaseComponent from '../base-component/base-component';
 import {branch} from 'baobab-react/higher-order';
+import * as actions from './actions';
+
 import {isEmpty} from '../../utils.js';
 
 const displayName = 'Header';
@@ -27,7 +29,10 @@ class Header extends BaseComponent {
 		if (isEmpty(user)) {
 			value = (
 				<div className="work-buttons">
-					<div className="work--upload">
+					<div 
+						className="work--upload"
+						onClick={this.props.actions.openLogin}
+					>
 						<p>Login</p>
 					</div>
 				</div>
@@ -90,5 +95,8 @@ export default branch(Header, {
 	cursors: {
 		title: ['canvasTitle'],
 		user: ['user']
+	},
+	actions: {
+		openLogin: actions.openLoginPopup
 	}
 });

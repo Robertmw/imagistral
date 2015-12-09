@@ -10,8 +10,7 @@ const tree = new Baobab({
 	color: 'ffffff',
 	popups: {
 		login: {
-			show: true,
-			methods: ['facebook']
+			show: false
 		},
 		newFile: {
 			show: false
