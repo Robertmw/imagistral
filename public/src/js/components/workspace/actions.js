@@ -3,7 +3,7 @@
  */
 
  export function zoomIn(tree) {
- 	let zoom =  tree.get(['workspace', 'zoom']);
+ 	let zoom = tree.get(['workspace', 'zoom']);
 
  	tree.set(['workspace', 'zoomIn'], true);
  	if (zoom <= 200) {
@@ -22,7 +22,7 @@
  }
 
  export function zoomOut(tree) {
- 	let zoom =  tree.get(['workspace', 'zoom']);
+ 	let zoom = tree.get(['workspace', 'zoom']);
 
  	tree.set(['workspace', 'zoomOut'], true);
  	if (zoom >= 100) {

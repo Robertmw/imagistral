@@ -6,23 +6,23 @@ function objToArray(obj) {
 	return arr;
 }
 
-export function changeFontSize(tree, value) {
+export function changeFontSize(tree, value) {	
 	tree.set(['toolSettings', 'text', 'fontSize'], value);
 }
 
-export function changeTextAlign(tree, value) {
+export function changeTextAlign(tree, value) {	
 	tree.set(['toolSettings', 'text', 'textAlign'], value);
 }
 
-export function changeFontFamily(tree, value) {
+export function changeFontFamily(tree, value) {	
 	tree.set(['toolSettings', 'text', 'fontFamily'], value);
 }
 
-export function changeFontWeight(tree, value) {
+export function changeFontWeight(tree, value) {	
 	tree.set(['toolSettings', 'text', 'fontWeight'], value);
 }
 
-export function changeFontStyle(tree, value) {
+export function changeFontStyle(tree, value) {	
 /*	const state = tree.get(['toolSettings', 'text']);
 	let fontStyle = objToArray(state.fontStyle);
 	let index = fontStyle.indexOf(value);
@@ -35,4 +35,3 @@ export function changeFontStyle(tree, value) {
 
 	tree.set(['toolSettings', 'text', 'fontStyle'], value);
 }
-

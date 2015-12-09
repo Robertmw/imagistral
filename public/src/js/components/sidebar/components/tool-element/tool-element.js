@@ -40,8 +40,8 @@ export default class ToolElement extends BaseComponent {
 				{
 					this.props.tool.subTools.length !== 0 && 
 					<SubToolElement 
-						subTool = {this.props.tool.subTools}
 						selected = {this.props.selected}
+						subTool = {this.props.tool.subTools}
 					/>
 				}
 			</div>

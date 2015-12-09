@@ -39,9 +39,15 @@ class Workspace extends BaseComponent {
 			<section className="workspace">
 				<section className="workspace-settings-bar">
 					<div className="zoom-settings">
-						<span className={zoomOutClass} onClick={this.zoomOut}></span>
+						<span 
+							className={zoomOutClass} 
+							onClick={this.zoomOut}
+						></span>
 						<span className="fa fa-lg fa-search"></span>
-						<span className={zoomInClass} onClick={this.zoomIn}></span>
+						<span 
+							className={zoomInClass} 
+							onClick={this.zoomIn}
+						></span>
 						<div className="custom-select">
 							<label className="current-zoom">
 								{workspace.zoom + '%'}
@@ -57,7 +63,10 @@ class Workspace extends BaseComponent {
 						<span className="fa fa-trash"></span>
 					</div>
 				</section>
-				<canvas id="mainCanvas" className="canvas-sheet"></canvas>
+				<canvas 
+					className="canvas-sheet"
+					id="mainCanvas" 
+				/>
 				<div className="scrollbar horizontal"><span className="cursor"></span></div>
 				<div className="scrollbar vertical"><span className="cursor"></span></div>
 			</section>

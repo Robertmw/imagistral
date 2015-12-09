@@ -33,7 +33,11 @@ class PencilSettings extends BaseComponent {
 				<p className="settings-title">Pencil settings</p>
 				<section className="font--size">
 					<h3>Pencil size</h3>
-					<input type="text" onChange = {this._changePencilSize} value={props.size} />
+					<input 
+						onChange = {this._changePencilSize} 
+						type="text" 
+						value={props.size}
+					/>
 					<label>px</label>
 				</section>
 			</aside>
