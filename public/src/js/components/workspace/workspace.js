@@ -18,7 +18,7 @@ class Workspace extends BaseComponent {
 	constructor (props) {
 		super(props);
 
-		this._bind('zoomIn', 'zoomOut');
+		this._bind('zoomIn', 'zoomOut', '_shouldRenderCanvas');
 	}
 
 	zoomIn() {
@@ -29,11 +29,40 @@ class Workspace extends BaseComponent {
 		this.props.actions.zoomOut();
 	}
 
+	_shouldRenderCanvas(props) {
+		if (props.width === 0 && props.height === 0) {
+			return (
+				<div className="canvas__intro">
+					<span className="fa fa--big fa-smile-o" />
+					<div 
+						className="canvas__intro__title"
+						onClick = {this.props.actions.openNewcanvasPopup}
+					>
+						<span>Create a </span>
+						<div className = "canvas__intro__btn">
+							<span className="fa fa-file-o" />
+							<span>  new canvas</span>
+						</div>
+					</div>
+				</div>
+			);
+		}
+
+		return (
+			<canvas 
+				className="canvas-sheet"
+				id="mainCanvas" 
+			/>
+		);
+	}
+
 	render() {
 		const workspace = this.props.workspace;
 
 		const zoomInClass = workspace.zoomIn ? "fa fa-plus" : "fa fa-plus unavailable";
 		const zoomOutClass = workspace.zoomOut ? "fa fa-minus" : "fa fa-minus unavailable";
+
+		const canvasOrNot = this._shouldRenderCanvas(this.props.canvas);
 
 		return (
 			<section className="workspace">
@@ -75,10 +104,7 @@ class Workspace extends BaseComponent {
 						</div>
 					</div>
 				</section>
-				<canvas 
-					className="canvas-sheet"
-					id="mainCanvas" 
-				/>
+				{canvasOrNot}
 				<div className="scrollbar scrollbar--horizontal"><span className="cursor"></span></div>
 				<div className="scrollbar scrollbar--vertical"><span className="cursor"></span></div>
 			</section>
@@ -89,7 +115,8 @@ class Workspace extends BaseComponent {
 
 export default branch(Workspace, {
 	cursors: {
-		workspace: ['workspace']
+		workspace: ['workspace'],
+		canvas: ['canvas']
 	},
 	actions: {
 		zoomIn: actions.zoomIn,

@@ -74,6 +74,48 @@
 		}
 	}
 
+	.canvas {
+		&__intro {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%);
+			
+			color: @grey;	
+			font-size: 25px;
+			font-weight: 700;
+			text-align: center;
+
+			-webkit-user-select: none; 
+			user-select: none; 
+
+			.fa {
+				&--big {
+					font-size: 80px;
+					margin-bottom: 15px;
+				}
+			}
+
+			&__title {
+				display: flex;
+				align-items: center;
+			}
+
+			&__btn {
+				margin-left: 10px;
+				
+				line-height: 36px;
+
+				cursor: pointer;
+				transition: color 450ms linear;
+
+				&:hover {
+					color: @light-grey;
+				}
+			}
+		}
+	}
+
 	.canvas-container{
 		position: absolute!important;
 		top: 50%;

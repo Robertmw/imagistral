@@ -18,6 +18,8 @@ class Popups extends BaseComponent {
 
 	constructor(props) {
 		super(props);
+
+		this._bind('_closePopup');
 	}
 
 	_shouldBeVisible(props) {
@@ -32,6 +34,11 @@ class Popups extends BaseComponent {
 		return false;
 	}
 
+	_closePopup(e) {
+		e.stopPropagation();
+		this.props.actions.closePopup();
+	}
+
 	render() {
 		const props = this.props.popups;
 
@@ -39,6 +46,10 @@ class Popups extends BaseComponent {
 			<section className={props.active !== '' ? "popups active" : "popups"}>
 				{props.active === 'login' && <LoginPopup handleClose={this.props.actions.closePopup} />}
 				{props.active === 'newCanvas' && <NewCanvasPopup handleClose={this.props.actions.closePopup} />}
+				<div 
+					className="popups__overlay"
+					onClick={this._closePopup}
+				/>
 			</section>
 		);
 	}
