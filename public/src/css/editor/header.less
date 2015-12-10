@@ -1,0 +1,198 @@
+header {
+	display: flex;
+	flex-direction: row;
+
+	width: 100%;
+	height: @headerHeight;
+	border-bottom: 1px solid @dark;
+
+	background-color: @grey;
+
+	z-index: 100;
+}
+
+.header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	height: 100%;
+
+	color: white;
+
+	&--logo {
+		@logoSize: @headerHeight;
+
+		justify-content: center;
+
+		width: @logoSize;
+		height: @logoSize - 1;
+		background-color: @green;
+
+		text-align: center;
+
+		cursor: pointer;
+
+		&:hover {
+			span {
+				transform: scale(1.3);
+			}
+		}
+
+		span {
+			transition: transform 0.25s ease;
+		}
+	}
+
+	&--title  {
+
+		width: 300px;
+		padding: 18px 15px;
+		border-right: 1px solid @dark;
+
+		&:hover {
+			.icon {
+				&--edit {
+					opacity: 1;
+				}
+			}
+		}
+
+		.icon {
+			margin: 0 10px 0 0;
+
+			&--edit {
+				margin: 0 0 0 10px;
+
+				color: @light-grey;
+				
+				opacity: 0;
+				cursor: pointer;
+				transition: opacity 350ms ease;
+			}
+		}
+
+		&__edit {
+			display: flex;
+			align-items: center;
+
+			h4 {
+				font-size: 15px;
+				font-weight: 600;
+			}
+
+			input[type="text"] {
+				padding: 10px 5px;
+				border: 0;
+				border-bottom: 1px solid @dark;
+
+				background-color: transparent;
+
+				color: @light-grey;
+				font-size: 15px;
+				font-weight: 600;
+
+				outline: 0;
+			}
+
+			label {
+				color: @green;
+				cursor: pointer;
+			}
+		}
+	}
+
+	&--history {
+		justify-content: center;
+
+		width: 90px;
+		padding: 0 15px;
+		border-right: 1px solid @dark;
+
+		color: @light-grey;
+
+		span {
+			width: @headerHeight;
+
+			text-align: center;
+			line-height: @headerHeight;
+
+			cursor: pointer;
+
+			&:hover {
+				color: white;
+			}
+
+			&.unavailable {
+				color: @unavailable-grey;
+
+				cursor: default;
+			}
+		}
+	}
+}
+
+.work-buttons {
+	display: flex;
+	flex-direction: row;
+
+	margin-left: auto;
+	border-left: 1px solid @dark;
+
+	.work--upload,
+	.work--publish,
+	.work--help,
+	.work--wall,
+	.work--download {
+		display: flex;
+		height: @headerHeight;
+		padding: 0 25px;
+
+		cursor: pointer;
+
+		transition: background-color 0.25s linear;
+
+		p {
+			align-self: center;
+
+			color: white;
+			font-size: 13px;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+
+		span {
+			align-self: center;
+
+			color: @light-grey;
+
+			transition: color 0.25s linear;
+		}
+
+		&:hover {
+			background-color: @dark-grey;
+
+			span {
+				color: white;
+			}
+		}
+	}
+
+	.work--download {
+		span {
+			color: @green;
+			font-size: 22px;
+		}
+	}
+
+	.avatar {
+		width: @headerHeight;
+		height: @headerHeight;
+		padding: 0;
+		margin: 0;
+	}
+
+	div + div {
+		border-left: 1px solid @dark;
+	}
+}

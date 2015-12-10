@@ -6,6 +6,7 @@ const tree = new Baobab({
 		name: 'Robert Pamfile'*/
 	},
 	canvasTitle: 'Floating bird',
+	editTitle: false,
 	selectedTool: 'cursor',
 	color: 'ffffff',
 	canvas: {
