@@ -12,6 +12,7 @@ import {branch} from 'baobab-react/higher-order';
 import * as actions from './actions';
 
 import LoginPopup from './components/login-popup';
+import NewCanvasPopup from './components/new-canvas-popup';
 
 class Popups extends BaseComponent {
 
@@ -36,7 +37,8 @@ class Popups extends BaseComponent {
 
 		return (
 			<section className={props.active !== '' ? "popups active" : "popups"}>
-				{props.active === 'login' && <LoginPopup handleClose={this.props.actions.closePopup}/>}
+				{props.active === 'login' && <LoginPopup handleClose={this.props.actions.closePopup} />}
+				{props.active === 'newCanvas' && <NewCanvasPopup handleClose={this.props.actions.closePopup} />}
 			</section>
 		);
 	}

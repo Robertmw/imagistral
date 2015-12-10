@@ -16,6 +16,65 @@
 	}
 }
 
+.btn {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	padding: 10px 15px;
+	border-radius: 2px;
+	margin: 5px;
+	background-color: @dark-grey;
+
+	color: @light-grey;
+	font-size: 14px;
+
+	cursor: pointer;
+
+	transition: background-color 350ms linear, color 350ms linear;
+
+	&:hover {
+		background-color: @blue;
+		color: white;
+	}
+
+	label {
+		margin-right: 10px;
+		cursor: pointer;
+	}
+
+	&--wide {
+		min-width: 200px;
+	}
+
+	&--facebook {
+		background-color: #3b5998;
+		color: white;
+
+		label {
+			font-size: 23px;
+		}
+
+		&:hover {
+			background-color: #274EA0;
+		}
+	}
+
+	&--google {
+		background-color: #d34836;
+		color: white;
+
+		label {
+			font-size: 23px;
+		}
+
+		&:hover {
+			background-color: #B93828;
+		}
+	}
+}
+
 .popup {
 	display: flex;
 	flex-direction: column;
@@ -75,57 +134,47 @@
 		line-height: 25px;
 	}
 
-	.btn {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
+}
 
-		padding: 10px 15px;
-		border-radius: 2px;
-		margin: 5px;
-		background-color: @dark-grey;
+.size-settings {
+	&__title {
+		font-size: 14px;
+		line-height: 25px;
+	}
+
+	&__wrapper {
+		margin: 5px 0;
+
+		input[type="number"] {
+			width: 100%;
+			padding: 10px 5px;
+			border: 1px solid @dark-grey;
+
+			background-color: @dark;
+
+			color: @light-grey;
+
+			outline: 0;
+			cursor: pointer;
+
+			&::-webkit-inner-spin-button { 
+				display: none;
+			}
+		}
+	}
+}
+
+.select {
+	&--custom {
+		width: 100%;
+		padding: 10px 5px;
+		border: 1px solid @dark-grey;
+
+		background-color: @dark;
 
 		color: @light-grey;
-		font-size: 14px;
 
+		outline: 0;
 		cursor: pointer;
-
-		transition: background-color 350ms linear;
-
-		label {
-			margin-right: 10px;
-			cursor: pointer;
-		}
-
-		&--wide {
-			min-width: 200px;
-		}
-
-		&--facebook {
-			background-color: #3b5998;
-			color: white;
-
-			label {
-				font-size: 23px;
-			}
-
-			&:hover {
-				background-color: #274EA0;
-			}
-		}
-
-		&--google {
-			background-color: #d34836;
-			color: white;
-
-			label {
-				font-size: 23px;
-			}
-
-			&:hover {
-				background-color: #B93828;
-			}
-		}
 	}
 }

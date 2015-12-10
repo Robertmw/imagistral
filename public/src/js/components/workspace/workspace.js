@@ -37,8 +37,27 @@ class Workspace extends BaseComponent {
 
 		return (
 			<section className="workspace">
-				<section className="workspace-settings-bar">
-					<div className="zoom-settings">
+				<section className="settingsBar">
+					<div 
+						className="settingsEl settingsEl--newFile"
+						onClick = {this.props.actions.openNewcanvasPopup}
+					>
+						<span className="fa fa-file-o" />
+						<p>New canvas</p>
+					</div>
+					<div className="settingsEl settingsEl--newFile">
+						<span className="fa fa-trash" />
+						<p>Delete canvas</p>
+					</div>
+					<div className="settingsEl settingsEl--newFile">
+						<span className="fa fa-rotate-left" />
+						<p>Rotate left</p>
+					</div>
+					<div className="settingsEl settingsEl--newFile">
+						<span className="fa fa-rotate-right" />
+						<p>Rotate right</p>
+					</div>
+					<div className="settingsEl settingsEl--zoom">
 						<span 
 							className={zoomOutClass} 
 							onClick={this.zoomOut}
@@ -55,20 +74,13 @@ class Workspace extends BaseComponent {
 							</label>
 						</div>
 					</div>
-					<div className="canvas-settings">
-						<span className="fa fa-rotate-left"></span>
-						<span className="fa fa-rotate-right"></span>
-					</div>
-					<div className="delete">
-						<span className="fa fa-trash"></span>
-					</div>
 				</section>
 				<canvas 
 					className="canvas-sheet"
 					id="mainCanvas" 
 				/>
-				<div className="scrollbar horizontal"><span className="cursor"></span></div>
-				<div className="scrollbar vertical"><span className="cursor"></span></div>
+				<div className="scrollbar scrollbar--horizontal"><span className="cursor"></span></div>
+				<div className="scrollbar scrollbar--vertical"><span className="cursor"></span></div>
 			</section>
 		);
 	}
@@ -81,7 +93,8 @@ export default branch(Workspace, {
 	},
 	actions: {
 		zoomIn: actions.zoomIn,
-		zoomOut: actions.zoomOut
+		zoomOut: actions.zoomOut,
+		openNewcanvasPopup: actions.openNewcanvasPopup
 	}
 });
 

@@ -1,6 +1,7 @@
 @headerHeight: 50px;
 
 @import 'popup';
+@import 'workspace';
 
 .unavailable {
 	color: @unavailable-grey;
@@ -486,136 +487,7 @@ header {
 	}
 }
 
-.workspace {
-	position: absolute;
-	top: 50px;
-	left: 50px;
-	bottom: 0;
-	right: 0;
 
-	.workspace-settings-bar {
-		display: flex;
-		justify-content: flex-end;
-		flex-shrink: 0;
-
-		width: 100%;
-		height: @headerHeight - 10;
-		padding: 10px;
-		background-color: @dark-grey;
-
-		z-index: 50;
-		overflow: hidden;
-
-		transition: left 0.45s linear;
-
-		.toggle-settings {
-			padding: 0 10px 0 5px;
-			margin-right: auto;
-			border-right: 1px solid @dark;
-
-			color: @light-grey;
-
-			cursor: pointer;
-
-			transition: color 0.25s ease;
-
-			&:hover {
-				color: white;
-			}
-		}
-
-		.zoom-settings {
-			display: flex;
-
-			padding: 0 10px;
-			border-left: 1px solid @dark;
-
-			color: white;
-
-			.fa {
-				margin: 0 5px;
-
-				cursor: pointer;
-
-				&.fa-search {
-					color: @light-grey;
-
-					cursor: default;
-				}
-			}
-		}
-
-		.canvas-settings, .delete {
-			padding: 0 10px;
-			border-left: 1px solid @dark;
-
-			color: @light-grey;
-
-			.fa {
-				margin: 0 5px;
-
-				cursor: pointer;
-
-				transition: color 0.25s ease;
-				&:hover {
-					color: white;
-				}
-			}
-		}
-	}
-
-	.canvas-container{
-		position: absolute!important;
-		top: 50%;
-		left: 50%;
-
-		transform: translate(-50%, -50%);
-	}
-
-	.scrollbar {
-		@scrollSize: 10px;
-
-		position: absolute;
-
-		background-color: @grey;
-
-		&.horizontal {
-			right: @scrollSize;
-			bottom: 0;
-			left: 0;
-
-			height: @scrollSize;
-
-			.cursor {
-				width: @scrollSize * 10;
-				height: @scrollSize * 3;
-
-				cursor: e-resize;
-			}
-		}
-
-		&.vertical {
-			top: @headerHeight - 10;
-			right: 0;
-			bottom: @scrollSize;
-
-			width: @scrollSize;
-
-			.cursor {
-				width: @scrollSize * 3;
-				height: @scrollSize * 10;
-
-				cursor: s-resize;
-			}
-		}
-
-		.cursor {
-			display: block;
-
-			background-color: @light-grey;
-		}
-	}
-}
 
 
 .custom-select {
