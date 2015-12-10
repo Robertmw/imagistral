@@ -1,0 +1,170 @@
+.workspace {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	bottom: 0;
+	right: 0;
+
+	.settingsBar {
+		display: flex;
+		justify-content: flex-end;
+		flex-shrink: 0;
+
+		width: 100%;
+		height: @headerHeight - 10;
+		padding: 10px;
+		background-color: @dark-grey;
+
+		z-index: 50;
+		overflow: hidden;
+
+		transition: left 0.45s linear;
+		
+		.settingsEl {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			padding: 0 10px;
+			border-left: 1px solid @dark;
+
+			color: @light-grey;
+
+			.fa {
+				margin: 0 5px;
+
+				cursor: pointer;
+				transition: color 0.25s ease;
+
+				&:hover {
+					color: white;
+				}
+
+				&.fa-search {
+					color: @light-grey;
+
+					cursor: default;
+				}				
+			}
+
+			&--newFile {
+				font-size: 11px;
+				font-weight: 700;
+				text-transform: uppercase;
+
+				cursor: pointer;
+				transition: color 0.25s ease;
+
+				.fa {
+					transition: none;
+				}
+
+				&:hover {
+					color: white;
+				}
+			}
+
+			&--zoom {
+				color: white;
+
+				.fa {
+					transition: none;
+				}
+			}
+		}
+	}
+
+	.canvas {
+		&__intro {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%);
+			
+			color: @grey;	
+			font-size: 25px;
+			font-weight: 700;
+			text-align: center;
+
+			-webkit-user-select: none; 
+			user-select: none; 
+
+			.fa {
+				&--big {
+					font-size: 80px;
+					margin-bottom: 15px;
+				}
+			}
+
+			&__title {
+				display: flex;
+				align-items: center;
+			}
+
+			&__btn {
+				margin-left: 10px;
+				
+				line-height: 36px;
+
+				cursor: pointer;
+				transition: color 450ms linear;
+
+				&:hover {
+					color: @light-grey;
+				}
+			}
+		}
+	}
+
+	.canvas-container{
+		position: absolute!important;
+		top: 50%;
+		left: 50%;
+
+		transform: translate(-50%, -50%);
+	}
+
+	.scrollbar {
+		@scrollSize: 10px;
+
+		position: absolute;
+
+		background-color: @grey;
+
+		&--horizontal {
+			right: @scrollSize;
+			bottom: 0;
+			left: 0;
+
+			height: @scrollSize;
+
+			.cursor {
+				width: @scrollSize * 10;
+				height: @scrollSize * 3;
+
+				cursor: e-resize;
+			}
+		}
+
+		&--vertical {
+			top: @headerHeight - 10;
+			right: 0;
+			bottom: @scrollSize;
+
+			width: @scrollSize;
+
+			.cursor {
+				width: @scrollSize * 3;
+				height: @scrollSize * 10;
+
+				cursor: s-resize;
+			}
+		}
+
+		.cursor {
+			display: block;
+
+			background-color: @light-grey;
+		}
+	}
+}
