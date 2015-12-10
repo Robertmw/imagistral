@@ -20,7 +20,7 @@ class Header extends BaseComponent {
 	constructor (props) {
 		super(props);
 
-		this._bind('_checkLogin');
+		this._bind('_checkLogin', '_shouldEditTitle', '_handleTitleChange');
 	}
 
 	_checkLogin(user) {
@@ -68,19 +68,53 @@ class Header extends BaseComponent {
 		return value;
 	}
 
+	_handleTitleChange(e) {
+		this.props.actions.saveTitle(e.target.value);
+	}
+
+	_shouldEditTitle(active) {
+		if (active) {
+			return(
+				<div className = "header--title__edit">
+					<input
+						defaultValue = {this.props.title}
+						onChange = {this._handleTitleChange}
+						placeholder = "Enter canvas title"
+						type = "text"
+					/>
+					<label 
+						className = "fa fa-check" 
+						onClick = {this.props.actions.closeTitle}
+					/>
+				</div>
+			);
+		}
+
+		return(
+			<div 
+				className = "header--title__edit"
+				onClick={this.props.actions.editTitle} 
+			>
+				<h4>{this.props.title}</h4>
+				<span className = "icon--edit fa fa-pencil-square-o" />
+			</div>
+		);
+	}
+
 	render() {
 		let loggedButton = this._checkLogin(this.props.user);
+		const title = this._shouldEditTitle(this.props.active);
 
 		return (
 			<header>
-				<div className="logo">
+				<div className="header header--logo">
 					<span className="fa fa-lg fa-camera"></span>
 				</div>
-				<div className="work-title">
-					<span className="fa fa-header"></span>
-					<h4>{this.props.title}</h4>
+				<div className="header header--title">
+					<span className="icon fa fa-header"></span>
+					{title}
 				</div>
-				<div className="work-history">
+				<div className="header header--history">
 					<span className="fa fa-lg fa-reply unavailable"></span>
 					<span className="fa fa-lg fa-share"></span>
 				</div>
@@ -94,9 +128,13 @@ class Header extends BaseComponent {
 export default branch(Header, {
 	cursors: {
 		title: ['canvasTitle'],
+		active: ['editTitle'],
 		user: ['user']
 	},
 	actions: {
-		openLogin: actions.openLoginPopup
+		openLogin: actions.openLoginPopup,
+		saveTitle: actions.saveTitle,
+		editTitle: actions.openTitle,
+		closeTitle: actions.closeTitle
 	}
 });
