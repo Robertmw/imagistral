@@ -3,12 +3,13 @@ import fabricjs from '../../../../bower_components/fabric.js/dist/fabric.min.js'
 import {pencil} from './draw';
 
 export let canvas = null;
-export function engineInit(){
+
+function engineInit(w, h){
 	canvas = new fabricjs.fabric.Canvas('mainCanvas', {
 		backgroundColor: 'rgb(255,255,255)',
 		selection: false,
-		width: window.innerWidth * 0.6,
-		height: window.innerHeight * 0.6,
+		width: w,
+		height: h
 	});
 
 	fabric.Object.prototype.selectable = false;
@@ -16,22 +17,31 @@ export function engineInit(){
 
 const updateTool = () => {
 	const currentState = tree.get();
-	console.log(currentState);
+	//console.log(currentState);
 	switch (currentState.selectedTool) {
 		case 'pencil':
 			pencil(currentState);
 			break;
 		case 'brush':
-			console.log('brush');
+			//console.log('brush');
 			break;
 		case 'text':
-			console.log('text');
+			//console.log('text');
 			break;
 		default:
-			console.log('default');
+			//console.log('default');
 	}
 };
 
-tree.on('update', () => {
+tree.on('update', (e) => {
+	let eventData = e.data;
+
+	if (eventData.previousData.canvas.width === null &
+		eventData.previousData.canvas.height === null) {
+		engineInit(eventData.currentData.canvas.width, eventData.currentData.canvas.height);
+
+	}
+	
 	updateTool();
+
 });

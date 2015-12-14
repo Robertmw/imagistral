@@ -2,16 +2,16 @@ import Baobab from 'baobab';
 
 const tree = new Baobab({
 	user: {
-		avatar: 'https://scontent-frt3-1.xx.fbcdn.net/hprofile-xap1/v/t1.0-1/p160x160/10383895_1080798488614634_3712605849066710036_n.jpg?oh=6c8c8762e3dfbcbaedf66cd61a674628&oe=56F7C1C8',
-		name: 'Robert Pamfile'
+		/*avatar: 'https://scontent-frt3-1.xx.fbcdn.net/hprofile-xap1/v/t1.0-1/p160x160/10383895_1080798488614634_3712605849066710036_n.jpg?oh=6c8c8762e3dfbcbaedf66cd61a674628&oe=56F7C1C8',
+		name: 'Robert Pamfile'*/
 	},
 	canvasTitle: 'Floating bird',
 	editTitle: false,
 	selectedTool: 'cursor',
 	color: 'ffffff',
 	canvas: {
-		width: 0,
-		height: 0
+		width: null,
+		height: null
 	},
 	popups: {
 		active: '',
@@ -33,25 +33,31 @@ const tree = new Baobab({
 			name: 'cursor',
 			icon: 'icon-cursor',
 			caret: '',
-			subTools: [],
+			subTools: []
+		},
+		{
+			name: 'crop',
+			icon: 'icon-crop',
+			caret: '',
+			subTools: []
 		},
 		{
 			name: 'brush',
 			icon: 'icon-brush',
 			caret: '',
-			subTools: [],
+			subTools: []
 		},
 		{
 			name: 'pencil',
 			icon: 'icon-pen',
 			caret: '',
-			subTools: [],
+			subTools: []
 		},
 		{
 			name: 'eraser',
 			icon: 'icon-eraser',
 			caret: '',
-			subTools: [],
+			subTools: []
 		},
 		{
 			name: 'square',
@@ -69,13 +75,19 @@ const tree = new Baobab({
 			name: 'bucket',
 			icon: 'icon-paint_swatch',
 			caret: '',
-			subTools: [],
+			subTools: []
+		},
+		{
+			name: 'filters',
+			icon: 'icon-filters',
+			caret: '',
+			subTools: []
 		},
 		{
 			name: 'zoom',
 			icon: 'icon-magnifier',
 			caret: '', /*'fa fa-caret-down caret',*/
-			subTools: [],
+			subTools: []
 		}
 	],
 	toolSettings: {

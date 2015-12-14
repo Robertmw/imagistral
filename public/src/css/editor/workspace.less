@@ -29,52 +29,69 @@
 			border-left: 1px solid @dark;
 
 			color: @light-grey;
+			font-size: 11px;
+			font-weight: 700;
+			text-transform: uppercase;
 
-			.fa {
+			cursor: pointer;
+			transition: color 0.25s ease;
+
+			[class^="icon-"] {
 				margin: 0 5px;
 
-				cursor: pointer;
-				transition: color 0.25s ease;
-
-				&:hover {
-					color: white;
-				}
-
-				&.fa-search {
-					color: @light-grey;
-
-					cursor: default;
-				}				
-			}
-
-			&--newFile {
 				font-size: 11px;
-				font-weight: 700;
-				text-transform: uppercase;
 
 				cursor: pointer;
-				transition: color 0.25s ease;
+			}
 
-				.fa {
-					transition: none;
-				}
+			&:hover {
+				color: white;
+			}
+
+			&--unavailable {
+				color: @unavailable-grey;
+				cursor: default;
 
 				&:hover {
-					color: white;
+					color: @unavailable-grey;
 				}
-			}
+
+				[class^="icon-"] {
+					cursor: default;
+				}
+			}	
 
 			&--zoom {
 				color: white;
 
-				.fa {
+				[class^="icon-"] {
 					transition: none;
+				}
+
+				.icon-magnifier {
+					color: @light-grey;
+
+					font-size: 14px;
+
+					cursor: default;
+
+					&:hover {
+						color: @light-grey;
+					}
 				}
 			}
 		}
 	}
 
 	.canvas {
+		&--sheet {
+			display: none;
+			
+			&.active {
+				display: block;
+				z-index: 89;
+			}
+		}
 		&__intro {
 			position: absolute;
 			top: 50%;
@@ -88,17 +105,17 @@
 
 			-webkit-user-select: none; 
 			user-select: none; 
+			z-index: 90;
 
-			.fa {
-				&--big {
-					font-size: 80px;
-					margin-bottom: 15px;
-				}
+			.big {
+				font-size: 80px;
 			}
 
 			&__title {
 				display: flex;
 				align-items: center;
+
+				margin-top: 15px;
 			}
 
 			&__btn {

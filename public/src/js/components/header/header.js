@@ -84,7 +84,7 @@ class Header extends BaseComponent {
 						type = "text"
 					/>
 					<label 
-						className = "fa fa-check" 
+						className = "icon-checked" 
 						onClick = {this.props.actions.closeTitle}
 					/>
 				</div>
@@ -97,7 +97,7 @@ class Header extends BaseComponent {
 				onClick={this.props.actions.editTitle} 
 			>
 				<h4>{this.props.title}</h4>
-				<span className = "icon--edit fa fa-pencil-square-o" />
+				<span className = "icon--edit icon-edit" />
 			</div>
 		);
 	}
