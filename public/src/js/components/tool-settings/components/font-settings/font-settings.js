@@ -48,11 +48,11 @@ class FontSettings extends BaseComponent {
 		const styleButtons = [
 			{
 				name: 'italic',
-				class: 'fa fa-lg fa-italic'
+				class: 'icon-italic'
 			},
 			{
 				name: 'bold',
-				class: 'fa fa-lg fa-bold'
+				class: 'icon-bold'
 			}
 		];
 		const renderButtons = styleButtons.map((btn, index) => {

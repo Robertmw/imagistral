@@ -61,9 +61,9 @@
 				},
 				{
 					expand: true,
-					cwd: 'node_modules/font-awesome/fonts',
+					cwd: 'public/src/css/fonts',
 					src: '**/*',
-					dest: 'public/dist/fonts'
+					dest: 'public/dist/css/fonts'
 				}]
 			}
 		},
@@ -77,7 +77,7 @@
 		watch: {
 			options: {
 				dateFormat: function(time) {
-					grunt.log.writeln('The watch finished in ' + time + 'ms at' + (new Date()).toString());
+					grunt.log.writeln('The watch finished in ' + time + 'ms at ' + (new Date()).toString());
 					grunt.log.writeln('Waiting for more changes...');
 				},
 			},

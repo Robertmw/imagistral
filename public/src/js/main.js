@@ -10,9 +10,6 @@ import Workspace from './components/workspace/workspace';
 
 import Popups from './components/popups/popups';
 
-
-import {engineInit} from './engine/engine';
-
 class App extends Component {
 
 	render() {
@@ -34,5 +31,3 @@ App.prototype.displayName = "App Name";
 const RootedApp = root(App, tree);
 
 render(<RootedApp />, document.querySelector('#app'));
-
-engineInit();

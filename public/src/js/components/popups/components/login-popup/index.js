@@ -21,17 +21,17 @@ class LoginPopup extends BaseComponent {
 				<div className="popup__header">
 					<h3 className="popup__title">Login with</h3>
 					<span 
-						className="popup__close fa fa-lg fa-times" 
+						className="popup__close icon-cross" 
 						onClick={this.props.handleClose}
 					/>
 				</div>
 				<div className="popup__wrapper popup__wrapper--inline">
 					<div className="btn btn--wide btn--facebook">
-						<label className="fa fa-lg fa-facebook-official" />
+						<label className="icon-facebook_square" />
 						<span className="btn__title">Facebook</span>
 					</div>
 					<div className="btn btn--wide btn--google">
-						<label className="fa fa-lg fa-google-plus" />
+						<label className="icon-google_square" />
 						<span className="btn__title">Google Plus</span>
 					</div>
 				</div>

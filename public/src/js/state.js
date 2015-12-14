@@ -10,8 +10,8 @@ const tree = new Baobab({
 	selectedTool: 'cursor',
 	color: 'ffffff',
 	canvas: {
-		width: 0,
-		height: 0
+		width: null,
+		height: null
 	},
 	popups: {
 		active: '',
@@ -31,51 +31,63 @@ const tree = new Baobab({
 	tools: [
 		{
 			name: 'cursor',
-			icon: 'fa fa-lg fa-mouse-pointer',
+			icon: 'icon-cursor',
 			caret: '',
-			subTools: [],
+			subTools: []
+		},
+		{
+			name: 'crop',
+			icon: 'icon-crop',
+			caret: '',
+			subTools: []
 		},
 		{
 			name: 'brush',
-			icon: 'fa fa-lg fa-paint-brush',
+			icon: 'icon-brush',
 			caret: '',
-			subTools: [],
+			subTools: []
 		},
 		{
 			name: 'pencil',
-			icon: 'fa fa-lg fa-pencil',
+			icon: 'icon-pen',
 			caret: '',
-			subTools: [],
+			subTools: []
 		},
 		{
 			name: 'eraser',
-			icon: 'fa fa-lg fa-eraser',
+			icon: 'icon-eraser',
 			caret: '',
-			subTools: [],
+			subTools: []
 		},
 		{
 			name: 'square',
-			icon: 'fa fa-lg fa-square',
+			icon: 'icon-square',
 			caret: '',
 			subTools: []
 		},
 		{
 			name: 'text',
-			icon: 'fa fa-lg fa-font',
+			icon: 'icon-text',
 			caret: '',
 			subTools: []
 		},
 		{
 			name: 'bucket',
-			icon: 'fa fa-lg fa-bitbucket',
+			icon: 'icon-paint_swatch',
 			caret: '',
-			subTools: [],
+			subTools: []
+		},
+		{
+			name: 'filters',
+			icon: 'icon-filters',
+			caret: '',
+			subTools: []
 		},
 		{
 			name: 'zoom',
-			icon: 'fa fa-lg fa-search',
+			icon: 'icon-magnifier',
 			caret: '', /*'fa fa-caret-down caret',*/
-			subTools: [],
+			subTools: []
 		}
 	],
 	toolSettings: {
