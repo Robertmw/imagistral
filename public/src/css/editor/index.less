@@ -29,7 +29,7 @@
 	border-right: 1px solid @dark;
 	background-color: @grey;
 
-	z-index: 100;
+	z-index: 9;
 
 	.toolbar-element {
 		display: flex;
@@ -123,6 +123,15 @@
 	background-color: @dark-grey;
 
 	z-index: 50;
+
+	.overlay {
+		position: absolute;
+		top: @headerHeight;
+		right: 0;
+		bottom: 0;
+		left: @headerHeight;
+		z-index: 49;
+	}
 
 	.settings-title {
 		margin-bottom: 20px;

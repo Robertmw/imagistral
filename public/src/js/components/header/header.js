@@ -9,6 +9,7 @@
 import React from 'react';
 import BaseComponent from '../base-component/base-component';
 import {branch} from 'baobab-react/higher-order';
+import Classnames from 'classnames';
 import * as actions from './actions';
 
 import {isEmpty} from '../../utils.js';
@@ -102,8 +103,13 @@ class Header extends BaseComponent {
 	}
 
 	render() {
-		let loggedButton = this._checkLogin(this.props.user);
 		const title = this._shouldEditTitle(this.props.active);
+		let loggedButton = this._checkLogin(this.props.user);
+		let overlayClass = Classnames({
+			'header header--overlay': true,
+			'active': this.props.active
+		});
+		
 
 		return (
 			<header>
@@ -119,6 +125,10 @@ class Header extends BaseComponent {
 					<span className="fa fa-lg fa-share"></span>
 				</div>
 				{loggedButton}
+				<div 
+					className = {overlayClass}
+					onClick = {this.props.actions.closeTitle}
+				/>
 			</header>
 		);
 	}
