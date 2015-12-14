@@ -19,7 +19,7 @@
 		overflow: hidden;
 
 		transition: left 0.45s linear;
-		
+
 		.settingsEl {
 			display: flex;
 			justify-content: center;
@@ -59,7 +59,7 @@
 				[class^="icon-"] {
 					cursor: default;
 				}
-			}	
+			}
 
 			&--zoom {
 				color: white;
@@ -84,27 +84,19 @@
 	}
 
 	.canvas {
-		&--sheet {
-			display: none;
-			
-			&.active {
-				display: block;
-				z-index: 89;
-			}
-		}
 		&__intro {
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%);
-			
-			color: @grey;	
+
+			color: @grey;
 			font-size: 25px;
 			font-weight: 700;
 			text-align: center;
 
-			-webkit-user-select: none; 
-			user-select: none; 
+			-webkit-user-select: none;
+			user-select: none;
 			z-index: 90;
 
 			.big {
@@ -120,7 +112,7 @@
 
 			&__btn {
 				margin-left: 10px;
-				
+
 				line-height: 36px;
 
 				cursor: pointer;

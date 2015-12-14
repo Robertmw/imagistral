@@ -1,4 +1,3 @@
-import tree from '../state';
 import {canvas} from './engine';
 
 export function pencil(state){

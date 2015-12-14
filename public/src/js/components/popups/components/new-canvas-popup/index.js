@@ -10,6 +10,7 @@ import React from 'react';
 import BaseComponent from '../../../base-component/base-component';
 import {branch} from 'baobab-react/higher-order';
 import * as actions from './actions';
+import {engineInit} from '../../../../engine/engine';
 
 class NewCanvasPopup extends BaseComponent {
 
@@ -43,6 +44,7 @@ class NewCanvasPopup extends BaseComponent {
 
 	_createCanvas() {
 		this.props.actions.createCanvas(this.state.w, this.state.h);
+		engineInit(this.state.w, this.state.h);
 	}
 
 	render() {
@@ -50,8 +52,8 @@ class NewCanvasPopup extends BaseComponent {
 			<div className="popup bounceIn animated">
 				<div className="popup__header">
 					<h3 className="popup__title">Create new canvas</h3>
-					<span 
-						className="popup__close icon-cross" 
+					<span
+						className="popup__close icon-cross"
 						onClick={this.props.handleClose}
 					/>
 				</div>
@@ -59,13 +61,13 @@ class NewCanvasPopup extends BaseComponent {
 					<div className="size-settings">
 						<h4 className="size-settings__title">Predefined size</h4>
 						<div className="size-settings__wrapper">
-							<select 
-								className="select--custom" 
+							<select
+								className="select--custom"
 								onChange={this._setCanvasSize}
 							>
-								<option 
+								<option
 									defaultValue
-									value="" 
+									value=""
 								>
 									Select option
 								</option>
@@ -76,25 +78,25 @@ class NewCanvasPopup extends BaseComponent {
 					<div className="size-settings">
 						<h4 className="size-settings__title">Custom size</h4>
 						<div className="size-settings__wrapper">
-							<input 
+							<input
 								name = "width"
 								onChange = {this._updateSize}
 								placeholder = "Width"
-								type = "number" 
+								type = "number"
 								value = {this.state.w}
 							/>
-							<input 
+							<input
 								name = "height"
 								onChange = {this._updateSize}
 								placeholder = "Height"
-								type = "number" 
+								type = "number"
 								value = {this.state.h}
 							/>
 						</div>
 					</div>
 				</div>
 				<div className="popup__footer">
-					<span 
+					<span
 						className="btn"
 						onClick={this._createCanvas}
 					>Create</span>
