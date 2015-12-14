@@ -42,7 +42,7 @@ class Header extends BaseComponent {
 			value = (
 				<div className="work-buttons">
 					<div className="work--download">
-						<span className="fa fa-lg fa-cloud-download"></span>
+						<span className="icon-download"></span>
 					</div>
 					<div className="work--upload">
 						<p>Import</p>
@@ -51,10 +51,10 @@ class Header extends BaseComponent {
 						<p>Publish</p>
 					</div>
 					<div className="work--help">
-						<span className="fa fa-lg fa-question-circle"></span>
+						<span className="icon-faq"></span>
 					</div>
 					<div className="work--wall">
-						<span className="fa fa-lg fa-th"></span>
+						<span className="icon-wall_v2"></span>
 					</div>
 					<div className="work--profile">
 						<img
@@ -114,15 +114,15 @@ class Header extends BaseComponent {
 		return (
 			<header>
 				<div className="header header--logo">
-					<span className="fa fa-lg fa-camera"></span>
+					<span className="icon-camera"></span>
 				</div>
 				<div className="header header--title">
-					<span className="icon fa fa-header"></span>
+					<span className="icon icon-heading"></span>
 					{title}
 				</div>
 				<div className="header header--history">
-					<span className="fa fa-lg fa-reply unavailable"></span>
-					<span className="fa fa-lg fa-share"></span>
+					<span className="icon-undo unavailable"></span>
+					<span className="icon-forward"></span>
 				</div>
 				{loggedButton}
 				<div 
