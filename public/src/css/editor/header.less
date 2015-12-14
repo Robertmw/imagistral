@@ -20,6 +20,24 @@ header {
 
 	color: white;
 
+	&--overlay {
+		position: absolute;
+		background-color: rgba(0,0,0,0.4);
+
+		z-index: 9;
+		opacity: 0;
+		transition: opacity 0.25s ease;
+
+		&.active {
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+
+			opacity: 1;
+		}
+	}
+
 	&--logo {
 		@logoSize: @headerHeight;
 
@@ -49,6 +67,7 @@ header {
 		width: 300px;
 		padding: 18px 15px;
 		border-right: 1px solid @dark;
+		z-index: 10;
 
 		&:hover {
 			.icon {
@@ -88,7 +107,7 @@ header {
 
 				background-color: transparent;
 
-				color: @light-grey;
+				color: white;
 				font-size: 15px;
 				font-weight: 600;
 
