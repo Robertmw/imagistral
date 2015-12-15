@@ -10,7 +10,6 @@ import React from 'react';
 import BaseComponent from '../../../base-component/base-component';
 import {branch} from 'baobab-react/higher-order';
 import * as actions from './actions';
-import {engineInit} from '../../../../engine/engine';
 
 class NewCanvasPopup extends BaseComponent {
 
@@ -44,7 +43,6 @@ class NewCanvasPopup extends BaseComponent {
 
 	_createCanvas() {
 		this.props.actions.createCanvas(this.state.w, this.state.h);
-		engineInit(this.state.w, this.state.h);
 	}
 
 	render() {
