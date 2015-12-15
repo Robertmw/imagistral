@@ -12,6 +12,7 @@ import {branch} from 'baobab-react/higher-order';
 
 import FontSettings from './components/font-settings/font-settings';
 import PencilSettings from './components/pencil-settings/pencil-settings';
+import BucketSettings from './components/bucket-settings/bucket-settings';
 
 const displayName = 'Sidebar';
 
@@ -37,6 +38,10 @@ class ToolSettings extends BaseComponent {
 
 	_getToolSettings(selectedTool) {
 		switch (selectedTool) {
+			case 'bucket':
+				return(<BucketSettings />);
+				break;
+				
 			case 'text':
 				return (<FontSettings />);
 				break;
