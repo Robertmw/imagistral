@@ -42,4 +42,6 @@ export function openNewcanvasPopup(tree) {
 export function deleteCanvas(tree) {
 	tree.set(['canvas', 'width'], null);
 	tree.set(['canvas', 'height'], null);
+	tree.set('selectedTool', 'cursor');
+	tree.set(['toolSettings', 'visible'], false);
 }

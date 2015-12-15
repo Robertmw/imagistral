@@ -8,7 +8,7 @@ const tree = new Baobab({
 	canvasTitle: 'Floating bird',
 	editTitle: false,
 	selectedTool: 'cursor',
-	color: 'ffffff',
+	color: '#ffffff',
 	canvas: {
 		width: null,
 		height: null
