@@ -12,6 +12,8 @@ import {branch} from 'baobab-react/higher-order';
 import Classnames from 'classnames';
 import * as actions from './actions';
 
+import {engineInit} from '../../engine/engine';
+
 const displayName = 'Workspace';
 
 class Workspace extends BaseComponent {
@@ -19,15 +21,15 @@ class Workspace extends BaseComponent {
 	constructor (props) {
 		super(props);
 
-		this._bind('zoomIn', 'zoomOut', '_shouldRenderCanvas', '_openCanvasPopup');
+		this._bind( '_shouldRenderCanvas', '_openCanvasPopup');
 	}
 
-	zoomIn() {
-		this.props.actions.zoomIn();
-	}
-
-	zoomOut() {
-		this.props.actions.zoomOut();
+	componentDidUpdate() {
+		if (this.props.canvas.width !== null && this.props.canvas.height !== null) {
+			engineInit(this.props.canvas.width, this.props.canvas.height);
+		} else {
+			console.info('Canvas deleted');
+		}
 	}
 
 	_shouldRenderCanvas(props) {
@@ -48,6 +50,15 @@ class Workspace extends BaseComponent {
 				</div>
 			);
 		}
+
+		return (
+			<canvas 
+				className = "canvas--sheet active"
+				id = "mainCanvas" 
+				ref = "canvasContainer"
+			/>
+		);
+
 	}
 
 	_openCanvasPopup(e) {
@@ -111,12 +122,12 @@ class Workspace extends BaseComponent {
 					<div className="settingsEl settingsEl--zoom">
 						<span 
 							className={zoomOutClass} 
-							onClick={this.zoomOut}
+							onClick={this.props.actions.zoomOut}
 						></span>
 						<span className="icon-magnifier"></span>
 						<span 
 							className={zoomInClass} 
-							onClick={this.zoomIn}
+							onClick={this.props.actions.zoomIn}
 						></span>
 						<div className="custom-select">
 							<label className="current-zoom">
@@ -126,10 +137,6 @@ class Workspace extends BaseComponent {
 					</div>
 				</section>
 				{canvasOrNot}
-				<canvas 
-					className = {canvasClass}
-					id = "mainCanvas" 
-				/>
 				<div className="scrollbar scrollbar--horizontal"><span className="cursor"></span></div>
 				<div className="scrollbar scrollbar--vertical"><span className="cursor"></span></div>
 			</section>
