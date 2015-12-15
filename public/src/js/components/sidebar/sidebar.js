@@ -51,11 +51,9 @@ class Sidebar extends BaseComponent {
 		return (
 			<aside className="sidebar">
 					{toolsWrapper}
-					<input
-						className = "colorPicker" 
-						onChange = {this._handleChange} 
-						type="color"
-						value={this.props.color}
+					<span
+						className = "colorPicker"
+						style = {{backgroundColor: this.props.color}}
 					/>
 			</aside>
 		);
