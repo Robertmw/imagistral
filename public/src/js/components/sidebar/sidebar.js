@@ -24,8 +24,10 @@ class Sidebar extends BaseComponent {
 	}
 
 	_handleClick(newTool) {
-		this.props.actions.changeTool(newTool);
-		this.props.actions.resizeWorkspace();
+		if (this.props.canvas.width !== null && this.props.canvas.height !== null) {
+			this.props.actions.changeTool(newTool);
+			this.props.actions.resizeWorkspace();
+		}
 	}
 
 	_handleChange(event) {
@@ -65,7 +67,8 @@ export default branch(Sidebar, {
 	cursors: {
 		tools: ['tools'],
 		selected: ['selectedTool'],
-		color: ['color']
+		color: ['color'],
+		canvas: ['canvas']
 	},
 	actions: {
 		changeTool: actions.changeTool,
