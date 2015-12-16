@@ -11,8 +11,9 @@ import BaseComponent from '../base-component/base-component';
 import {branch} from 'baobab-react/higher-order';
 import * as actions from './actions';
 
-import LoginPopup from './components/login-popup';
-import NewCanvasPopup from './components/new-canvas-popup';
+import LoginPopup from './components/login';
+import NewCanvasPopup from './components/new-canvas';
+import OpenFilePopup from './components/open-file';
 
 class Popups extends BaseComponent {
 
@@ -46,6 +47,7 @@ class Popups extends BaseComponent {
 			<section className={props.active !== '' ? "popups active" : "popups"}>
 				{props.active === 'login' && <LoginPopup handleClose={this.props.actions.closePopup} />}
 				{props.active === 'newCanvas' && <NewCanvasPopup handleClose={this.props.actions.closePopup} />}
+				{props.active === 'openFile' && <OpenFilePopup handleClose={this.props.actions.closePopup} />}
 				<div 
 					className="popups__overlay"
 					onClick={this._closePopup}

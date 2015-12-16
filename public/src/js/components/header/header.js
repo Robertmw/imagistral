@@ -44,7 +44,10 @@ class Header extends BaseComponent {
 					<div className="work--download">
 						<span className="icon-download"></span>
 					</div>
-					<div className="work--upload">
+					<div 
+						className="work--upload"
+						onClick = {this.props.actions.openFile}
+					>
 						<p>Import</p>
 					</div>
 					<div className="work--publish">
@@ -143,6 +146,7 @@ export default branch(Header, {
 	},
 	actions: {
 		openLogin: actions.openLoginPopup,
+		openFile: actions.openFilePopup,
 		saveTitle: actions.saveTitle,
 		editTitle: actions.openTitle,
 		closeTitle: actions.closeTitle

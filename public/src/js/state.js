@@ -2,8 +2,8 @@ import Baobab from 'baobab';
 
 const tree = new Baobab({
 	user: {
-		/*avatar: 'https://scontent-frt3-1.xx.fbcdn.net/hprofile-xap1/v/t1.0-1/p160x160/10383895_1080798488614634_3712605849066710036_n.jpg?oh=6c8c8762e3dfbcbaedf66cd61a674628&oe=56F7C1C8',
-		name: 'Robert Pamfile'*/
+		avatar: 'https://scontent-frt3-1.xx.fbcdn.net/hprofile-xap1/v/t1.0-1/p160x160/10383895_1080798488614634_3712605849066710036_n.jpg?oh=6c8c8762e3dfbcbaedf66cd61a674628&oe=56F7C1C8',
+		name: 'Robert Pamfile'
 	},
 	canvasTitle: 'Floating bird',
 	editTitle: false,
@@ -11,7 +11,9 @@ const tree = new Baobab({
 	color: '#000000',
 	canvas: {
 		width: null,
-		height: null
+		height: null,
+		image: null,
+		rotate: 0
 	},
 	popups: {
 		active: '',
