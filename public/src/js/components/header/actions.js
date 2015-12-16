@@ -14,3 +14,6 @@ export function closeTitle(tree) {
 	tree.set(['editTitle'], false);
 }
 
+export function openFilePopup(tree) {
+	tree.set(['popups', 'active'], 'openFile');
+}
