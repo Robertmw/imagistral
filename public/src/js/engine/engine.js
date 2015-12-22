@@ -16,21 +16,19 @@ export function engineInit(w, h) {
 
 const updateTool = () => {
 	const currentState = tree.get();
+	console.log(currentState);
 	switch (currentState.selectedTool) {
 		case 'pencil':
 			draw.pencil(currentState);
-			break;
-		case 'brush':
-			//console.log('brush');
-			break;
-		case 'text':
-			//console.log('text');
 			break;
 		case 'eraser':
 			draw.clear();
 			break;
 		default:
-			//console.log('default');
+			if (canvas !== null) {
+				canvas.isDrawingMode = false;
+			}
+			break;
 	}
 };
 
