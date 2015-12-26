@@ -1,8 +1,9 @@
-var express = require('express');
+const express = require('express');
+const port = process.env.PORT || 80;
 
-var app = express();
+const app = express();
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static('./public'));
 
-app.listen(3000);
-console.log('Server is running');
+app.listen(port);
+console.log('Express app started on port ' + port);

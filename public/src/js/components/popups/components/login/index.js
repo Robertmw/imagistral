@@ -10,11 +10,62 @@ import React from 'react';
 import BaseComponent from '../../../base-component/base-component';
 import {branch} from 'baobab-react/higher-order';
 
+import * as actions from './actions';
+
 class LoginPopup extends BaseComponent {
 
 	constructor(props) {
 		super(props);
+
+		this._bind('_authenticate', 'responseApi', 'checkLoginState');
 	}
+
+	componentDidMount() {
+		window.fbAsyncInit = () => {
+			FB.init({
+				appId: '999809560057190',
+				xfbml: false,
+				version: 'v2.3'
+			});
+
+			//FB.getLoginStatus(this.checkLoginState);
+		};
+
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	}
+
+	responseApi (authResponse) {
+		FB.api('/me', {fields: 'first_name, last_name, picture'}, (me) => {
+			me.accessToken = authResponse.accessToken;
+			let payload = {
+				first_name: me.first_name,
+				last_name: me.last_name,
+				avatar: me.picture.data.url
+			};
+
+			this.props.actions.authUser(payload);
+			this.props.handleClose();
+		});
+	}
+
+	checkLoginState (response) {
+		if (response.authResponse) {
+			this.responseApi(response.authResponse);
+		} else {
+			console.error('Login failed');
+		}
+	}
+
+	_authenticate() {
+		FB.login(this.checkLoginState, { scope: 'public_profile' });
+	}
+
 	render() {
 		return (
 			<div className="popup bounceIn animated">
@@ -26,7 +77,10 @@ class LoginPopup extends BaseComponent {
 					/>
 				</div>
 				<div className="popup__wrapper popup__wrapper--inline">
-					<div className="btn btn--wide btn--facebook">
+					<div 
+						className="btn btn--wide btn--facebook"
+						onClick= {this._authenticate}
+					>
 						<label className="icon-facebook_square" />
 						<span className="btn__title">Facebook</span>
 					</div>
@@ -44,4 +98,8 @@ class LoginPopup extends BaseComponent {
 
 }
 
-export default LoginPopup;
+export default branch(LoginPopup, {
+	actions: {
+		authUser: actions.authUser
+	}
+});
