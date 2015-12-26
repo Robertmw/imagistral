@@ -1,9 +1,5 @@
-function objToArray(obj) {
-	let arr = [];
-	Object.keys(obj).map(key => {
-		arr.push(obj[key]);
-	});
-	return arr;
+export function updateColor(tree, value) {
+	tree.set(['color'], value);
 }
 
 export function changeFontSize(tree, value) {	
@@ -23,15 +19,9 @@ export function changeFontWeight(tree, value) {
 }
 
 export function changeFontStyle(tree, value) {	
-/*	const state = tree.get(['toolSettings', 'text']);
-	let fontStyle = objToArray(state.fontStyle);
-	let index = fontStyle.indexOf(value);
-
-	if (index > -1) {
-		fontStyle.splice(index, 1);
-	} else {
-		fontStyle.push(value);
-	}*/
-
 	tree.set(['toolSettings', 'text', 'fontStyle'], value);
+}
+
+export function changePencilSize(tree, value) {
+	tree.set(['toolSettings', 'pencil', 'size'], value);
 }

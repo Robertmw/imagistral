@@ -9,7 +9,7 @@
 import React from 'react';
 import BaseComponent from '../../../base-component/base-component';
 import {branch} from 'baobab-react/higher-order';
-import * as actions from './actions';
+import * as actions from '../../actions';
 
 const displayName = 'Font Settings';
 

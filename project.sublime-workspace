@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"auth",
+				"authUser"
+			],
+			[
+				"con",
+				"config"
+			],
+			[
 				"_",
 				"_animateWrapper"
 			],
@@ -268,18 +276,10 @@
 	"buffers":
 	[
 		{
-			"file": "public/src/js/state.js",
+			"file": "public/src/js/components/header/header.js",
 			"settings":
 			{
-				"buffer_size": 1835,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/src/js/components/tool-settings/tool-settings.js",
-			"settings":
-			{
-				"buffer_size": 1873,
+				"buffer_size": 3201,
 				"line_ending": "Windows"
 			}
 		}
@@ -300,6 +300,18 @@
 				"Set Syntax: JavaScript (Babel)"
 			],
 			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"JSON",
+				"Set Syntax: JSON"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
 				"javasc",
 				"Set Syntax: JavaScript"
 			],
@@ -310,10 +322,6 @@
 			[
 				"javascip",
 				"Set Syntax: JavaScript"
-			],
-			[
-				"html",
-				"Set Syntax: HTML"
 			],
 			[
 				"javasc	",
@@ -362,10 +370,6 @@
 			[
 				"jsh",
 				"JSHint"
-			],
-			[
-				"js",
-				"Set Syntax: JavaScript (Babel)"
 			],
 			[
 				"remove",
@@ -424,26 +428,61 @@
 		"/E/xampp/htdocs/cliw",
 		"/E/xampp/htdocs/cliw/public",
 		"/E/xampp/htdocs/cliw/public/src",
-		"/E/xampp/htdocs/cliw/public/src/css/editor",
 		"/E/xampp/htdocs/cliw/public/src/js",
-		"/E/xampp/htdocs/cliw/public/src/js/components",
-		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings",
-		"/E/xampp/htdocs/cliw/public/src/js/components/workspace"
+		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/components/tool-element"
 	],
 	"file_history":
 	[
-		"/E/xampp/htdocs/cliw/public/src/css/editor/index.less",
+		"/E/xampp/htdocs/cliw/public/src/js/actions.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/popups/components/login/index.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/popups/components/new-canvas/index.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/popups/popups.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/sidebar.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/components/bucket-settings/bucket-settings.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/components/font-settings/font-settings.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/workspace/workspace.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/components/pencil-settings/pencil-settings.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/components/font-settings/actions.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/header/actions.js",
+		"/E/xampp/htdocs/cliw/public/src/js/main.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/popups/components/login/actions.js",
+		"/E/xampp/htdocs/cliw/package.json",
+		"/E/xampp/htdocs/cliw/index.js",
+		"/E/xampp/htdocs/cliw/app/config/passport.js",
+		"/E/xampp/htdocs/cliw/app/config/routes.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/header/header.js",
+		"/E/xampp/htdocs/cliw/gulpfile.js",
+		"/E/xampp/htdocs/cliw/public/src/js/state.js",
+		"/E/xampp/htdocs/cliw/app/config/config.js",
+		"/E/xampp/htdocs/cliw/config.js",
+		"/E/xampp/htdocs/cliw/app/models/user.js",
+		"/E/xampp/htdocs/cliw/app/controllers/user.js",
+		"/E/xampp/htdocs/cliw/app/lib/utils.js",
+		"/E/xampp/htdocs/cliw/app/config/middlewares/authorization.js",
+		"/E/xampp/htdocs/cliw/app/config/express.js",
+		"/E/xampp/htdocs/cliw/app/config/passport/facebook.js",
+		"/E/xampp/htdocs/cliw/app/config/env/development.js",
+		"/E/xampp/htdocs/cliw/app/config/env/production.js",
+		"/E/xampp/htdocs/cliw/app/config/env/env.json",
+		"/E/xampp/htdocs/cliw/app/controllers/users.js",
+		"/E/xampp/htdocs/cliw/app/config/database.js",
+		"/E/xampp/htdocs/cliw/.gitignore",
+		"/C/Users/Robert/Desktop/ex.cpp",
+		"/E/xampp/htdocs/selfsite/css/style.less",
+		"/E/xampp/htdocs/selfsite/index.html",
+		"/E/xampp/htdocs/selfsite/Gruntfile.js",
+		"/E/xampp/htdocs/selfsite/js/jquery.js",
+		"/E/xampp/htdocs/selfsite/css/reset.less",
+		"/E/xampp/htdocs/selfsite/css/animate.less",
+		"/E/xampp/htdocs/selfsite/public/index.html",
+		"/E/xampp/htdocs/selfsite/package.json",
 		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/tool-settings.js",
+		"/E/xampp/htdocs/cliw/public/src/css/editor/index.less",
 		"/E/xampp/htdocs/cliw/public/src/css/style.less",
 		"/E/xampp/htdocs/cliw/public/src/css/animate.css",
-		"/E/xampp/htdocs/cliw/public/src/js/state.js",
-		"/E/xampp/htdocs/cliw/public/src/js/main.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/actions.js",
-		"/E/xampp/htdocs/cliw/public/src/js/components/workspace/workspace.js",
-		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/sidebar.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/workspace/actions.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/components/tool-element/tool-element.js",
-		"/E/xampp/htdocs/cliw/public/src/js/components/header/header.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/components/actions.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/components/tool-element/actions.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/base-component/base-component.js",
@@ -459,13 +498,10 @@
 		"/E/xampp/htdocs/cliw/public/src/js/app.js",
 		"/C/Users/Robert/Desktop/[Training] Timetable/Gruntfile.js",
 		"/E/xampp/htdocs/cliw/public/src/css/reset.less",
-		"/E/xampp/htdocs/cliw/package.json",
 		"/C/Users/Robert/Desktop/[Training] Timetable/public/index.html",
 		"/C/Users/Robert/Desktop/[Training] Timetable/index.js",
-		"/E/xampp/htdocs/cliw/index.js",
 		"/E/xampp/htdocs/cliw/bower.json",
 		"/E/xampp/htdocs/license/bower.json",
-		"/E/xampp/htdocs/cliw/.gitignore",
 		"/E/xampp/htdocs/license/.bowerrc",
 		"/E/xampp/htdocs/cliw/.bowerrc",
 		"/E/xampp/htdocs/license/Gruntfile.js",
@@ -524,42 +560,7 @@
 		"/C/Users/Robert/Desktop/IC690875.png",
 		"/C/Users/Robert/Desktop/123/index.html",
 		"/C/Users/Robert/Desktop/123/index.js",
-		"/E/xampp/htdocs/[Training] Timetable/index.html",
-		"/E/xampp/htdocs/[Training] Timetable/style.css",
-		"/C/Users/Robert/Desktop/problema 1.c",
-		"/C/Users/Robert/Desktop/asdasd/main.c",
-		"/C/Users/Robert/Desktop/ex.java",
-		"/C/Users/Robert/Desktop/asdasd/find.c",
-		"/E/xampp/htdocs/fiipractic/.bowerrc",
-		"/C/Users/Robert/Desktop/asdasd/users.txt",
-		"/C/Users/Robert/Desktop/asdasd/a.out",
-		"/E/xampp/htdocs/fiipractic/bower.json",
-		"/C/Users/Robert/Desktop/index.html",
-		"/E/xampp/htdocs/reactPlayv1/app/components/cartApp/cartApp.types.js",
-		"/E/xampp/htdocs/reactPlayv1/app/index.html",
-		"/E/xampp/htdocs/reactPlayv1/app/components/cartApp/cartApp.reducer.js",
-		"/E/xampp/htdocs/reactPlayv1/app/components/cartApp/cartApp.component.js",
-		"/E/xampp/htdocs/reactPlayv1/app/components/cartApp/cartApp.actions.js",
-		"/E/xampp/htdocs/reactPlayv1/app/index.js",
-		"/E/xampp/htdocs/reactPlayv1/Gruntfile.js",
-		"/E/xampp/htdocs/reactPlayv1/app/components/cartApp/index.html",
-		"/E/xampp/htdocs/reactPlayv1/app/dispatcher/dispatcher.js",
-		"/E/xampp/htdocs/reactPlayv1/package.json",
-		"/E/xampp/htdocs/reactPlayv1/app/components/cartApp/constants/actionTypes.js",
-		"/E/xampp/htdocs/reactPlayv1/app/components/cartApp/constants/actions.js",
-		"/C/Users/Robert/Desktop/diana.txt",
-		"/C/Users/Robert/Desktop/SearchNode.java",
-		"/C/Users/Robert/Desktop/State.java",
-		"/C/Users/Robert/Desktop/FWGCState.java",
-		"/C/Users/Robert/Desktop/DFSSerach.java",
-		"/C/Users/Robert/Desktop/Solver.java",
-		"/C/Users/Robert/Desktop/Farmer.java",
-		"/C/Users/Robert/Desktop/Planner.class",
-		"/C/Users/Robert/Desktop/IA/Backup/SpacesSearch/MainForm.cs",
-		"/C/Users/Robert/Desktop/IA/Backup/SpacesSearch/ISolver.cs",
-		"/C/Users/Robert/Desktop/IA/Backup/SpacesSearch/BreadthFirstSolver.cs",
-		"/C/Users/Robert/Desktop/IA/Backup/SpacesSearch/DepthFirstSolver.cs",
-		"/C/Users/Robert/Desktop/IA/Backup/SpacesSearch/BestFirstSolver.cs"
+		"/E/xampp/htdocs/[Training] Timetable/index.html"
 	],
 	"find":
 	{
@@ -580,6 +581,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"tree.set(['popups', 'active'], '');",
+			"config.root",
+			"var ",
+			", ",
+			"strong",
+			"bold",
 			"class",
 			"hover",
 			"_handleClick",
@@ -701,13 +708,7 @@
 			"galleryEls",
 			"\"",
 			"naturalWidth",
-			"clientWidth",
-			"clientHeight",
-			"clientWidth",
-			"imageHeight",
-			"imageWidth",
-			"$img",
-			"\"date\": \"22/08/2015\","
+			"clientWidth"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -731,24 +732,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "public/src/js/state.js",
+					"file": "public/src/js/components/header/header.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1835,
+						"buffer_size": 3201,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1802,
-								1802
+								743,
+								743
 							]
 						],
 						"settings":
@@ -760,35 +761,6 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "public/src/js/components/tool-settings/tool-settings.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1873,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								571,
-								571
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 229.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 0,
 					"type": "text"
 				}
@@ -797,7 +769,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 22.0
+		"height": 21.0
 	},
 	"input":
 	{
@@ -838,7 +810,7 @@
 	"project": "",
 	"replace":
 	{
-		"height": 40.0
+		"height": 38.0
 	},
 	"save_all_on_build": true,
 	"select_file":

@@ -10,10 +10,12 @@ gulp.task("copy", helpers.getTask({taskName: 'copy'}));
 gulp.task("clean", helpers.getTask({taskName: 'clean'}));
 
 gulp.task("watch", function() {
-	gulp.watch(global.files.css.watch, ['styles']);
-	gulp.watch(global.files.js.all, ['scripts']);
+	
 });
 
 gulp.task("deploy", ['copy','scripts', 'styles']);
 
-gulp.task("build", ['copy','scripts', 'styles', 'watch']);
+gulp.task("build", ['copy','scripts', 'styles'], function () {
+	gulp.watch(global.files.css.watch, ['styles']);
+	gulp.watch(global.files.js.all, ['scripts']);
+});
