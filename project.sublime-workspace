@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"auth",
+				"authUser"
+			],
+			[
 				"con",
 				"config"
 			],
@@ -272,10 +276,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/config/passport.js",
+			"file": "public/src/js/components/header/header.js",
 			"settings":
 			{
-				"buffer_size": 1043,
+				"buffer_size": 3201,
 				"line_ending": "Windows"
 			}
 		}
@@ -422,28 +426,36 @@
 	"expanded_folders":
 	[
 		"/E/xampp/htdocs/cliw",
-		"/E/xampp/htdocs/cliw/app",
-		"/E/xampp/htdocs/cliw/app/config",
+		"/E/xampp/htdocs/cliw/public",
 		"/E/xampp/htdocs/cliw/public/src",
 		"/E/xampp/htdocs/cliw/public/src/js",
-		"/E/xampp/htdocs/cliw/public/src/js/components",
-		"/E/xampp/htdocs/cliw/public/src/js/components/popups",
-		"/E/xampp/htdocs/cliw/public/src/js/components/popups/components",
-		"/E/xampp/htdocs/cliw/public/src/js/components/popups/components/login"
+		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/components/tool-element"
 	],
 	"file_history":
 	[
-		"/E/xampp/htdocs/cliw/app/config/routes.js",
+		"/E/xampp/htdocs/cliw/public/src/js/actions.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/popups/components/login/index.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/popups/components/new-canvas/index.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/popups/popups.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/sidebar.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/components/bucket-settings/bucket-settings.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/components/font-settings/font-settings.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/workspace/workspace.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/components/pencil-settings/pencil-settings.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/components/font-settings/actions.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/header/actions.js",
+		"/E/xampp/htdocs/cliw/public/src/js/main.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/popups/components/login/actions.js",
+		"/E/xampp/htdocs/cliw/package.json",
 		"/E/xampp/htdocs/cliw/index.js",
+		"/E/xampp/htdocs/cliw/app/config/passport.js",
+		"/E/xampp/htdocs/cliw/app/config/routes.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/header/header.js",
 		"/E/xampp/htdocs/cliw/gulpfile.js",
-		"/E/xampp/htdocs/cliw/app/config/passport.js",
 		"/E/xampp/htdocs/cliw/public/src/js/state.js",
 		"/E/xampp/htdocs/cliw/app/config/config.js",
 		"/E/xampp/htdocs/cliw/config.js",
 		"/E/xampp/htdocs/cliw/app/models/user.js",
-		"/E/xampp/htdocs/cliw/package.json",
 		"/E/xampp/htdocs/cliw/app/controllers/user.js",
 		"/E/xampp/htdocs/cliw/app/lib/utils.js",
 		"/E/xampp/htdocs/cliw/app/config/middlewares/authorization.js",
@@ -468,10 +480,7 @@
 		"/E/xampp/htdocs/cliw/public/src/css/editor/index.less",
 		"/E/xampp/htdocs/cliw/public/src/css/style.less",
 		"/E/xampp/htdocs/cliw/public/src/css/animate.css",
-		"/E/xampp/htdocs/cliw/public/src/js/main.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/actions.js",
-		"/E/xampp/htdocs/cliw/public/src/js/components/workspace/workspace.js",
-		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/sidebar.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/workspace/actions.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/components/tool-element/tool-element.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/components/actions.js",
@@ -551,16 +560,7 @@
 		"/C/Users/Robert/Desktop/IC690875.png",
 		"/C/Users/Robert/Desktop/123/index.html",
 		"/C/Users/Robert/Desktop/123/index.js",
-		"/E/xampp/htdocs/[Training] Timetable/index.html",
-		"/E/xampp/htdocs/[Training] Timetable/style.css",
-		"/C/Users/Robert/Desktop/problema 1.c",
-		"/C/Users/Robert/Desktop/asdasd/main.c",
-		"/C/Users/Robert/Desktop/ex.java",
-		"/C/Users/Robert/Desktop/asdasd/find.c",
-		"/E/xampp/htdocs/fiipractic/.bowerrc",
-		"/C/Users/Robert/Desktop/asdasd/users.txt",
-		"/C/Users/Robert/Desktop/asdasd/a.out",
-		"/E/xampp/htdocs/fiipractic/bower.json"
+		"/E/xampp/htdocs/[Training] Timetable/index.html"
 	],
 	"find":
 	{
@@ -581,6 +581,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"tree.set(['popups', 'active'], '');",
 			"config.root",
 			"var ",
 			", ",
@@ -707,8 +708,7 @@
 			"galleryEls",
 			"\"",
 			"naturalWidth",
-			"clientWidth",
-			"clientHeight"
+			"clientWidth"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -737,26 +737,25 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/config/passport.js",
-					"semi_transient": true,
+					"file": "public/src/js/components/header/header.js",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1043,
+						"buffer_size": 3201,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								743,
+								743
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

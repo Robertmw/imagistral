@@ -10,7 +10,7 @@ import React from 'react';
 import BaseComponent from '../../../base-component/base-component';
 import {branch} from 'baobab-react/higher-order';
 import ColorPicker from 'react-color';
-import * as actions from './actions';
+import * as actions from '../../actions';
 
 
 const displayName = 'Bucket Settings';

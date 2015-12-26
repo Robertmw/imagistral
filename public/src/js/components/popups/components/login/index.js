@@ -10,60 +10,39 @@ import React from 'react';
 import BaseComponent from '../../../base-component/base-component';
 import {branch} from 'baobab-react/higher-order';
 
-import * as actions from './actions';
+import Auth from '../../../../services/facebook-auth';
+import Cookie from '../../../../services/cookies';
+
+import * as actions from '../../actions';
 
 class LoginPopup extends BaseComponent {
 
 	constructor(props) {
 		super(props);
 
-		this._bind('_authenticate', 'responseApi', 'checkLoginState');
-	}
+		this._bind('_authenticate', '_login');
 
-	componentDidMount() {
-		window.fbAsyncInit = () => {
-			FB.init({
-				appId: '999809560057190',
-				xfbml: false,
-				version: 'v2.3'
-			});
-
-			//FB.getLoginStatus(this.checkLoginState);
+		let authConfig = {
+			appId: '999809560057190',
+			xfbml: false,
+			version: 'v2.3',
+			callback: this._login
 		};
+		this.FbAuth = new Auth(authConfig);
 
-		(function(d, s, id){
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) {return;}
-			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/en_US/sdk.js";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-	}
-
-	responseApi (authResponse) {
-		FB.api('/me', {fields: 'first_name, last_name, picture'}, (me) => {
-			me.accessToken = authResponse.accessToken;
-			let payload = {
-				first_name: me.first_name,
-				last_name: me.last_name,
-				avatar: me.picture.data.url
-			};
-
-			this.props.actions.authUser(payload);
-			this.props.handleClose();
-		});
-	}
-
-	checkLoginState (response) {
-		if (response.authResponse) {
-			this.responseApi(response.authResponse);
-		} else {
-			console.error('Login failed');
-		}
+		this.Cookies = new Cookie();
 	}
 
 	_authenticate() {
-		FB.login(this.checkLoginState, { scope: 'public_profile' });
+		this.FbAuth.authenticate(this._login);
+	}
+
+	_login(payload) {
+		this.props.actions.authUser(payload);
+		this.props.handleClose();
+		this.Cookies.createCookie('avatar', payload.avatar, 100, 'Imagistral');
+		this.Cookies.createCookie('first_name', payload.first_name, 100, 'Imagistral');
+		this.Cookies.createCookie('last_name', payload.last_name, 100, 'Imagistral');
 	}
 
 	render() {
