@@ -132,48 +132,4 @@
 
 		transform: translate(-50%, -50%);
 	}
-
-	.scrollbar {
-		@scrollSize: 10px;
-
-		position: absolute;
-
-		background-color: @grey;
-
-		&--horizontal {
-			right: @scrollSize;
-			bottom: 0;
-			left: 0;
-
-			height: @scrollSize;
-
-			.cursor {
-				width: @scrollSize * 10;
-				height: @scrollSize * 3;
-
-				cursor: e-resize;
-			}
-		}
-
-		&--vertical {
-			top: @headerHeight - 10;
-			right: 0;
-			bottom: @scrollSize;
-
-			width: @scrollSize;
-
-			.cursor {
-				width: @scrollSize * 3;
-				height: @scrollSize * 10;
-
-				cursor: s-resize;
-			}
-		}
-
-		.cursor {
-			display: block;
-
-			background-color: @light-grey;
-		}
-	}
 }
