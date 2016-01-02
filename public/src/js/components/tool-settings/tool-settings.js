@@ -14,6 +14,8 @@ import FontSettings from './components/font-settings/font-settings';
 import PencilSettings from './components/pencil-settings/pencil-settings';
 import BucketSettings from './components/bucket-settings/bucket-settings';
 
+import {closeToolSettings} from './actions';
+
 const displayName = 'Sidebar';
 
 class ToolSettings extends BaseComponent {
@@ -24,6 +26,8 @@ class ToolSettings extends BaseComponent {
 		this.state = {
 			wrapperClass: ''
 		};
+
+		this._bind('_closeSettings');
 	}
 
 	componentWillReceiveProps(newProps) {
@@ -55,13 +59,27 @@ class ToolSettings extends BaseComponent {
 		}
 	}
 
+	_closeSettings() {
+		this.setState({wrapperClass: 'toolbar-advanced-settings animated fadeOutLeft'});
+		this.props.actions.closeTool();
+	}
+
 	render() {
 		const props = this.props.toolSettings;
 		const toolElement = this._getToolSettings(this.props.selectedTool);
 
 		return (
-			<div className={this.state.wrapperClass}>
-				{props.visible && toolElement}
+			<div>
+				<div className={this.state.wrapperClass}>
+					{props.visible && toolElement}
+				</div>
+				{
+					props.visible && 
+					<div 
+						className = "toolbar-shadow"
+						onClick = {this._closeSettings}
+					/>
+				}
 			</div>
 		);
 	}
@@ -72,5 +90,8 @@ export default branch(ToolSettings, {
 	cursors: {
 		selectedTool: ['selectedTool'],
 		toolSettings: ['toolSettings']
+	},
+	actions: {
+		closeTool: closeToolSettings
 	}
 });

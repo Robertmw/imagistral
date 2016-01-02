@@ -1,3 +1,7 @@
+export function closeToolSettings(tree) {
+	tree.set(['toolSettings', 'visible'], false);
+}
+
 export function updateColor(tree, value) {
 	tree.set(['color'], value);
 }
