@@ -111,14 +111,6 @@ class Workspace extends BaseComponent {
 						<span className="icon-trash" />
 						<p>Delete canvas</p>
 					</div>
-					<div className = {deleteClass}>
-						<span className="icon-rotate_left" />
-						<p>Rotate left</p>
-					</div>
-					<div className = {deleteClass}>
-						<span className="icon-rotate_right" />
-						<p>Rotate right</p>
-					</div>
 					<div className="settingsEl settingsEl--zoom">
 						<span 
 							className={zoomOutClass} 
@@ -137,8 +129,6 @@ class Workspace extends BaseComponent {
 					</div>
 				</section>
 				{canvasOrNot}
-				<div className="scrollbar scrollbar--horizontal"><span className="cursor"></span></div>
-				<div className="scrollbar scrollbar--vertical"><span className="cursor"></span></div>
 			</section>
 		);
 	}

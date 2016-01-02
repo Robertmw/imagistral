@@ -123,10 +123,6 @@ class Header extends BaseComponent {
 					<span className="icon icon-heading"></span>
 					{title}
 				</div>
-				<div className="header header--history">
-					<span className="icon-undo unavailable"></span>
-					<span className="icon-forward"></span>
-				</div>
 				{loggedButton}
 				<div 
 					className = {overlayClass}
