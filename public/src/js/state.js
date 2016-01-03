@@ -27,6 +27,7 @@ const tree = new Baobab({
 		zoomIn: true,
 		zoomOut: true
 	},
+	uploadedImage: '',
 	tools: [
 		{
 			name: 'cursor',
