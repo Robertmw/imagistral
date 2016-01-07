@@ -13,6 +13,7 @@ import {branch} from 'baobab-react/higher-order';
 import FontSettings from './components/font-settings/font-settings';
 import PencilSettings from './components/pencil-settings/pencil-settings';
 import BucketSettings from './components/bucket-settings/bucket-settings';
+import BrushSettings from './components/brush-settings/brush-settings';
 
 import {closeToolSettings} from './actions';
 
@@ -52,6 +53,10 @@ class ToolSettings extends BaseComponent {
 
 			case 'pencil':
 				return (<PencilSettings />);
+				break;
+
+			case 'brush':
+				return (<BrushSettings />);
 				break;
 
 			default: 

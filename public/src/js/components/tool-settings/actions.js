@@ -29,3 +29,11 @@ export function changeFontStyle(tree, value) {
 export function changePencilSize(tree, value) {
 	tree.set(['toolSettings', 'pencil', 'size'], value);
 }
+
+export function changeBrushSize(tree, value) {
+	tree.set(['toolSettings', 'brush', 'size'], value);
+}
+
+export function changeBrushHardness(tree, value) {
+	tree.set(['toolSettings', 'brush', 'hardness'], value);
+}
