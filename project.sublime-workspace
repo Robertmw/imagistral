@@ -4,8 +4,24 @@
 		"selected_items":
 		[
 			[
+				"up",
+				"uploadImage"
+			],
+			[
+				"Cook",
+				"Cookie"
+			],
+			[
+				"app",
+				"appId"
+			],
+			[
 				"auth",
-				"authUser"
+				"authConfig"
+			],
+			[
+				"respo",
+				"responseApi"
 			],
 			[
 				"con",
@@ -192,10 +208,6 @@
 				"browserify"
 			],
 			[
-				"app",
-				"appendChild"
-			],
-			[
 				"load",
 				"loadingContainer"
 			],
@@ -276,10 +288,34 @@
 	"buffers":
 	[
 		{
+			"file": "public/src/js/main.js",
+			"settings":
+			{
+				"buffer_size": 1616,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "public/src/js/components/header/header.js",
 			"settings":
 			{
-				"buffer_size": 3201,
+				"buffer_size": 3108,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/src/css/editor/header.less",
+			"settings":
+			{
+				"buffer_size": 2793,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.js",
+			"settings":
+			{
+				"buffer_size": 217,
 				"line_ending": "Windows"
 			}
 		}
@@ -297,6 +333,10 @@
 		[
 			[
 				"babel",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"ba",
 				"Set Syntax: JavaScript (Babel)"
 			],
 			[
@@ -428,31 +468,49 @@
 		"/E/xampp/htdocs/cliw",
 		"/E/xampp/htdocs/cliw/public",
 		"/E/xampp/htdocs/cliw/public/src",
+		"/E/xampp/htdocs/cliw/public/src/css",
+		"/E/xampp/htdocs/cliw/public/src/css/editor",
 		"/E/xampp/htdocs/cliw/public/src/js",
-		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/components/tool-element"
+		"/E/xampp/htdocs/cliw/public/src/js/components",
+		"/E/xampp/htdocs/cliw/public/src/js/components/header",
+		"/E/xampp/htdocs/cliw/public/src/js/components/popups",
+		"/E/xampp/htdocs/cliw/public/src/js/components/popups/components",
+		"/E/xampp/htdocs/cliw/public/src/js/components/popups/components/open-file",
+		"/E/xampp/htdocs/cliw/public/src/js/components/workspace"
 	],
 	"file_history":
 	[
-		"/E/xampp/htdocs/cliw/public/src/js/actions.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/popups/actions.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/popups/components/open-file/index.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/workspace/workspace.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/workspace/actions.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/header/header.js",
+		"/E/xampp/htdocs/cliw/public/src/js/state.js",
+		"/E/xampp/htdocs/cliw/public/src/css/editor/workspace.less",
+		"/E/xampp/htdocs/cliw/public/src/css/editor/index.less",
+		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/tool-settings.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/actions.js",
+		"/E/xampp/htdocs/cliw/public/src/css/style.less",
+		"/E/xampp/htdocs/cliw/public/src/js/main.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/popups/components/login/index.js",
-		"/E/xampp/htdocs/cliw/public/src/js/components/popups/components/new-canvas/index.js",
+		"/E/xampp/htdocs/cliw/public/src/js/services/cookies/index.js",
+		"/E/xampp/htdocs/cliw/public/src/js/services/facebook-auth/index.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/popups/popups.js",
-		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/sidebar.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/popups/components/new-canvas/index.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/components/actions.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/components/bucket-settings/bucket-settings.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/components/font-settings/font-settings.js",
-		"/E/xampp/htdocs/cliw/public/src/js/components/workspace/workspace.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/components/pencil-settings/pencil-settings.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/sidebar.js",
+		"/E/xampp/htdocs/cliw/public/src/js/actions.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/components/font-settings/actions.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/header/actions.js",
-		"/E/xampp/htdocs/cliw/public/src/js/main.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/popups/components/login/actions.js",
 		"/E/xampp/htdocs/cliw/package.json",
 		"/E/xampp/htdocs/cliw/index.js",
 		"/E/xampp/htdocs/cliw/app/config/passport.js",
 		"/E/xampp/htdocs/cliw/app/config/routes.js",
-		"/E/xampp/htdocs/cliw/public/src/js/components/header/header.js",
 		"/E/xampp/htdocs/cliw/gulpfile.js",
-		"/E/xampp/htdocs/cliw/public/src/js/state.js",
 		"/E/xampp/htdocs/cliw/app/config/config.js",
 		"/E/xampp/htdocs/cliw/config.js",
 		"/E/xampp/htdocs/cliw/app/models/user.js",
@@ -476,12 +534,8 @@
 		"/E/xampp/htdocs/selfsite/css/animate.less",
 		"/E/xampp/htdocs/selfsite/public/index.html",
 		"/E/xampp/htdocs/selfsite/package.json",
-		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/tool-settings.js",
-		"/E/xampp/htdocs/cliw/public/src/css/editor/index.less",
-		"/E/xampp/htdocs/cliw/public/src/css/style.less",
 		"/E/xampp/htdocs/cliw/public/src/css/animate.css",
 		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/actions.js",
-		"/E/xampp/htdocs/cliw/public/src/js/components/workspace/actions.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/components/tool-element/tool-element.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/components/actions.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/components/tool-element/actions.js",
@@ -553,14 +607,7 @@
 		"/C/Users/Robert/Desktop/[Training] Timetable/index.html",
 		"/E/xampp/htdocs/license/.eslintrc",
 		"/C/Users/Robert/Desktop/[Training] Timetable/.eslintrc",
-		"/E/xampp/htdocs/fiipractic/package.json",
-		"/C/Users/Robert/Desktop/[Training] Timetable/wiki/SinglePageApplication.md",
-		"/C/Users/Robert/Desktop/asdas/style.css",
-		"/C/Users/Robert/Desktop/asdas/index.html",
-		"/C/Users/Robert/Desktop/IC690875.png",
-		"/C/Users/Robert/Desktop/123/index.html",
-		"/C/Users/Robert/Desktop/123/index.js",
-		"/E/xampp/htdocs/[Training] Timetable/index.html"
+		"/E/xampp/htdocs/fiipractic/package.json"
 	],
 	"find":
 	{
@@ -581,6 +628,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"RootedApp",
+			"first_name",
+			"avatar",
+			"this.",
+			"this",
+			"callback",
+			"this.",
+			".bind(this)",
 			"tree.set(['popups', 'active'], '');",
 			"config.root",
 			"var ",
@@ -700,15 +755,7 @@
 			"LoginCtrl",
 			"myFirstName",
 			"myPass",
-			"GetByUsername",
-			"Username",
-			"username",
-			"myEmail",
-			"login",
-			"galleryEls",
-			"\"",
-			"naturalWidth",
-			"clientWidth"
+			"GetByUsername"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -732,24 +779,54 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "public/src/js/components/header/header.js",
+					"file": "public/src/js/main.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3201,
+						"buffer_size": 1616,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								743,
-								743
+								147,
+								74
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "public/src/js/components/header/header.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3108,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								583,
+								583
 							]
 						],
 						"settings":
@@ -757,11 +834,68 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
+						"translation.x": -0.0,
+						"translation.y": 424.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/src/css/editor/header.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2793,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2353,
+								2353
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2034.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 217,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								146,
+								146
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {render} from 'react-dom';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import {root} from 'baobab-react/higher-order';
 import tree from './state';
 
@@ -15,7 +16,7 @@ import Cookie from './services/cookies';
 
 const Cookies = new Cookie();
 
-class App extends Component {
+class Editor extends Component {
 
 	componentWillMount() {
 
@@ -44,8 +45,38 @@ class App extends Component {
 
 }
 
-App.prototype.displayName = "App Name";
+Editor.prototype.displayName = "Editor Name";
 
-const RootedApp = root(App, tree);
+const EditorApp = root(Editor, tree);
 
-render(<RootedApp />, document.querySelector('#app'));
+class Wall extends Component {
+
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		return (
+			<h1>This is the wall</h1>
+		);
+	}
+
+}
+
+Wall.prototype.displayName = "Wall Name";
+
+
+render(
+	<Router history={browserHistory}>
+		<Route 
+			path="/" 
+		>
+			<IndexRoute component={EditorApp} />
+			<Route 
+				component={Wall}
+				path="wall" 
+			/>
+		</Route>
+	</Router>, 
+  	document.querySelector('#app')
+);
