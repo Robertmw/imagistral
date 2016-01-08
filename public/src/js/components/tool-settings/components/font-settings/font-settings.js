@@ -95,7 +95,7 @@ class FontSettings extends BaseComponent {
 			return (
 				<option
 					key = {index}
-					selected = {props.fontWeight === el ? true : false}
+					//selected = {props.fontWeight === el ? true : false}
 					value = {el}
 				>{el}</option>
 			);
@@ -144,6 +144,7 @@ class FontSettings extends BaseComponent {
 						<select 
 							className="weight--wrapper" 
 							onChange={this._changeFontWeight}
+							value = {props.fontWeight}
 						>
 							{renderWeights}
 						</select>
