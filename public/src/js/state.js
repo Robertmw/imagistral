@@ -58,6 +58,12 @@ const tree = new Baobab({
 			subTools: []
 		},
 		{
+			name: 'text',
+			icon: 'icon-text',
+			caret: '',
+			subTools: []
+		},
+		{
 			name: 'eraser',
 			icon: 'icon-eraser',
 			caret: '',

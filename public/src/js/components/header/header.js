@@ -7,6 +7,7 @@
  */
 
 import React from 'react';
+import { Link } from 'react-router';
 import BaseComponent from '../base-component/base-component';
 import {branch} from 'baobab-react/higher-order';
 import Classnames from 'classnames';
@@ -57,7 +58,7 @@ class Header extends BaseComponent {
 						<span className="icon-faq"></span>
 					</div>
 					<div className="work--wall">
-						<span className="icon-wall_v2"></span>
+						<Link to="/wall"><span className="icon-wall_v2"></span></Link>
 					</div>
 					<div className="work--profile">
 						<img
