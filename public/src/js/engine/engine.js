@@ -61,6 +61,6 @@ const uploadedCursor = tree.select('uploadedImage');
 uploadedCursor.on('update', () => {
 	const imageUrl = tree.get().uploadedImage;
 	if (imageUrl !== null) {
-		importImage.addImage(tree.get().uploadedImage);
+		importImage.addImage(imageUrl);
 	}
 });

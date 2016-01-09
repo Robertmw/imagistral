@@ -9,9 +9,9 @@ export function addImage(url){
 		});
 	} else {
 		// TODO wait until issue #52 its resolved
-		// fabricjs.fabric.Image.fromURL(url, (myImage) => {
-		// 	engine.engineInit(myImage.width, myImage.height);
-		// 	engine.canvas.add(myImage);
-		// });
+		fabricjs.fabric.Image.fromURL(url, (myImage) => {
+			engine.engineInit(myImage.width, myImage.height);
+			engine.canvas.add(myImage);
+		});
 	}
 }

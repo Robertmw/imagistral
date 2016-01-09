@@ -34,7 +34,7 @@ class OpenFile extends BaseComponent {
 		console.log(this.state);
 		if (this.state.image !== null) {
 			this.props.actions.uploadImage(this.state.image);
-			engineInit(1,1);
+			// engineInit(1,1);
 			this.props.actions.closePopup();
 		}
 	}
@@ -55,13 +55,13 @@ class OpenFile extends BaseComponent {
 			<div className="popup bounceIn animated">
 				<div className="popup__header">
 					<h3 className="popup__title">Import File</h3>
-					<span 
-						className="popup__close icon-cross" 
+					<span
+						className="popup__close icon-cross"
 						onClick={this.props.handleClose}
 					/>
 				</div>
 				<div className="popup__wrapper">
-					<Dropzone 
+					<Dropzone
 						accept = "image/*"
 						activeStyle = {activeStyle}
 						className = "dropzone__container"
@@ -71,9 +71,9 @@ class OpenFile extends BaseComponent {
 					>
 						<div className="dropzone__wrapper">
 							<p className="dropzone__title">Try dropping some files here, or click to select files to upload.</p>
-							<span 
-								className = {previewClass} 
-								style = {{backgroundImage: 'url(' + this.state.image + ')'}} 
+							<span
+								className = {previewClass}
+								style = {{backgroundImage: 'url(' + this.state.image + ')'}}
 							/>
 						</div>
 					</Dropzone>
