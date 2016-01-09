@@ -43,7 +43,7 @@ class Workspace extends BaseComponent {
 			);
 		}
 
-		return;
+		return null;
 
 	}
 
