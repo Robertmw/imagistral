@@ -1,6 +1,7 @@
 import tree from '../state';
 import fabricjs from '../../../../bower_components/fabric.js/dist/fabric.min.js';
 import * as draw from './draw';
+import * as importImage from './importImage';
 
 export let canvas = null;
 
@@ -9,9 +10,11 @@ export function engineInit(w, h) {
 		backgroundColor: 'rgb(255,255,255)',
 		selection: false,
 		width: w,
-		height: h
+		height: h,
+		selectionColor: 'rgba(0,255,0,0.3)',
+		selectionBorderColor: 'red',
+		selectionLineWidth: 5
 	});
-	fabric.Object.prototype.selectable = false;
 };
 
 const updateTool = () => {
@@ -32,6 +35,14 @@ const updateTool = () => {
 	}
 };
 
-tree.on('update', (e) => {
+tree.on('update', () => {
 	updateTool();
+});
+
+const uploadedCursor = tree.select('uploadedImage');
+uploadedCursor.on('update', () => {
+	const imageUrl = tree.get().uploadedImage;
+	if (imageUrl !== null) {
+		importImage.addImage(tree.get().uploadedImage);
+	}
 });
