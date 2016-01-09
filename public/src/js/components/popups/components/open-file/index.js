@@ -12,13 +12,13 @@ import Dropzone from 'react-dropzone';
 import {branch} from 'baobab-react/higher-order';
 
 import {engineInit} from '../../../../engine/engine';
-import {uploadImage} from '../../actions';
+import {uploadImage, closePopup} from '../../actions';
 
 class OpenFile extends BaseComponent {
 
 	constructor(props) {
 		super(props);
-		this._bind('_onDrop');
+		this._bind('_onDrop', '_uploadFile');
 
 		this.state = {
 			image: null
@@ -27,8 +27,16 @@ class OpenFile extends BaseComponent {
 
 	_onDrop(files) {
 		console.info('Received files: ', files[0]);
-		this.props.actions.uploadImage(files[0].preview);
-		//engineInit();
+		this.setState({image: files[0].preview});
+	}
+
+	_uploadFile() {
+		console.log(this.state);
+		if (this.state.image !== null) {
+			this.props.actions.uploadImage(this.state.image);
+			engineInit(1,1);
+			this.props.actions.closePopup();
+		}
 	}
 
 	render() {
@@ -41,6 +49,8 @@ class OpenFile extends BaseComponent {
 			backgroundColor: '#D90429',
 			color: '#fff'
 		};
+
+		const previewClass = this.state.image ? 'dropzone__preview open' : 'dropzone__preview';
 		return (
 			<div className="popup bounceIn animated">
 				<div className="popup__header">
@@ -61,14 +71,17 @@ class OpenFile extends BaseComponent {
 					>
 						<div className="dropzone__wrapper">
 							<p className="dropzone__title">Try dropping some files here, or click to select files to upload.</p>
-							<span className="dropzone__preview" />
+							<span 
+								className = {previewClass} 
+								style = {{backgroundImage: 'url(' + this.state.image + ')'}} 
+							/>
 						</div>
 					</Dropzone>
 				</div>
 				<div className="popup__footer">
 					<span
 						className="btn"
-						onClick={this._createCanvas}
+						onClick={this._uploadFile}
 					>Create</span>
 				</div>
 			</div>
@@ -79,6 +92,7 @@ class OpenFile extends BaseComponent {
 
 export default branch(OpenFile, {
 	actions: {
-		uploadImage: uploadImage
+		uploadImage: uploadImage,
+		closePopup: closePopup
 	}
 });
