@@ -12,6 +12,8 @@ import {branch} from 'baobab-react/higher-order';
 
 import {engineInit} from '../../../../engine/engine';
 
+import * as actions from '../../actions';
+
 class NewCanvasPopup extends BaseComponent {
 
 	constructor(props) {
@@ -44,6 +46,7 @@ class NewCanvasPopup extends BaseComponent {
 
 	_createCanvas() {
 		//this.props.actions.createCanvas(this.state.w, this.state.h);
+		this.props.actions.closePopup();
 		engineInit(this.state.w, this.state.h);
 	}
 
@@ -110,5 +113,8 @@ class NewCanvasPopup extends BaseComponent {
 export default branch(NewCanvasPopup, {
 	cursors : {
 		canvas: 'canvas'
+	},
+	actions: {
+		closePopup: actions.closePopup
 	}
 });
