@@ -6,6 +6,13 @@ import * as importImage from './importImage';
 export let canvas = null;
 
 export function engineInit(w, h) {
+
+	const canvasElem = document.createElement('canvas');
+	const workspace = document.getElementsByClassName('workspace')[0];
+	console.log(workspace);
+	canvasElem.setAttribute('id', 'mainCanvas');
+	workspace.appendChild(canvasElem);
+
 	canvas = new fabricjs.fabric.Canvas('mainCanvas', {
 		backgroundColor: 'rgb(255,255,255)',
 		selection: false,
