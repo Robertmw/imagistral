@@ -9,7 +9,6 @@ export function engineInit(w, h) {
 
 	const canvasElem = document.createElement('canvas');
 	const workspace = document.getElementsByClassName('workspace')[0];
-	console.log(workspace);
 	canvasElem.setAttribute('id', 'mainCanvas');
 	workspace.appendChild(canvasElem);
 
@@ -22,6 +21,9 @@ export function engineInit(w, h) {
 		selectionBorderColor: 'red',
 		selectionLineWidth: 5
 	});
+
+	tree.set(['canvas', 'width'], w);
+	tree.set(['canvas', 'height'], h);
 };
 
 const updateTool = () => {
