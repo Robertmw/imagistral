@@ -4,11 +4,12 @@ import * as draw from './draw';
 import * as importImage from './importImage';
 
 export let canvas = null;
+let workspace = null;
 
 export function engineInit(w, h) {
 
 	const canvasElem = document.createElement('canvas');
-	const workspace = document.getElementsByClassName('workspace')[0];
+	workspace = document.getElementsByClassName('workspace')[0];
 	canvasElem.setAttribute('id', 'mainCanvas');
 	workspace.appendChild(canvasElem);
 
@@ -24,6 +25,14 @@ export function engineInit(w, h) {
 
 	tree.set(['canvas', 'width'], w);
 	tree.set(['canvas', 'height'], h);
+};
+
+export function deleteEngine() {
+	const canvasContainer = document.getElementsByClassName('canvas-container')[0];
+	workspace.removeChild(canvasContainer);
+
+	tree.set(['canvas', 'width'], null);
+	tree.set(['canvas', 'height'], null);
 };
 
 const updateTool = () => {
