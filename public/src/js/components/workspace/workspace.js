@@ -24,14 +24,6 @@ class Workspace extends BaseComponent {
 		this._bind( '_shouldRenderCanvas', '_openCanvasPopup');
 	}
 
-	componentDidUpdate() {
-		if (this.props.canvas.width !== null && this.props.canvas.height !== null) {
-			engineInit(this.props.canvas.width, this.props.canvas.height);
-		} else {
-			console.info('Canvas deleted');
-		}
-	}
-
 	_shouldRenderCanvas(props) {
 		if (props.width === null && props.height === null) {
 			return (
@@ -51,13 +43,7 @@ class Workspace extends BaseComponent {
 			);
 		}
 
-		return (
-			<canvas 
-				className = "canvas--sheet active"
-				id = "mainCanvas" 
-				ref = "canvasContainer"
-			/>
-		);
+		return;
 
 	}
 

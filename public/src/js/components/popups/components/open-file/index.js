@@ -11,6 +11,7 @@ import BaseComponent from '../../../base-component/base-component';
 import Dropzone from 'react-dropzone';
 import {branch} from 'baobab-react/higher-order';
 
+import {engineInit} from '../../../../engine/engine';
 import {uploadImage} from '../../actions';
 
 class OpenFile extends BaseComponent {
@@ -21,8 +22,9 @@ class OpenFile extends BaseComponent {
 	}
 
 	_onDrop(files) {
-		console.info('Received files: ', files[0].name);
+		console.info('Received files: ', files[0]);
 		this.props.actions.uploadImage(files[0].preview);
+		engineInit();
 	}
 
 	render() {
