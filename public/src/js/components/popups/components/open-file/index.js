@@ -19,12 +19,16 @@ class OpenFile extends BaseComponent {
 	constructor(props) {
 		super(props);
 		this._bind('_onDrop');
+
+		this.state = {
+			image: null
+		};
 	}
 
 	_onDrop(files) {
 		console.info('Received files: ', files[0]);
 		this.props.actions.uploadImage(files[0].preview);
-		engineInit();
+		//engineInit();
 	}
 
 	render() {
@@ -57,10 +61,15 @@ class OpenFile extends BaseComponent {
 					>
 						<div className="dropzone__wrapper">
 							<p className="dropzone__title">Try dropping some files here, or click to select files to upload.</p>
+							<span className="dropzone__preview" />
 						</div>
 					</Dropzone>
 				</div>
 				<div className="popup__footer">
+					<span
+						className="btn"
+						onClick={this._createCanvas}
+					>Create</span>
 				</div>
 			</div>
 		);
