@@ -12,7 +12,7 @@ import {branch} from 'baobab-react/higher-order';
 import Classnames from 'classnames';
 import * as actions from './actions';
 
-import {engineInit} from '../../engine/engine';
+import {engineInit, deleteEngine} from '../../engine/engine';
 
 const displayName = 'Workspace';
 
@@ -21,7 +21,7 @@ class Workspace extends BaseComponent {
 	constructor (props) {
 		super(props);
 
-		this._bind( '_shouldRenderCanvas', '_openCanvasPopup');
+		this._bind( '_shouldRenderCanvas', '_openCanvasPopup', '_clearWorkspace');
 	}
 
 	_shouldRenderCanvas(props) {
@@ -43,7 +43,7 @@ class Workspace extends BaseComponent {
 			);
 		}
 
-		return null;
+		return (<div/>);
 
 	}
 
@@ -51,6 +51,11 @@ class Workspace extends BaseComponent {
 		if (this.props.canvas.width === null && this.props.canvas.height === null) {
 			this.props.actions.openNewcanvasPopup();
 		}
+	}
+
+	_clearWorkspace() {
+		deleteEngine();
+		this.props.actions.deleteCanvas();
 	}
 
 	render() {
@@ -92,7 +97,7 @@ class Workspace extends BaseComponent {
 					</div>
 					<div 
 						className = {deleteClass}
-						onClick = {this.props.actions.deleteCanvas}
+						onClick = {this._clearWorkspace}
 					>
 						<span className="icon-trash" />
 						<p>Delete canvas</p>
