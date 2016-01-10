@@ -1,3 +1,4 @@
+import tree from '../state';
 import {canvas} from './engine';
 
 export function pencil(state) {
@@ -12,3 +13,10 @@ export function clear() {
 		canvas.clear();
 	}
 };
+
+export function deleteLayer() {
+	if (canvas.getActiveObject() !== null) {
+		canvas.getActiveObject().remove();
+		tree.set('selectedTool', 'cursor');
+	}
+}
