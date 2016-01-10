@@ -11,18 +11,32 @@ import BaseComponent from '../../../base-component/base-component';
 import Dropzone from 'react-dropzone';
 import {branch} from 'baobab-react/higher-order';
 
-import {uploadImage} from '../../actions';
+import {engineInit} from '../../../../engine/engine';
+import {uploadImage, closePopup} from '../../actions';
 
 class OpenFile extends BaseComponent {
 
 	constructor(props) {
 		super(props);
-		this._bind('_onDrop');
+		this._bind('_onDrop', '_uploadFile');
+
+		this.state = {
+			image: null
+		};
 	}
 
 	_onDrop(files) {
-		console.info('Received files: ', files[0].name);
-		this.props.actions.uploadImage(files[0].preview);
+		console.info('Received files: ', files[0]);
+		this.setState({image: files[0].preview});
+	}
+
+	_uploadFile() {
+		console.log(this.state);
+		if (this.state.image !== null) {
+			this.props.actions.uploadImage(this.state.image);
+			// engineInit(1,1);
+			this.props.actions.closePopup();
+		}
 	}
 
 	render() {
@@ -35,17 +49,19 @@ class OpenFile extends BaseComponent {
 			backgroundColor: '#D90429',
 			color: '#fff'
 		};
+
+		const previewClass = this.state.image ? 'dropzone__preview open' : 'dropzone__preview';
 		return (
 			<div className="popup bounceIn animated">
 				<div className="popup__header">
 					<h3 className="popup__title">Import File</h3>
-					<span 
-						className="popup__close icon-cross" 
+					<span
+						className="popup__close icon-cross"
 						onClick={this.props.handleClose}
 					/>
 				</div>
 				<div className="popup__wrapper">
-					<Dropzone 
+					<Dropzone
 						accept = "image/*"
 						activeStyle = {activeStyle}
 						className = "dropzone__container"
@@ -55,10 +71,18 @@ class OpenFile extends BaseComponent {
 					>
 						<div className="dropzone__wrapper">
 							<p className="dropzone__title">Try dropping some files here, or click to select files to upload.</p>
+							<span
+								className = {previewClass}
+								style = {{backgroundImage: 'url(' + this.state.image + ')'}}
+							/>
 						</div>
 					</Dropzone>
 				</div>
 				<div className="popup__footer">
+					<span
+						className="btn"
+						onClick={this._uploadFile}
+					>Create</span>
 				</div>
 			</div>
 		);
@@ -68,6 +92,7 @@ class OpenFile extends BaseComponent {
 
 export default branch(OpenFile, {
 	actions: {
-		uploadImage: uploadImage
+		uploadImage: uploadImage,
+		closePopup: closePopup
 	}
 });
