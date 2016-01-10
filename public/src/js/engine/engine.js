@@ -43,7 +43,7 @@ const updateTool = () => {
 			draw.pencil(currentState);
 			break;
 		case 'eraser':
-			draw.clear();
+			draw.deleteLayer();
 			break;
 		default:
 			if (canvas !== null) {
