@@ -1,4 +1,5 @@
 import LocalStorage from '../../services/localStorage/localStorage';
+import * as engine from '../../engine/engine';
 
 export function openLoginPopup(tree) {
 	tree.set(['popups', 'active'], 'login');
@@ -28,15 +29,17 @@ export function saveToLS(tree, payload) {
     title: payload.title,
     owner: payload.username,
     like: 0,
+    blob: engine.getBlob(),
     timestamp: Date.now()
   };
 
+  console.log(newElement);
   if (pushToImages(newElement, _images)) {
     response.value = true;
     response.title = 'Image was published';
   } else {
     response.value = false;
-    response.title = 'Name already exists';
+    response.title = 'Image already exists';
   }
 
   return response;
@@ -47,7 +50,7 @@ function pushToImages(element, images) {
   let response = true;
   if (images.length > 0) {
     for (let index = 0; index < images.length; index++) {
-      if (images[index].title === element.title) {
+      if (images[index].blob === element.blob) {
         response = false;
       } else {
         images.push(element);
