@@ -12,6 +12,7 @@ import BaseComponent from '../base-component/base-component';
 import {branch} from 'baobab-react/higher-order';
 import Classnames from 'classnames';
 import * as actions from './actions';
+import * as engine from '../../engine/engine';
 
 import {isEmpty} from '../../utils.js';
 
@@ -22,7 +23,12 @@ class Header extends BaseComponent {
 	constructor (props) {
 		super(props);
 
-		this._bind('_checkLogin', '_shouldEditTitle', '_handleTitleChange');
+		this._bind('_checkLogin', '_shouldEditTitle', '_handleTitleChange', '_saveLocal');
+	}
+
+	_saveLocal() {
+		// TODO save file localy
+		console.info('Local save to be implemented');
 	}
 
 	_checkLogin(user) {
@@ -31,7 +37,7 @@ class Header extends BaseComponent {
 		if (isEmpty(user)) {
 			value = (
 				<div className="work-buttons">
-					<div 
+					<div
 						className="work--upload"
 						onClick={this.props.actions.openLogin}
 					>
@@ -42,10 +48,12 @@ class Header extends BaseComponent {
 		} else {
 			value = (
 				<div className="work-buttons">
-					<div className="work--download">
+					<div className="work--download"
+						onClick = {this._saveLocal}
+					>
 						<span className="icon-download"></span>
 					</div>
-					<div 
+					<div
 						className="work--upload"
 						onClick = {this.props.actions.openFile}
 					>
@@ -87,8 +95,8 @@ class Header extends BaseComponent {
 						placeholder = "Enter canvas title"
 						type = "text"
 					/>
-					<label 
-						className = "icon-checked" 
+					<label
+						className = "icon-checked"
 						onClick = {this.props.actions.closeTitle}
 					/>
 				</div>
@@ -96,9 +104,9 @@ class Header extends BaseComponent {
 		}
 
 		return(
-			<div 
+			<div
 				className = "header--title__edit"
-				onClick={this.props.actions.editTitle} 
+				onClick={this.props.actions.editTitle}
 			>
 				<h4>{this.props.title}</h4>
 				<span className = "icon--edit icon-edit" />
@@ -113,7 +121,7 @@ class Header extends BaseComponent {
 			'header header--overlay': true,
 			'active': this.props.active
 		});
-		
+
 
 		return (
 			<header>
@@ -125,7 +133,7 @@ class Header extends BaseComponent {
 					{title}
 				</div>
 				{loggedButton}
-				<div 
+				<div
 					className = {overlayClass}
 					onClick = {this.props.actions.closeTitle}
 				/>
