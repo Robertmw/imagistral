@@ -23,12 +23,16 @@ class Header extends BaseComponent {
 	constructor (props) {
 		super(props);
 
-		this._bind('_checkLogin', '_shouldEditTitle', '_handleTitleChange', '_saveLocal');
+		this._bind('_publish', '_checkLogin', '_shouldEditTitle', '_handleTitleChange');
 	}
 
-	_saveLocal() {
-		// TODO save file localy
-		console.info('Local save to be implemented');
+	_publish() {
+		let request = {
+			title: this.props.title,
+			username: 'Robert'
+		};
+		let response = this.props.actions.saveToLS(request);
+		console.info(response.title);
 	}
 
 	_checkLogin(user) {
@@ -59,7 +63,10 @@ class Header extends BaseComponent {
 					>
 						<p>Import</p>
 					</div>
-					<div className="work--publish">
+					<div 
+						className="work--publish"
+						onClick = {this._publish}
+					>
 						<p>Publish</p>
 					</div>
 					<div className="work--help">
@@ -154,6 +161,7 @@ export default branch(Header, {
 		openFile: actions.openFilePopup,
 		saveTitle: actions.saveTitle,
 		editTitle: actions.openTitle,
-		closeTitle: actions.closeTitle
+		closeTitle: actions.closeTitle,
+		saveToLS: actions.saveToLS
 	}
 });
