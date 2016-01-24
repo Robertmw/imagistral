@@ -37,6 +37,10 @@ class Header extends BaseComponent {
 
 	_checkLogin(user) {
 		let value;
+		const buttons = Classnames({
+			'work--publish': true,
+			'work--publish--inactive': this.props.canvas.width === null && this.props.canvas.height === null
+		});
 
 		if (isEmpty(user)) {
 			value = (
@@ -64,7 +68,7 @@ class Header extends BaseComponent {
 						<p>Import</p>
 					</div>
 					<div 
-						className="work--publish"
+						className= {buttons}
 						onClick = {this._publish}
 					>
 						<p>Publish</p>
@@ -129,7 +133,6 @@ class Header extends BaseComponent {
 			'active': this.props.active
 		});
 
-
 		return (
 			<header>
 				<div className="header header--logo">
@@ -154,7 +157,8 @@ export default branch(Header, {
 	cursors: {
 		title: ['canvasTitle'],
 		active: ['editTitle'],
-		user: ['user']
+		user: ['user'],
+		canvas: ['canvas']
 	},
 	actions: {
 		openLogin: actions.openLoginPopup,

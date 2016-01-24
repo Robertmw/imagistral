@@ -33,7 +33,6 @@ export function saveToLS(tree, payload) {
     timestamp: Date.now()
   };
 
-  console.log(newElement);
   if (pushToImages(newElement, _images)) {
     response.value = true;
     response.title = 'Image was published';
