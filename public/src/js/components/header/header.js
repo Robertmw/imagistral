@@ -7,15 +7,17 @@
  */
 
 import React from 'react';
-import { Link } from 'react-router';
 import BaseComponent from '../base-component/base-component';
 import {branch} from 'baobab-react/higher-order';
 import Classnames from 'classnames';
 import * as actions from './actions';
 import * as engine from '../../engine/engine';
 
+import HeaderButton from './components/header-button/header-button';
+
 import {isEmpty} from '../../utils.js';
 
+import { Link } from 'react-router';
 const displayName = 'Header';
 
 class Header extends BaseComponent {
@@ -50,40 +52,35 @@ class Header extends BaseComponent {
 		if (isEmpty(user)) {
 			value = (
 				<div className="work-buttons">
-					<div
-						className="work--upload"
-						onClick={this.props.actions.openLogin}
-					>
-						<p>Login</p>
-					</div>
+					<HeaderButton
+							content = "Login"
+							handleClick = {this.props.actions.openLogin}
+					/>
 				</div>
 			);
 		} else {
 			value = (
 				<div className="work-buttons">
-					<div className="work--download"
-						onClick = {this._saveLocal}
-					>
-						<span className="icon-download"></span>
-					</div>
-					<div
-						className="work--upload"
-						onClick = {this.props.actions.openFile}
-					>
-						<p>Import</p>
-					</div>
-					<div
-						className= {buttons}
-						onClick = {this._publish}
-					>
-						<p>Publish</p>
-					</div>
-					<div className="work--help">
-						<span className="icon-faq"></span>
-					</div>
-					<div className="work--wall">
-						<Link to="/wall"><span className="icon-wall_v2"></span></Link>
-					</div>
+					<HeaderButton
+							icon = "icon-download"
+							handleClick = {this._saveLocal}
+					/>
+					<HeaderButton
+							content = "Import"
+							handleClick = {this.props.actions.openFile}
+					/>
+					<HeaderButton
+							content = "Publish"
+							elementClass = {this.props.canvas.width === null ? 'inactive' : null}
+							handleClick = {this._publish}
+					/>
+					<HeaderButton
+							icon = "icon-faq"
+					/>
+					<HeaderButton
+						icon = "icon-wall_v2"
+						linkTo = "/wall"
+					/>
 					<div className="work--profile">
 						<img
 							className="avatar"

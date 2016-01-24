@@ -49,14 +49,13 @@ function pushToImages(element, images) {
   let response = true;
   if (images.length > 0) {
     for (let index = 0; index < images.length; index++) {
-      if (images[index].blob === element.blob) {
+      if (images[index].title === element.title) {
         response = false;
-      } else {
-        images.push(element);
-        LocalStorage.set('imagesDB', images);
       }
     };
-  } else {
+  }
+
+  if (response) {
     images.push(element);
     LocalStorage.set('imagesDB', images);
   }
