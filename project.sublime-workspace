@@ -1,0 +1,922 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"dropz",
+				"dropzone__preview"
+			],
+			[
+				"drop",
+				"dropzone__wrapper"
+			],
+			[
+				"tool",
+				"toolSettings"
+			],
+			[
+				"up",
+				"uploadImage"
+			],
+			[
+				"Cook",
+				"Cookie"
+			],
+			[
+				"app",
+				"appId"
+			],
+			[
+				"auth",
+				"authConfig"
+			],
+			[
+				"respo",
+				"responseApi"
+			],
+			[
+				"con",
+				"config"
+			],
+			[
+				"_",
+				"_animateWrapper"
+			],
+			[
+				"too",
+				"ToolSettings"
+			],
+			[
+				"cur",
+				"currentTool"
+			],
+			[
+				"cure",
+				"currentToolName"
+			],
+			[
+				"ac",
+				"actions"
+			],
+			[
+				"zom",
+				"zoomOut"
+			],
+			[
+				"zoom",
+				"zoomIn"
+			],
+			[
+				"sele",
+				"selectedTool"
+			],
+			[
+				"caret",
+				"caretDropdown"
+			],
+			[
+				"prop",
+				"propTypes"
+			],
+			[
+				"header",
+				"headerButtons"
+			],
+			[
+				"Header",
+				"HeaderEl"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"fonts-",
+				"font-size"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"task",
+				"taskList"
+			],
+			[
+				"time",
+				"timetable"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"cart",
+				"cartAppComponent"
+			],
+			[
+				"ty",
+				"types"
+			],
+			[
+				"new",
+				"newEntry"
+			],
+			[
+				"ans",
+				"answerRandom"
+			],
+			[
+				"me",
+				"message"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"re",
+				"responses"
+			],
+			[
+				"ad",
+				"addMessage"
+			],
+			[
+				"user",
+				"userMessage"
+			],
+			[
+				"Mes",
+				"MessageStore"
+			],
+			[
+				"over",
+				"overflow"
+			],
+			[
+				"borderbott",
+				"border-bottom-color"
+			],
+			[
+				"paddi",
+				"padding-left"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"base",
+				"BaseComponent"
+			],
+			[
+				"AP",
+				"AppConstants"
+			],
+			[
+				"App",
+				"AppDispatcher"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"adap",
+				"adaptedWidth"
+			],
+			[
+				"vioe",
+				"viewportHeight"
+			],
+			[
+				"adp",
+				"adaptedWidth"
+			],
+			[
+				"viewport",
+				"viewportHeight"
+			],
+			[
+				"angu",
+				"angular-route"
+			],
+			[
+				"b",
+				"browserify"
+			],
+			[
+				"load",
+				"loadingContainer"
+			],
+			[
+				"media",
+				"mediaPopUp"
+			],
+			[
+				"medi",
+				"mediaPopUp"
+			],
+			[
+				"med",
+				"mediaPopUp"
+			],
+			[
+				"image",
+				"imageContainer"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"box-s",
+				"box-sizing"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"fons",
+				"font-size"
+			],
+			[
+				"listst",
+				"list-style"
+			],
+			[
+				"rou",
+				"route"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"call",
+				"callback"
+			],
+			[
+				"search",
+				"searching"
+			],
+			[
+				"fil",
+				"filterUser"
+			],
+			[
+				"dept",
+				"deptOnly"
+			],
+			[
+				"Filter",
+				"FilterUsers"
+			],
+			[
+				"find",
+				"findById"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/E/licenta/app/pages/app/js/state.js",
+			"settings":
+			{
+				"buffer_size": 156,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/licenta/app/pages/app/js/index.js",
+			"settings":
+			{
+				"buffer_size": 419,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 242.0,
+		"last_filter": "babel",
+		"selected_items":
+		[
+			[
+				"babel",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"JSON",
+				"Set Syntax: JSON"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"",
+				"Build With: JSHint"
+			],
+			[
+				"ba",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"javascip",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"javasc	",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"jav",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"markdo",
+				"Set Syntax: Markdown"
+			],
+			[
+				"less",
+				"Set Syntax: LESS"
+			],
+			[
+				"babe",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"jso",
+				"Set Syntax: JSON"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"jisn",
+				"Build With: JSHint"
+			],
+			[
+				"jshi",
+				"JSHint"
+			],
+			[
+				"jsh",
+				"JSHint"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"pascal",
+				"Set Syntax: Pascal"
+			],
+			[
+				"htm",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"jos",
+				"Set Syntax: JSON"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 424.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": true,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/licenta",
+		"/E/licenta/app",
+		"/E/licenta/app/pages",
+		"/E/licenta/app/pages/app",
+		"/E/licenta/app/pages/app/js"
+	],
+	"file_history":
+	[
+		"/E/licenta/app/common/services/ajax/ajax.js",
+		"/E/xampp/htdocs/cliw/public/src/js/services/ajax/ajax.js",
+		"/E/licenta/app/pages/landing/js/index.js",
+		"/E/licenta/app/pages/app/js/index.js",
+		"/E/licenta/app/pages/landing/js/route.js",
+		"/E/licenta/app/pages/app/js/route.js",
+		"/E/licenta/app/index.html",
+		"/E/licenta/app/common/components/base-component/js/base-component.js",
+		"/C/Users/Robert/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Robert/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/E/licenta/app/pages/main.js",
+		"/E/licenta/app/pages/landing/js/state.js",
+		"/E/licenta/app/pages/app/js/state.js",
+		"/E/licenta/app/common/state/state.js",
+		"/E/licenta/app/common/database/mocks/users.json",
+		"/E/licenta/package.json",
+		"/E/licenta/mock-server/server.js",
+		"/E/licenta/app/common/tests/tests.webpack.js",
+		"/E/licenta/app/common/tests/phantomjs-shim.js",
+		"/E/licenta/gulpfile.js",
+		"/E/licenta/README.md",
+		"/E/licenta/.gitignore",
+		"/E/xampp/htdocs/cliw/public/src/css/editor/popup.less",
+		"/E/xampp/htdocs/cliw/.gitignore",
+		"/E/xampp/htdocs/cliw/app/common/components/workspace/js/workspace.js",
+		"/E/xampp/htdocs/cliw/app/common/components/popups/components/new-canvas/js/index.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/popups/components/open-file/index.js",
+		"/E/xampp/htdocs/cliw/app/common/components/popups/components/open-file/js/index.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/workspace/workspace.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/popups/components/new-canvas/index.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/canvas/canvas.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/components/canvas.js",
+		"/E/xampp/htdocs/cliw/app/pages/main.js",
+		"/E/xampp/htdocs/cliw/package.json",
+		"/E/xampp/htdocs/cliw/app/common/components/tool-settings/js/tool-settings.js",
+		"/E/xampp/htdocs/cliw/gulp/configs/files.js",
+		"/E/xampp/htdocs/cliw/gulpfile.js",
+		"/E/xampp/htdocs/cliw/app/common/engine/engine.js",
+		"/E/xampp/htdocs/cliw/app/pages/app/js/route.js",
+		"/E/xampp/htdocs/cliw/app/common/engine/draw.js",
+		"/E/xampp/htdocs/cliw/app/pages/editor/js/editor.js",
+		"/E/xampp/htdocs/cliw/app/pages/app/js/app.js",
+		"/E/xampp/htdocs/cliw/app/pages/editor/js/route.js",
+		"/E/xampp/htdocs/cliw/gulp/configs/.eslintrc",
+		"/E/xampp/htdocs/cliw/app/common/components/header/js/header.js",
+		"/E/xampp/htdocs/cliw/gulp/webpack-server.js",
+		"/E/xampp/htdocs/cliw/app/common/state/state.js",
+		"/E/xampp/htdocs/cliw/app/common/components/tool-settings/components/pencil-settings/js/pencil-settings.js",
+		"/E/xampp/htdocs/cliw/app/common/components/tool-settings/components/font-settings/js/font-settings.js",
+		"/E/xampp/htdocs/cliw/app/common/components/tool-settings/components/bucket-settings/js/bucket-settings.js",
+		"/E/xampp/htdocs/cliw/app/common/components/tool-settings/components/brush-settings/js/brush-settings.js",
+		"/E/xampp/htdocs/cliw/app/pages/editor/js/state.js",
+		"/E/xampp/htdocs/cliw/app/pages/app/js/state.js",
+		"/E/xampp/htdocs/cliw/app/pages/wall/js/wall.js",
+		"/E/xampp/htdocs/cliw/app/pages/wall/js/route.js",
+		"/E/xampp/htdocs/cliw/app/common/components/sidebar/js/sidebar.js",
+		"/E/xampp/htdocs/cliw/app/common/components/sidebar/components/tool-element/js/tool-element.js",
+		"/E/xampp/htdocs/cliw/app/common/components/popups/js/popups.js",
+		"/E/xampp/htdocs/cliw/app/common/components/popups/components/login/js/index.js",
+		"/E/xampp/htdocs/cliw/app/pages/editor/js/tools.js",
+		"/E/xampp/htdocs/cliw/gulp/styles.js",
+		"/E/xampp/htdocs/cliw/gulp/scripts.js",
+		"/E/xampp/htdocs/cliw/gulp/helpers.js",
+		"/E/xampp/htdocs/cliw/gulp/tests.js",
+		"/E/xampp/htdocs/cliw/gulp/html.js",
+		"/E/xampp/htdocs/cliw/gulp/configs/webpack.conf.js",
+		"/E/xampp/htdocs/facebook-nickname-remover/manifest.json",
+		"/E/xampp/htdocs/facebook-nickname-remover/content.js",
+		"/E/xampp/htdocs/facebook-nickname-remover/devtools.html",
+		"/E/xampp/htdocs/facebook-nickname-remover/background.js",
+		"/E/xampp/htdocs/facebook-nickname-remover/panel.js",
+		"/E/xampp/htdocs/facebook-nickname-remover/popup/css/style.less",
+		"/E/xampp/htdocs/facebook-nickname-remover/popup/index.html",
+		"/E/xampp/htdocs/facebook-nickname-remover/devtools.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/actions.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/components/brush-settings/brush-settings.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/workspace/actions.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/tool-settings.js",
+		"/E/xampp/htdocs/cliw/public/src/js/state.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/actions.js",
+		"/E/xampp/htdocs/cliw/public/src/js/main.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/header/header.js",
+		"/E/xampp/htdocs/cliw/index.js",
+		"/E/xampp/htdocs/cliw/public/src/css/editor/header.less",
+		"/E/xampp/htdocs/cliw/public/src/js/components/popups/actions.js",
+		"/E/xampp/htdocs/cliw/public/src/css/editor/workspace.less",
+		"/E/xampp/htdocs/cliw/public/src/css/editor/index.less",
+		"/E/xampp/htdocs/cliw/public/src/css/style.less",
+		"/E/xampp/htdocs/cliw/public/src/js/components/popups/components/login/index.js",
+		"/E/xampp/htdocs/cliw/public/src/js/services/cookies/index.js",
+		"/E/xampp/htdocs/cliw/public/src/js/services/facebook-auth/index.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/popups/popups.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/components/actions.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/components/bucket-settings/bucket-settings.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/components/font-settings/font-settings.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/components/pencil-settings/pencil-settings.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/sidebar.js",
+		"/E/xampp/htdocs/cliw/public/src/js/actions.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/components/font-settings/actions.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/header/actions.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/popups/components/login/actions.js",
+		"/E/xampp/htdocs/cliw/app/config/passport.js",
+		"/E/xampp/htdocs/cliw/app/config/routes.js",
+		"/E/xampp/htdocs/cliw/app/config/config.js",
+		"/E/xampp/htdocs/cliw/config.js",
+		"/E/xampp/htdocs/cliw/app/models/user.js",
+		"/E/xampp/htdocs/cliw/app/controllers/user.js",
+		"/E/xampp/htdocs/cliw/app/lib/utils.js",
+		"/E/xampp/htdocs/cliw/app/config/middlewares/authorization.js",
+		"/E/xampp/htdocs/cliw/app/config/express.js",
+		"/E/xampp/htdocs/cliw/app/config/passport/facebook.js",
+		"/E/xampp/htdocs/cliw/app/config/env/development.js",
+		"/E/xampp/htdocs/cliw/app/config/env/production.js",
+		"/E/xampp/htdocs/cliw/app/config/env/env.json",
+		"/E/xampp/htdocs/cliw/app/controllers/users.js",
+		"/E/xampp/htdocs/cliw/app/config/database.js",
+		"/C/Users/Robert/Desktop/ex.cpp",
+		"/E/xampp/htdocs/selfsite/css/style.less",
+		"/E/xampp/htdocs/selfsite/index.html",
+		"/E/xampp/htdocs/selfsite/Gruntfile.js",
+		"/E/xampp/htdocs/selfsite/js/jquery.js",
+		"/E/xampp/htdocs/selfsite/css/reset.less",
+		"/E/xampp/htdocs/selfsite/css/animate.less",
+		"/E/xampp/htdocs/selfsite/public/index.html",
+		"/E/xampp/htdocs/selfsite/package.json",
+		"/E/xampp/htdocs/cliw/public/src/css/animate.css",
+		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/components/tool-element/tool-element.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/components/actions.js"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+			"E:\\xampp\\htdocs\\cliw\\public\\src\\js\\components",
+			"E:\\xampp\\htdocs\\cliw\\app\\common\\components",
+			"C:\\Users\\Robert\\Desktop\\[Training] Timetable\\public\\src",
+			"C:\\Users\\Robert\\Desktop\\[Training] Timetable\\public\\src\\style",
+			"E:\\xampp\\htdocs\\starting-with-react\\client\\src"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"home",
+			"_uploadFile",
+			"componentWillUnmount",
+			"_uploadFile",
+			"closePopup",
+			"inde",
+			"indent",
+			"space",
+			"common",
+			"../co",
+			"ccommon",
+			"sidebar",
+			"base-component/base-component",
+			"../c",
+			"home",
+			"css",
+			"{\n  \"plugins\": [\n    \"react\"\n  ],\n  \"parser\": \"babel-eslint\",\n  \"ecmaFeatures\": {\n    \"arrowFunctions\": true,\n    \"binaryLiterals\": true,\n    \"blockBindings\": true,\n    \"classes\": true,\n    \"defaultParams\": true,\n    \"modules\": true,\n    \"destructuring\": true,\n    \"forOf\": true,\n    \"generators\": true,\n    \"modules\": true,\n    \"objectLiteralComputedProperties\": true,\n    \"objectLiteralDuplicateProperties\": true,\n    \"objectLiteralShorthandMethods\": true,\n    \"objectLiteralShorthandProperties\": true,\n    \"octalLiterals\": true,\n    \"regexUFlag\": true,\n    \"regexYFlag\": true,\n    \"restParams\": true,\n    \"spread\": true,\n    \"superInFunctions\": true,\n    \"templateStrings\": true,\n    \"unicodeCodePointEscapes\": true,\n    \"globalReturn\": true,\n    \"jsx\": true\n  },\n  \"env\": {\n    \"es6\": true\n  },\n  \"rules\": {\n    \"semi\": 2,\n    \"strict\": 2,\n    \"block-scoped-var\": 2,\n    \"complexity\": 2,\n    \"consistent-return\": 2,\n    \"curly\": 2,\n    \"default-case\": 2,\n    \"dot-notation\": 2,\n    \"eqeqeq\": 2,\n    \"func-names\": 0,\n    \"global-require\": 0,\n    \"guard-for-in\": 2,\n    \"indent\": [2, 2],\n    \"linebreak-style\": [0, \"unix\"],\n    \"no-else-return\": 2,\n    \"no-empty-label\": 2,\n    \"no-eq-null\": 2,\n    \"no-eval\": 2,\n    \"no-implied-eval\": 2,\n    \"no-labels\": 2,\n    \"no-lone-blocks\": 2,\n    \"no-loop-func\": 2,\n    \"no-mixed-requires\": 0,\n    \"no-multi-spaces\": 2,\n    \"no-native-reassign\": 2,\n    \"no-new\": 2,\n    \"no-octal\": 0,\n    \"no-process-env\": 0,\n    \"no-proto\": 2,\n    \"no-redeclare\": 2,\n    \"no-var\": 0,\n    \"no-with\": 2,\n    \"object-shorthand\": [0, \"always\"],\n    \"one-var\": [0, {\"var\": \"never\", \"let\": \"never\", \"const\": \"never\"}],\n    \"radix\": 2,\n    \"sort-vars\": [0, {\"ignoreCase\": true}],\n    \"vars-on-top\": 2,\n    \"wrap-iife\": 2,\n    \"yoda\": 2,\n    \"react/display-name\": 2,\n    \"react/jsx-boolean-value\": 2,\n    \"react/jsx-closing-bracket-location\": 2,\n    \"react/jsx-curly-spacing\": 2,\n    \"react/jsx-indent-props\": 2,\n    \"react/jsx-max-props-per-line\": 2,\n    \"react/jsx-no-duplicate-props\": 2,\n    \"react/jsx-no-undef\": 2,\n    \"jsx-quotes\": 1,\n    \"react/jsx-sort-prop-types\": 1,\n    \"react/jsx-sort-props\": 1,\n    \"react/jsx-uses-react\": 1,\n    \"react/jsx-uses-vars\": 1,\n    \"react/no-danger\": 1,\n    \"react/no-did-mount-set-state\": 1,\n    \"react/no-did-update-set-state\": 1,\n    \"react/no-multi-comp\": 1,\n    \"react/no-set-state\": 0,\n    \"react/no-unknown-property\": 1,\n    \"react/prop-types\": 1,\n    \"react/react-in-jsx-scope\": 0,\n    \"react/require-extension\": 1,\n    \"react/self-closing-comp\": 1,\n    \"react/sort-comp\": 1,\n    \"react/wrap-multilines\": 1\n  }\n}",
+			"app",
+			"details",
+			"request",
+			"personChat",
+			"changeBrushSize",
+			"changeBrushSettings",
+			"bucket",
+			"changePencilSize",
+			"_changePencilSize",
+			"Pencil",
+			"PencilSettings",
+			"RootedApp",
+			"first_name",
+			"avatar",
+			"this.",
+			"this",
+			"callback",
+			"this.",
+			".bind(this)",
+			"tree.set(['popups', 'active'], '');",
+			"config.root",
+			"var ",
+			", ",
+			"strong",
+			"bold",
+			"class",
+			"hover",
+			"_handleClick",
+			"selected: false",
+			"props",
+			"ToolElement",
+			"Sidebar",
+			"\"",
+			"value",
+			"bucket",
+			"eraser",
+			"pencil",
+			"class",
+			"Header",
+			"aStringProp",
+			"HeaderEl",
+			"ExampleComponent",
+			"class",
+			"Header",
+			"app",
+			"tool",
+			"h3",
+			"bin",
+			":00",
+			"end",
+			"start",
+			"label",
+			"title:",
+			"tasks",
+			"day:",
+			"day",
+			"value",
+			"'",
+			"title",
+			"linear",
+			"item",
+			"display",
+			"scope",
+			"headerLink",
+			"2\"",
+			"2",
+			"button",
+			"console.log",
+			"model",
+			"name",
+			"add",
+			"headerController",
+			"00A27C",
+			"span",
+			"button",
+			" !important",
+			"</li>",
+			"<p",
+			"/th>",
+			"!important",
+			"option",
+			"button",
+			"important",
+			"button",
+			"xampp/htdocs/[Training] Timetable",
+			"h1",
+			"28 Noiembrie",
+			"components/cartApp/",
+			"cartAppComponent",
+			":",
+			"cartApp",
+			"break;",
+			"_",
+			",",
+			"console.log",
+			"match",
+			"Date()",
+			"this.",
+			"AppActions",
+			"AppStore",
+			"f(",
+			"this.match",
+			"user",
+			"class",
+			"section",
+			"<section class=\"user-info\">\n			<input type=\"text\" placeholder=\"Username\">\n			<p class=\"btn-txt\">Start to chat</p>\n		</section>",
+			"button",
+			"9aca40",
+			"2196f3",
+			"25px",
+			"div"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"base-component/js/base-component"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "E:\\licenta"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/E/licenta/app/pages/app/js/state.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 156,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								105,
+								105
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/E/licenta/app/pages/app/js/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 419,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								205,
+								205
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 32.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.exec":
+	{
+		"height": 98.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 38.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 242.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

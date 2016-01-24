@@ -23,16 +23,24 @@ class Header extends BaseComponent {
 	constructor (props) {
 		super(props);
 
-		this._bind('_checkLogin', '_shouldEditTitle', '_handleTitleChange', '_saveLocal');
+		this._bind('_publish', '_checkLogin', '_shouldEditTitle', '_handleTitleChange');
 	}
 
-	_saveLocal() {
-		// TODO save file localy
-		console.info('Local save to be implemented');
+	_publish() {
+		let request = {
+			title: this.props.title,
+			username: 'Robert'
+		};
+		let response = this.props.actions.saveToLS(request);
+		console.info(response.title);
 	}
 
 	_checkLogin(user) {
 		let value;
+		const buttons = Classnames({
+			'work--publish': true,
+			'work--publish--inactive': this.props.canvas.width === null && this.props.canvas.height === null
+		});
 
 		if (isEmpty(user)) {
 			value = (
@@ -59,7 +67,10 @@ class Header extends BaseComponent {
 					>
 						<p>Import</p>
 					</div>
-					<div className="work--publish">
+					<div 
+						className= {buttons}
+						onClick = {this._publish}
+					>
 						<p>Publish</p>
 					</div>
 					<div className="work--help">
@@ -122,7 +133,6 @@ class Header extends BaseComponent {
 			'active': this.props.active
 		});
 
-
 		return (
 			<header>
 				<div className="header header--logo">
@@ -147,13 +157,15 @@ export default branch(Header, {
 	cursors: {
 		title: ['canvasTitle'],
 		active: ['editTitle'],
-		user: ['user']
+		user: ['user'],
+		canvas: ['canvas']
 	},
 	actions: {
 		openLogin: actions.openLoginPopup,
 		openFile: actions.openFilePopup,
 		saveTitle: actions.saveTitle,
 		editTitle: actions.openTitle,
-		closeTitle: actions.closeTitle
+		closeTitle: actions.closeTitle,
+		saveToLS: actions.saveToLS
 	}
 });
