@@ -35,13 +35,13 @@ export function deleteEngine() {
 	tree.set(['canvas', 'height'], null);
 };
 
-export function getBlob() {
+export function getBlob(rawBlob) {
 	let byteString = null;
 	let mimestring = null;
 
 	canvas.deactivateAll().renderAll();
 	const dataURI = canvas.toDataURL('png');
-	
+
 	if(dataURI.split(',')[0].indexOf('base64') !== -1 ) {
 		byteString = atob(dataURI.split(',')[1]);
 	} else {
@@ -58,7 +58,13 @@ export function getBlob() {
 
 	const returnBlob = new Blob([rawContent], {type: mimestring});
 	const urlCreator = window.URL || window.webkitURL;
-	const imageUrl = urlCreator.createObjectURL(returnBlob);
+
+	let imageUrl = null;
+	if (rawBlob) {
+		imageUrl = {returnBlob, mimestring};
+	} else {
+		imageUrl = urlCreator.createObjectURL(returnBlob);
+	}
 
 	return imageUrl;
 };
