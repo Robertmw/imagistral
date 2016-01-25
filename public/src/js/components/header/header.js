@@ -23,7 +23,7 @@ class Header extends BaseComponent {
 	constructor (props) {
 		super(props);
 
-		this._bind('_publish', '_checkLogin', '_shouldEditTitle', '_handleTitleChange');
+		this._bind('_publish', '_checkLogin', '_shouldEditTitle', '_handleTitleChange', '_saveLocal');
 	}
 
 	_publish() {
@@ -33,6 +33,11 @@ class Header extends BaseComponent {
 		};
 		let response = this.props.actions.saveToLS(request);
 		console.info(response.title);
+	}
+
+	_saveLocal() {
+		const extension = engine.getBlob(true).mimestring.split('/');
+		saveAs(engine.getBlob(true).returnBlob, this.props.title + "." + extension[1]);
 	}
 
 	_checkLogin(user) {
@@ -67,7 +72,7 @@ class Header extends BaseComponent {
 					>
 						<p>Import</p>
 					</div>
-					<div 
+					<div
 						className= {buttons}
 						onClick = {this._publish}
 					>
