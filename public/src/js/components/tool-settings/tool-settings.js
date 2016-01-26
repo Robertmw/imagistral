@@ -15,6 +15,7 @@ import PencilSettings from './components/pencil-settings/pencil-settings';
 import BucketSettings from './components/bucket-settings/bucket-settings';
 import BrushSettings from './components/brush-settings/brush-settings';
 import ShapeSettings from './components/shape-settings/shape-settings';
+import FiltersSettings from './components/filters-settings/filters-settings';
 
 import {closeToolSettings} from './actions';
 
@@ -62,6 +63,10 @@ class ToolSettings extends BaseComponent {
 
 			case 'shape':
 				return (<ShapeSettings />);
+				break;
+
+			case 'filters':
+				return (<FiltersSettings />);
 				break;
 
 			default: 

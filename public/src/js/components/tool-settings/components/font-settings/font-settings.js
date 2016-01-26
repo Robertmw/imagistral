@@ -84,7 +84,7 @@ class FontSettings extends BaseComponent {
 					/>
 					<label>
 						<span className="radio--placeholder"></span>
-						{el};
+						{el}
 					</label>
 				</div>
 			);

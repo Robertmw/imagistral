@@ -102,7 +102,8 @@ const tree = new Baobab({
 			mode: 'pencil',
 			hardness: 0
 		},
-		shape: 'Square'
+		shape: 'Square',
+		filter: 'None'
 	}
 });
 

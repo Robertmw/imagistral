@@ -1,6 +1,6 @@
 /**
  *
- * Shape Settings Component
+ * Filters Settings Component
  * @parent ToolSettings
  * @author Robert P.
  *
@@ -11,33 +11,33 @@ import BaseComponent from '../../../base-component/base-component';
 import {branch} from 'baobab-react/higher-order';
 import * as actions from '../../actions';
 
-class ShapeSettings extends BaseComponent {
+class FiltersSettings extends BaseComponent {
 
 	constructor(props) {
 		super(props);
 
-		this._bind('_changeShape');
+		this._bind('_changeFilter');
 	}
 
 
-	_changeShape(event) {
-		this.props.actions.changeShape(event.target.value);
+	_changeFilter(event) {
+		this.props.actions.changeFilter(event.target.value);
 	}
 
 	render() {
 		const props = this.props;
 
-		const shapeTypes = ['Square', 'Cirle'];
-		const renderShapes = shapeTypes.map((el, index) => {
+		const filterTypes = ['None', 'Plymouth', 'Blue Jay'];
+		const renderFilters = filterTypes.map((el, index) => {
 			return (
 				<div 
 					className="radioBtn" 
 					key={el}
 				>
 					<input
-						checked = {props.shape === el}
-						name="shape"
-						onChange = {this._changeShape}
+						checked = {props.filter === el}
+						name="filter"
+						onChange = {this._changeFilter}
 						type="radio"
 						value={el}
 					/>
@@ -51,11 +51,11 @@ class ShapeSettings extends BaseComponent {
 
 		return (
 			<aside>
-				<p className="settingsTitle">Shapes settings</p>
+				<p className="settingsTitle">Filters settings</p>
 				<section className="setting">
-					<h3>Shape type</h3>
+					<h3>Filter type</h3>
 					<div className="setting--wrapper">
-						{renderShapes}
+						{renderFilters}
 					</div>
 				</section>
 			</aside>
@@ -64,13 +64,13 @@ class ShapeSettings extends BaseComponent {
 
 }
 
-ShapeSettings.displayName = 'Shape Settings';
+FiltersSettings.displayName = 'Filters Settings';
 
-export default branch(ShapeSettings, {
+export default branch(FiltersSettings, {
 	cursors: {
-		shape: ['toolSettings', 'shape']
+		filter: ['toolSettings', 'filter']
 	},
 	actions: {
-		changeShape: actions.changeShape
+		changeFilter: actions.changeFilter
 	}
 });
