@@ -70,7 +70,7 @@ const tree = new Baobab({
 			subTools: []
 		},
 		{
-			name: 'square',
+			name: 'shape',
 			icon: 'icon-square',
 			caret: '',
 			subTools: []
@@ -113,7 +113,8 @@ const tree = new Baobab({
 			size: 10,
 			mode: 'pencil',
 			hardness: 0
-		}
+		},
+		shape: 'Square'
 	}
 });
 
