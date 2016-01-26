@@ -34,8 +34,8 @@ class BrushSettings extends BaseComponent {
 
 		return (
 			<aside>
-				<p className="settings-title">Brush settings</p>
-				<section className="font--size">
+				<p className="settingsTitle">Brush settings</p>
+				<section className="setting setting--inline">
 					<h3>Brush size</h3>
 					<input 
 						onChange = {this._changeBrushSize} 
@@ -44,7 +44,7 @@ class BrushSettings extends BaseComponent {
 					/>
 					<label>px</label>
 				</section>
-				<section className="font--size">
+				<section className="setting setting--inline">
 					<h3>Brush hardness</h3>
 					<input 
 						onChange = {this._changeBrushHardness} 

@@ -72,7 +72,7 @@ class FontSettings extends BaseComponent {
 		const renderFonts = fontFamilies.map((el, index) => {
 			return (
 				<div 
-					className="font--family--element" 
+					className="radioBtn" 
 					key={el}
 				>
 					<input
@@ -103,7 +103,7 @@ class FontSettings extends BaseComponent {
 
 		const fontAligns = ['left', 'center', 'right'];
 		const renderAligns = fontAligns.map((el, index) => {
-			let css = (props.textAlign.indexOf(el) > -1) ? 'align--option active' : 'align--option';
+			let css = (props.textAlign.indexOf(el) > -1) ? 'fontAlign--option active' : 'fontAlign--option';
 			return (
 				<span 
 					className = {css}
@@ -116,8 +116,8 @@ class FontSettings extends BaseComponent {
 
 		return (
 			<aside>
-				<p className="settings-title">Text settings</p>
-				<section className="font--size">
+				<p className="settingsTitle">Text settings</p>
+				<section className="setting setting--inline">
 					<h3>Font size</h3>
 					<input 
 						onChange = {this._changeFontSize} 
@@ -126,23 +126,23 @@ class FontSettings extends BaseComponent {
 					/>
 					<label>px</label>
 				</section>
-				<section className="font--family">
+				<section className="setting">
 					<h3>Font family</h3>
-					<div className="font--family--wrapper">
+					<div className="setting--wrapper">
 						{renderFonts}
 					</div>
 				</section>
-				<section className="font--style">
+				<section className="setting setting--inline">
 					<h3>Font style</h3>
-					<ul className="fonts--list">
+					<ul className="fontSyle">
 						{renderButtons}
 					</ul>
 				</section>
-				<section className="font--weight">
+				<section className="setting setting--inline">
 					<h3>Font weight</h3>
-					<div className="weight--container">
+					<div className="customSelect">
 						<select 
-							className="weight--wrapper" 
+							className="customSelect__content" 
 							onChange={this._changeFontWeight}
 							value = {props.fontWeight}
 						>
@@ -150,9 +150,9 @@ class FontSettings extends BaseComponent {
 						</select>
 					</div>
 				</section>
-				<section className="font--align">
+				<section className="setting">
 					<h3>Text align</h3>
-					<div className="align--wrapper">
+					<div className="fontAlign">
 						{renderAligns}
 					</div>
 				</section>

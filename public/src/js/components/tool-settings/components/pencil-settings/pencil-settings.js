@@ -30,8 +30,8 @@ class PencilSettings extends BaseComponent {
 
 		return (
 			<aside>
-				<p className="settings-title">Pencil settings</p>
-				<section className="font--size">
+				<p className="settingsTitle">Pencil settings</p>
+				<section className="setting setting--inline">
 					<h3>Pencil size</h3>
 					<input 
 						onChange = {this._changePencilSize} 

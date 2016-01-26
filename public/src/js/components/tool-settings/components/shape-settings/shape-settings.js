@@ -31,7 +31,7 @@ class ShapeSettings extends BaseComponent {
 		const renderShapes = shapeTypes.map((el, index) => {
 			return (
 				<div 
-					className="font--family--element" 
+					className="radioBtn" 
 					key={el}
 				>
 					<input
@@ -51,10 +51,10 @@ class ShapeSettings extends BaseComponent {
 
 		return (
 			<aside>
-				<p className="settings-title">Shapes settings</p>
-				<section className="font--family">
+				<p className="settingsTitle">Shapes settings</p>
+				<section className="setting">
 					<h3>Shape type</h3>
-					<div className="font--family--wrapper">
+					<div className="setting--wrapper">
 						{renderShapes}
 					</div>
 				</section>
