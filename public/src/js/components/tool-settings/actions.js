@@ -37,3 +37,11 @@ export function changeBrushSize(tree, value) {
 export function changeBrushHardness(tree, value) {
 	tree.set(['toolSettings', 'brush', 'hardness'], value);
 }
+
+export function changeShape(tree, value) {
+	tree.set(['toolSettings', 'shape'], value);
+}
+
+export function changeFilter(tree, value) {
+	tree.set(['toolSettings', 'filter'], value);
+}

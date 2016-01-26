@@ -26,11 +26,6 @@ class Header extends BaseComponent {
 	constructor (props) {
 		super(props);
 
-		this.canvas = {
-			w: this.props.canvas.width,
-			h: this.props.canvas.height
-		};
-
 		this._bind('_handlePublishClick', '_handleTitleChange', '_saveLocal');
 	}
 
@@ -40,7 +35,7 @@ class Header extends BaseComponent {
 			username: this.props.user.first_name + this.props.user.first_name 
 		};
 
-		if (canvasExists(this.canvas.w, this.canvas.h)) {
+		if (canvasExists(this.props.canvas.width, this.props.canvas.height)) {
 			let response = this.props.actions.saveToLS(request);
 			console.info(response.title);
 		}
@@ -119,7 +114,7 @@ class Header extends BaseComponent {
 						/>
 						<HeaderButton
 								content = "Publish"
-								elementClass = {this.canvas.w === null ? 'inactive' : null}
+								elementClass = {this.props.canvas.width === null ? 'inactive' : null}
 								handleClick = {this._handlePublishClick}
 						/>
 						<HeaderButton

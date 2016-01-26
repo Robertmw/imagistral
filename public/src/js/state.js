@@ -40,12 +40,6 @@ const tree = new Baobab({
 			subTools: []
 		},
 		{
-			name: 'crop',
-			icon: 'icon-crop',
-			caret: '',
-			subTools: []
-		},
-		{
 			name: 'brush',
 			icon: 'icon-brush',
 			caret: '',
@@ -70,7 +64,7 @@ const tree = new Baobab({
 			subTools: []
 		},
 		{
-			name: 'square',
+			name: 'shape',
 			icon: 'icon-square',
 			caret: '',
 			subTools: []
@@ -85,12 +79,6 @@ const tree = new Baobab({
 			name: 'filters',
 			icon: 'icon-filters',
 			caret: '',
-			subTools: []
-		},
-		{
-			name: 'zoom',
-			icon: 'icon-magnifier',
-			caret: '', /*'fa fa-caret-down caret',*/
 			subTools: []
 		}
 	],
@@ -113,7 +101,9 @@ const tree = new Baobab({
 			size: 10,
 			mode: 'pencil',
 			hardness: 0
-		}
+		},
+		shape: 'Square',
+		filter: 'None'
 	}
 });
 

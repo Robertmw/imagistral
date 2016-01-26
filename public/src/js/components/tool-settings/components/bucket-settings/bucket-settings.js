@@ -36,7 +36,7 @@ class BucketSettings extends BaseComponent {
 
 		return (
 			<aside>
-				<p className="settings-title">Bucket settings</p>
+				<p className="settingsTitle">Bucket settings</p>
 				<div className="settings settings--short">
 					<ColorPicker
 						color = {props.color}
