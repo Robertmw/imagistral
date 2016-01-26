@@ -120,35 +120,6 @@ header {
 			}
 		}
 	}
-
-	&--history {
-		justify-content: center;
-
-		width: 90px;
-		padding: 0 15px;
-		border-right: 1px solid @dark;
-
-		color: @light-grey;
-
-		span {
-			width: @headerHeight;
-
-			text-align: center;
-			line-height: @headerHeight;
-
-			cursor: pointer;
-
-			&:hover {
-				color: white;
-			}
-
-			&.unavailable {
-				color: @unavailable-grey;
-
-				cursor: default;
-			}
-		}
-	}
 }
 
 .work-buttons {
@@ -157,45 +128,6 @@ header {
 
 	margin-left: auto;
 	border-left: 1px solid @dark;
-
-	.work--upload,
-	.work--publish,
-	.work--help,
-	.work--wall,
-	.work--download {
-		display: flex;
-		height: @headerHeight;
-		padding: 0 25px;
-
-		cursor: pointer;
-
-		transition: background-color 0.25s linear;
-
-		p {
-			align-self: center;
-
-			color: white;
-			font-size: 13px;
-			font-weight: 600;
-			text-transform: uppercase;
-		}
-
-		span {
-			align-self: center;
-
-			color: @light-grey;
-
-			transition: color 0.25s linear;
-		}
-
-		&:hover {
-			background-color: @dark-grey;
-
-			span {
-				color: white;
-			}
-		}
-	}
 
 	.work--wall {
 		a {
@@ -219,5 +151,55 @@ header {
 
 	div + div {
 		border-left: 1px solid @dark;
+	}
+}
+
+.btn {
+	&--header {
+		display: flex;
+		height: @headerHeight;
+		padding: 0 25px;
+
+		color: @light-grey;
+
+		cursor: pointer;
+
+		transition: background-color 0.25s linear;
+
+		p {
+			align-self: center;
+
+			font-size: 13px;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+
+		span {
+			align-self: center;
+
+			transition: color 0.25s linear;
+		}
+
+		a {
+			display: inherit;
+			color: inherit;
+		}
+
+		&:hover {
+			background-color: @dark-grey;
+
+			span {
+				color: white;
+			}
+		}
+	}
+
+	&--inactive {
+		cursor: default;
+		color: @unavailable-grey;
+
+		&:hover {
+			background-color: inherit;
+		}
 	}
 }

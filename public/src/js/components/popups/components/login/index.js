@@ -40,6 +40,7 @@ class LoginPopup extends BaseComponent {
 	_login(payload) {
 		this.props.actions.authUser(payload);
 		this.props.handleClose();
+		console.log(payload);
 		this.Cookies.createCookie('avatar', payload.avatar, 100, 'Imagistral');
 		this.Cookies.createCookie('first_name', payload.first_name, 100, 'Imagistral');
 		this.Cookies.createCookie('last_name', payload.last_name, 100, 'Imagistral');

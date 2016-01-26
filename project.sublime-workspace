@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"Header",
+				"HeaderButton"
+			],
+			[
+				"head",
+				"header-button"
+			],
+			[
+				"Head",
+				"HeaderButton"
+			],
+			[
 				"dropz",
 				"dropzone__preview"
 			],
@@ -82,10 +94,6 @@
 			[
 				"header",
 				"headerButtons"
-			],
-			[
-				"Header",
-				"HeaderEl"
 			],
 			[
 				"box",
@@ -296,18 +304,10 @@
 	"buffers":
 	[
 		{
-			"file": "/E/licenta/app/pages/app/js/state.js",
+			"file": "public/src/js/components/header/header.js",
 			"settings":
 			{
-				"buffer_size": 156,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/E/licenta/app/pages/app/js/index.js",
-			"settings":
-			{
-				"buffer_size": 419,
+				"buffer_size": 3605,
 				"line_ending": "Windows"
 			}
 		}
@@ -319,10 +319,22 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 242.0,
-		"last_filter": "babel",
+		"height": 191.0,
+		"last_filter": "javasc",
 		"selected_items":
 		[
+			[
+				"javasc",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
 			[
 				"babel",
 				"Set Syntax: JavaScript (Babel)"
@@ -346,10 +358,6 @@
 			[
 				"html",
 				"Set Syntax: HTML"
-			],
-			[
-				"javasc",
-				"Set Syntax: JavaScript"
 			],
 			[
 				"json",
@@ -412,10 +420,6 @@
 				"Package Control: Remove Package"
 			],
 			[
-				"install",
-				"Package Control: Install Package"
-			],
-			[
 				"css",
 				"Set Syntax: CSS"
 			],
@@ -461,43 +465,93 @@
 	},
 	"expanded_folders":
 	[
-		"/E/licenta",
+		"/E/xampp/htdocs/cliw",
+		"/E/xampp/htdocs/cliw/public",
+		"/E/xampp/htdocs/cliw/public/src",
+		"/E/xampp/htdocs/cliw/public/src/css",
+		"/E/xampp/htdocs/cliw/public/src/css/utils",
+		"/E/xampp/htdocs/cliw/public/src/js/components",
+		"/E/xampp/htdocs/cliw/public/src/js/components/header",
+		"/E/xampp/htdocs/cliw/public/src/js/components/header/components",
+		"/E/xampp/htdocs/cliw/public/src/js/components/header/components/canvas-title",
+		"/E/xampp/htdocs/cliw/public/src/js/components/header/components/header-button",
 		"/E/licenta/app",
-		"/E/licenta/app/pages",
-		"/E/licenta/app/pages/app",
-		"/E/licenta/app/pages/app/js"
+		"/E/licenta/app/js",
+		"/E/licenta/app/js/controllers",
+		"/E/licenta/app/style"
 	],
 	"file_history":
 	[
+		"/E/xampp/htdocs/cliw/public/src/js/components/header/actions.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/header/components/header-button/header-button.js",
+		"/E/xampp/htdocs/cliw/public/src/css/editor/header.less",
+		"/E/licenta/app/js/controllers/homeController.js",
+		"/E/licenta/app/js/on_config.js",
+		"/E/licenta/app/js/main.js",
+		"/C/Users/Robert/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/E/licenta/app/js/services/index.js",
+		"/E/licenta/app/js/controllers/index.js",
+		"/E/licenta/app/js/directives/index.js",
+		"/E/licenta/app/index.html",
+		"/E/licenta/app/js/on_run.js",
+		"/E/licenta/app/js/constants.js",
+		"/E/licenta/app/style/grid.scss",
+		"/E/licenta/test/unit/first-test_spec.js",
+		"/E/licenta/test/karma.conf.js",
+		"/E/licenta/gulp/config.js",
+		"/E/licenta/build/index.html",
+		"/E/licenta/app/main.js",
+		"/E/licenta/app/app.test.js",
+		"/E/licenta/package.json",
+		"/E/licenta/gulpfile.js",
+		"/E/licenta/app/app.module.js",
+		"/E/licenta/webpack.make.js",
+		"/E/licenta/app/style/style.scss",
+		"/E/licenta/app/style/colors.scss",
+		"/E/licenta/app/style/mixins/_mixins.scss",
+		"/E/licenta/app/style/mixins/bem.scss",
+		"/E/licenta/karma.conf.js",
+		"/E/licenta/app/tests.webpack.js",
+		"/E/licenta/karma.config.js",
+		"/E/licenta/webpack.config.js",
+		"/E/licenta/webpack.build.js",
+		"/E/licenta/webpack.test.js",
+		"/E/licenta/.jshintrc",
+		"/E/licenta/webpack.conf.js",
+		"/E/licenta/.eslintrc",
+		"/E/licenta/gulp/configs/karma.conf.js",
+		"/E/licenta/app/app.js",
+		"/E/licenta/gulp/configs/webpack.conf.js",
+		"/E/licenta/gulp/configs/files.js",
+		"/E/licenta/gulp/configs/.eslintrc",
+		"/E/licenta/.babelrc",
+		"/E/licenta/readme.md",
+		"/E/licenta/.gitignore",
+		"/E/xampp/htdocs/cliw/public/src/js/components/workspace/workspace.js",
+		"/E/xampp/htdocs/cliw/public/src/js/components/header/header.js",
+		"/E/licenta/app/pages/app/js/state.js",
+		"/E/licenta/app/pages/app/js/index.js",
 		"/E/licenta/app/common/services/ajax/ajax.js",
 		"/E/xampp/htdocs/cliw/public/src/js/services/ajax/ajax.js",
 		"/E/licenta/app/pages/landing/js/index.js",
-		"/E/licenta/app/pages/app/js/index.js",
 		"/E/licenta/app/pages/landing/js/route.js",
 		"/E/licenta/app/pages/app/js/route.js",
-		"/E/licenta/app/index.html",
 		"/E/licenta/app/common/components/base-component/js/base-component.js",
 		"/C/Users/Robert/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/C/Users/Robert/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/E/licenta/app/pages/main.js",
 		"/E/licenta/app/pages/landing/js/state.js",
-		"/E/licenta/app/pages/app/js/state.js",
 		"/E/licenta/app/common/state/state.js",
 		"/E/licenta/app/common/database/mocks/users.json",
-		"/E/licenta/package.json",
 		"/E/licenta/mock-server/server.js",
 		"/E/licenta/app/common/tests/tests.webpack.js",
 		"/E/licenta/app/common/tests/phantomjs-shim.js",
-		"/E/licenta/gulpfile.js",
 		"/E/licenta/README.md",
-		"/E/licenta/.gitignore",
 		"/E/xampp/htdocs/cliw/public/src/css/editor/popup.less",
 		"/E/xampp/htdocs/cliw/.gitignore",
 		"/E/xampp/htdocs/cliw/app/common/components/workspace/js/workspace.js",
 		"/E/xampp/htdocs/cliw/app/common/components/popups/components/new-canvas/js/index.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/popups/components/open-file/index.js",
 		"/E/xampp/htdocs/cliw/app/common/components/popups/components/open-file/js/index.js",
-		"/E/xampp/htdocs/cliw/public/src/js/components/workspace/workspace.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/popups/components/new-canvas/index.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/canvas/canvas.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/components/canvas.js",
@@ -550,53 +604,12 @@
 		"/E/xampp/htdocs/cliw/public/src/js/state.js",
 		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/actions.js",
 		"/E/xampp/htdocs/cliw/public/src/js/main.js",
-		"/E/xampp/htdocs/cliw/public/src/js/components/header/header.js",
 		"/E/xampp/htdocs/cliw/index.js",
-		"/E/xampp/htdocs/cliw/public/src/css/editor/header.less",
 		"/E/xampp/htdocs/cliw/public/src/js/components/popups/actions.js",
 		"/E/xampp/htdocs/cliw/public/src/css/editor/workspace.less",
 		"/E/xampp/htdocs/cliw/public/src/css/editor/index.less",
 		"/E/xampp/htdocs/cliw/public/src/css/style.less",
-		"/E/xampp/htdocs/cliw/public/src/js/components/popups/components/login/index.js",
-		"/E/xampp/htdocs/cliw/public/src/js/services/cookies/index.js",
-		"/E/xampp/htdocs/cliw/public/src/js/services/facebook-auth/index.js",
-		"/E/xampp/htdocs/cliw/public/src/js/components/popups/popups.js",
-		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/components/actions.js",
-		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/components/bucket-settings/bucket-settings.js",
-		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/components/font-settings/font-settings.js",
-		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/components/pencil-settings/pencil-settings.js",
-		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/sidebar.js",
-		"/E/xampp/htdocs/cliw/public/src/js/actions.js",
-		"/E/xampp/htdocs/cliw/public/src/js/components/tool-settings/components/font-settings/actions.js",
-		"/E/xampp/htdocs/cliw/public/src/js/components/header/actions.js",
-		"/E/xampp/htdocs/cliw/public/src/js/components/popups/components/login/actions.js",
-		"/E/xampp/htdocs/cliw/app/config/passport.js",
-		"/E/xampp/htdocs/cliw/app/config/routes.js",
-		"/E/xampp/htdocs/cliw/app/config/config.js",
-		"/E/xampp/htdocs/cliw/config.js",
-		"/E/xampp/htdocs/cliw/app/models/user.js",
-		"/E/xampp/htdocs/cliw/app/controllers/user.js",
-		"/E/xampp/htdocs/cliw/app/lib/utils.js",
-		"/E/xampp/htdocs/cliw/app/config/middlewares/authorization.js",
-		"/E/xampp/htdocs/cliw/app/config/express.js",
-		"/E/xampp/htdocs/cliw/app/config/passport/facebook.js",
-		"/E/xampp/htdocs/cliw/app/config/env/development.js",
-		"/E/xampp/htdocs/cliw/app/config/env/production.js",
-		"/E/xampp/htdocs/cliw/app/config/env/env.json",
-		"/E/xampp/htdocs/cliw/app/controllers/users.js",
-		"/E/xampp/htdocs/cliw/app/config/database.js",
-		"/C/Users/Robert/Desktop/ex.cpp",
-		"/E/xampp/htdocs/selfsite/css/style.less",
-		"/E/xampp/htdocs/selfsite/index.html",
-		"/E/xampp/htdocs/selfsite/Gruntfile.js",
-		"/E/xampp/htdocs/selfsite/js/jquery.js",
-		"/E/xampp/htdocs/selfsite/css/reset.less",
-		"/E/xampp/htdocs/selfsite/css/animate.less",
-		"/E/xampp/htdocs/selfsite/public/index.html",
-		"/E/xampp/htdocs/selfsite/package.json",
-		"/E/xampp/htdocs/cliw/public/src/css/animate.css",
-		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/components/tool-element/tool-element.js",
-		"/E/xampp/htdocs/cliw/public/src/js/components/sidebar/components/actions.js"
+		"/E/xampp/htdocs/cliw/public/src/js/components/popups/components/login/index.js"
 	],
 	"find":
 	{
@@ -607,6 +620,7 @@
 		"height": 104.0,
 		"where_history":
 		[
+			"E:\\licenta\\gulp",
 			"E:\\xampp\\htdocs\\cliw\\public\\src\\js\\components",
 			"E:\\xampp\\htdocs\\cliw\\app\\common\\components",
 			"C:\\Users\\Robert\\Desktop\\[Training] Timetable\\public\\src",
@@ -619,6 +633,31 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"elmentClass",
+			"onClick",
+			"defaultClass",
+			"blob",
+			"AppSettings",
+			"{ ",
+			"styles",
+			"/js",
+			"/js/main",
+			"/js",
+			"images",
+			"_build",
+			"@",
+			";",
+			"var ",
+			"css",
+			"dist",
+			"src",
+			"dist",
+			"../../",
+			"global.files.js.bundle",
+			"global.files",
+			"newElement",
+			"_images",
+			"response",
 			"home",
 			"_uploadFile",
 			"componentWillUnmount",
@@ -721,32 +760,7 @@
 			"important",
 			"button",
 			"xampp/htdocs/[Training] Timetable",
-			"h1",
-			"28 Noiembrie",
-			"components/cartApp/",
-			"cartAppComponent",
-			":",
-			"cartApp",
-			"break;",
-			"_",
-			",",
-			"console.log",
-			"match",
-			"Date()",
-			"this.",
-			"AppActions",
-			"AppStore",
-			"f(",
-			"this.match",
-			"user",
-			"class",
-			"section",
-			"<section class=\"user-info\">\n			<input type=\"text\" placeholder=\"Username\">\n			<p class=\"btn-txt\">Start to chat</p>\n		</section>",
-			"button",
-			"9aca40",
-			"2196f3",
-			"25px",
-			"div"
+			"h1"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -765,66 +779,42 @@
 	"folders":
 	[
 		{
+			"path": "E:\\xampp\\htdocs\\cliw"
+		},
+		{
 			"path": "E:\\licenta"
 		}
 	],
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/E/licenta/app/pages/app/js/state.js",
+					"file": "public/src/js/components/header/header.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 156,
+						"buffer_size": 3605,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								105,
-								105
+								1618,
+								1618
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/E/licenta/app/pages/app/js/index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 419,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								205,
-								205
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 425.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
