@@ -7,17 +7,18 @@
  */
 
 import React from 'react';
-import BaseComponent from '../base-component/base-component';
+import { Link } from 'react-router';
 import {branch} from 'baobab-react/higher-order';
 import Classnames from 'classnames';
+
 import * as actions from './actions';
 import * as engine from '../../engine/engine';
 
+import BaseComponent from '../base-component/base-component';
 import HeaderButton from './components/header-button/header-button';
 
-import {isEmpty} from '../../utils.js';
+import {isEmpty, canvasExists} from '../../utils.js';
 
-import { Link } from 'react-router';
 const displayName = 'Header';
 
 class Header extends BaseComponent {
@@ -25,111 +26,36 @@ class Header extends BaseComponent {
 	constructor (props) {
 		super(props);
 
-		this._bind('_publish', '_checkLogin', '_shouldEditTitle', '_handleTitleChange', '_saveLocal');
+		this.canvas = {
+			w: this.props.canvas.width,
+			h: this.props.canvas.height
+		};
+
+		this._bind('_handlePublishClick', '_handleTitleChange', '_saveLocal');
 	}
 
-	_publish() {
+	_handlePublishClick() {
 		let request = {
 			title: this.props.title,
-			username: 'Robert'
+			username: this.props.user.first_name + this.props.user.first_name 
 		};
-		let response = this.props.actions.saveToLS(request);
-		console.info(response.title);
+
+		if (canvasExists(this.canvas.w, this.canvas.h)) {
+			let response = this.props.actions.saveToLS(request);
+			console.info(response.title);
+		}
 	}
 
 	_saveLocal() {
 		const extension = engine.getBlob(true).mimestring.split('/');
 		saveAs(engine.getBlob(true).returnBlob, this.props.title + "." + extension[1]);
 	}
-
-	_checkLogin(user) {
-		let value;
-		const buttons = Classnames({
-			'work--publish': true,
-			'work--publish--inactive': this.props.canvas.width === null && this.props.canvas.height === null
-		});
-
-		if (isEmpty(user)) {
-			value = (
-				<div className="work-buttons">
-					<HeaderButton
-							content = "Login"
-							handleClick = {this.props.actions.openLogin}
-					/>
-				</div>
-			);
-		} else {
-			value = (
-				<div className="work-buttons">
-					<HeaderButton
-							icon = "icon-download"
-							handleClick = {this._saveLocal}
-					/>
-					<HeaderButton
-							content = "Import"
-							handleClick = {this.props.actions.openFile}
-					/>
-					<HeaderButton
-							content = "Publish"
-							elementClass = {this.props.canvas.width === null ? 'inactive' : null}
-							handleClick = {this._publish}
-					/>
-					<HeaderButton
-							icon = "icon-faq"
-					/>
-					<HeaderButton
-						icon = "icon-wall_v2"
-						linkTo = "/wall"
-					/>
-					<div className="work--profile">
-						<img
-							className="avatar"
-							src={this.props.user.avatar}
-						/>
-					</div>
-				</div>
-			);
-		}
-
-		return value;
-	}
-
+		
 	_handleTitleChange(e) {
 		this.props.actions.saveTitle(e.target.value);
 	}
 
-	_shouldEditTitle(active) {
-		if (active) {
-			return(
-				<div className = "header--title__edit">
-					<input
-						defaultValue = {this.props.title}
-						onChange = {this._handleTitleChange}
-						placeholder = "Enter canvas title"
-						type = "text"
-					/>
-					<label
-						className = "icon-checked"
-						onClick = {this.props.actions.closeTitle}
-					/>
-				</div>
-			);
-		}
-
-		return(
-			<div
-				className = "header--title__edit"
-				onClick={this.props.actions.editTitle}
-			>
-				<h4>{this.props.title}</h4>
-				<span className = "icon--edit icon-edit" />
-			</div>
-		);
-	}
-
 	render() {
-		const title = this._shouldEditTitle(this.props.active);
-		let loggedButton = this._checkLogin(this.props.user);
 		let overlayClass = Classnames({
 			'header header--overlay': true,
 			'active': this.props.active
@@ -140,11 +66,78 @@ class Header extends BaseComponent {
 				<div className="header header--logo">
 					<span className="icon-camera"></span>
 				</div>
+
 				<div className="header header--title">
 					<span className="icon icon-heading"></span>
-					{title}
+					{
+						this.props.active &&
+						<div className = "header--title__edit">
+							<input
+								defaultValue = {this.props.title}
+								onChange = {this._handleTitleChange}
+								placeholder = "Enter canvas title"
+								type = "text"
+							/>
+							<label
+								className = "icon-checked"
+								onClick = {this.props.actions.closeTitle}
+							/>
+						</div>
+					}
+					{
+						!this.props.active &&
+						<div
+							className = "header--title__edit"
+							onClick={this.props.actions.editTitle}
+						>
+							<h4>{this.props.title}</h4>
+							<span className = "icon--edit icon-edit" />
+						</div>
+					}
 				</div>
-				{loggedButton}
+
+				{
+					isEmpty(this.props.user) &&
+					<div className="work-buttons">
+						<HeaderButton
+								content = "Login"
+								handleClick = {this.props.actions.openLogin}
+						/>
+
+					</div>
+				}
+				{
+					!isEmpty(this.props.user) && 
+					<div className="work-buttons">
+						<HeaderButton
+								icon = "icon-download"
+								handleClick = {this._saveLocal}
+						/>
+						<HeaderButton
+								content = "Import"
+								handleClick = {this.props.actions.openFile}
+						/>
+						<HeaderButton
+								content = "Publish"
+								elementClass = {this.canvas.w === null ? 'inactive' : null}
+								handleClick = {this._handlePublishClick}
+						/>
+						<HeaderButton
+								icon = "icon-faq"
+						/>
+						<HeaderButton
+							icon = "icon-wall_v2"
+							linkTo = "/wall"
+						/>
+						<div className="work--profile">
+							<img
+								className="avatar"
+								src={this.props.user.avatar}
+							/>
+						</div>
+					</div>
+				}
+					
 				<div
 					className = {overlayClass}
 					onClick = {this.props.actions.closeTitle}

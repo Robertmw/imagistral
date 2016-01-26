@@ -17,3 +17,7 @@ export function isEmpty(obj) {
 
 	return true;
 }
+
+export function canvasExists(w, h) {
+	return w > 0 && h > 0;
+}

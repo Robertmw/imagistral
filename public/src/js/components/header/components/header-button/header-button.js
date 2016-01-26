@@ -20,7 +20,9 @@ class HeaderButton extends BaseComponent {
   }
 
   _onclick() {
-    this.props.handleClick();
+    if (this.props.handleClick) {
+      this.props.handleClick();
+    }
   }
 
   render() {
