@@ -58,16 +58,16 @@ export function getBlob(rawBlob) {
 	const rawContent = new Uint8Array(content);
 
 	const returnBlob = new Blob([rawContent], {type: mimestring});
-	const urlCreator = window.URL || window.webkitURL;
+	// const urlCreator = window.URL || window.webkitURL;
 
 	let imageUrl = null;
 	if (rawBlob) {
 		imageUrl = {returnBlob, mimestring};
 	} else {
-		imageUrl = urlCreator.createObjectURL(returnBlob);
+		imageUrl = dataURI;
 	}
 
-	return dataURI;
+	return imageUrl;
 };
 
 const updateTool = () => {
