@@ -27,11 +27,11 @@ class FiltersSettings extends BaseComponent {
 	render() {
 		const props = this.props;
 
-		const filterTypes = ['None', 'Plymouth', 'Blue Jay'];
+		const filterTypes = ['None', 'Greyscale', 'Invert', 'Sepia'];
 		const renderFilters = filterTypes.map((el, index) => {
 			return (
-				<div 
-					className="radioBtn" 
+				<div
+					className="radioBtn"
 					key={el}
 				>
 					<input

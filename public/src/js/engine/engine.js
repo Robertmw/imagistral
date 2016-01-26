@@ -1,6 +1,7 @@
 import tree from '../pages/editor/state';
 import fabricjs from '../../../../bower_components/fabric.js/dist/fabric.min.js';
 import * as draw from './draw';
+import * as filters from './filters';
 import * as importImage from './importImage';
 
 export let canvas = null;
@@ -77,6 +78,10 @@ const updateTool = () => {
 			break;
 		case 'eraser':
 			draw.deleteLayer();
+			break;
+		case 'filters':
+			console.log('filters');
+			filters.applyFilter(currentState);
 			break;
 		default:
 			if (canvas !== null) {
