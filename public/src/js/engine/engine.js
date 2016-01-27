@@ -81,7 +81,7 @@ const updateTool = () => {
 			break;
 		case 'filters':
 			console.log('filters');
-			filters.applyFilter(currentState);
+			filters.apply(currentState);
 			break;
 		default:
 			if (canvas !== null) {

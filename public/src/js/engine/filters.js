@@ -1,37 +1,39 @@
 import fabricjs from '../../../../bower_components/fabric.js/dist/fabric.min.js';
 import {canvas} from './engine';
 
-export function applyFilter(state) {
-	let currentObj = canvas.getActiveObject();
+const applyFilter = (obj, filter) => {
 	const f = fabricjs.fabric.Image.filters;
-	console.log(f);
-	//
-	// if (currentObj === null) {
-	// 	currentObj = canvas;
-	// }
-	// console.log('filter', state, currentObj);
-
-	switch (state.toolSettings.filter) {
+	switch (filter) {
 		case 'None':
-			console.log('none');
-			console.log('co', currentObj);
-			currentObj.filters.length = 0;
 			break;
 		case 'Greyscale':
-			currentObj.filters.push(new f.Grayscale());
-			console.log('grey');
+			obj.filters.push(new f.Grayscale());
 			break;
 		case 'Invert':
-			currentObj.filters.push(new f.Invert());
-			console.log('inv');
+			obj.filters.push(new f.Invert());
 			break;
 		case 'Sepia':
-			currentObj.filters.push(new f.Sepia());
-			console.log('sep');
+			obj.filters.push(new f.Sepia2());
 			break;
 		default:
-
 	}
+	obj.applyFilters(canvas.renderAll.bind(canvas));
+};
 
-	currentObj.applyFilters(canvas.renderAll.bind(canvas));
+export function apply(state) {
+	let currentObj = canvas.getActiveObject();
+	if (currentObj === null) {
+		console.log('to', typeof currentObj);
+		canvas.deactivateAll();
+		const rasterizeImage = canvas.toDataURL('png');
+
+		fabric.Image.fromURL(rasterizeImage, function(img) {
+			console.log('co', img);
+			applyFilter(img, state.toolSettings.filter);
+			canvas.clear();
+			canvas.add(img);
+		});
+	} else {
+		applyFilter(currentObj, state.toolSettings.filter);
+	}
 };
