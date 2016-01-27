@@ -27,6 +27,12 @@ class Header extends BaseComponent {
 		super(props);
 
 		this._bind('_handlePublishClick', '_handleTitleChange', '_saveLocal');
+
+		this.state = {
+			publish: {
+				status: 'Publish'
+			}
+		};
 	}
 
 	_handlePublishClick() {
@@ -37,7 +43,11 @@ class Header extends BaseComponent {
 
 		if (canvasExists(this.props.canvas.width, this.props.canvas.height)) {
 			let response = this.props.actions.saveToLS(request);
-			console.info(response.title);
+			this.setState({publish: {status: response.title}});
+
+			setTimeout(() => {
+				this.setState({publish: {status: 'Publish'}});
+			}, 2000);
 		}
 	}
 
@@ -113,12 +123,9 @@ class Header extends BaseComponent {
 								handleClick = {this.props.actions.openFile}
 						/>
 						<HeaderButton
-								content = "Publish"
+								content = {this.state.publish.status}
 								elementClass = {this.props.canvas.width === null ? 'inactive' : null}
 								handleClick = {this._handlePublishClick}
-						/>
-						<HeaderButton
-								icon = "icon-faq"
 						/>
 						<HeaderButton
 							icon = "icon-wall_v2"

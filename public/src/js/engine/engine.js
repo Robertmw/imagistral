@@ -71,7 +71,6 @@ export function getBlob(rawBlob) {
 
 const updateTool = () => {
 	const currentState = tree.get();
-	console.log(currentState);
 	switch (currentState.selectedTool) {
 		case 'pencil':
 			draw.pencil(currentState);

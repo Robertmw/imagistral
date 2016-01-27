@@ -31,7 +31,6 @@ class OpenFile extends BaseComponent {
 	}
 
 	_uploadFile() {
-		console.log(this.state);
 		if (this.state.image !== null) {
 			this.props.actions.uploadImage(this.state.image);
 			// engineInit(1,1);
