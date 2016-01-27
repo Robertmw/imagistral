@@ -5,7 +5,7 @@ global.files = {
   projectRoot: projectRoot,
   sourceFolder: 'public/src',
   sourceFolderPath: projectRoot + 'public/src/',
-  buildFolder: 'public/dist',
+  buildFolder: 'public\\dist',
   buildFolderPath: projectRoot + 'public/dist/',
   js: {
     all: projectRoot + 'public/src/js/**/*.js',
