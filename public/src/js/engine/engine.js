@@ -80,7 +80,6 @@ const updateTool = () => {
 			draw.deleteLayer();
 			break;
 		case 'filters':
-			console.log('filters');
 			filters.apply(currentState);
 			break;
 		default:

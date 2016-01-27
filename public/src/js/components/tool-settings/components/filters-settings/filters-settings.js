@@ -27,7 +27,7 @@ class FiltersSettings extends BaseComponent {
 	render() {
 		const props = this.props;
 
-		const filterTypes = ['None', 'Greyscale', 'Invert', 'Sepia'];
+		const filterTypes = ['Greyscale', 'Invert', 'Sepia', 'Color Overlay'];
 		const renderFilters = filterTypes.map((el, index) => {
 			return (
 				<div

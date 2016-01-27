@@ -1,11 +1,10 @@
 import fabricjs from '../../../../bower_components/fabric.js/dist/fabric.min.js';
 import {canvas} from './engine';
 
-const applyFilter = (obj, filter) => {
+const applyFilter = (obj, state) => {
+	console.log(obj, state.color);
 	const f = fabricjs.fabric.Image.filters;
-	switch (filter) {
-		case 'None':
-			break;
+	switch (state.toolSettings.filter) {
 		case 'Greyscale':
 			obj.filters.push(new f.Grayscale());
 			break;
@@ -14,6 +13,11 @@ const applyFilter = (obj, filter) => {
 			break;
 		case 'Sepia':
 			obj.filters.push(new f.Sepia2());
+			break;
+		case 'Color Overlay':
+			obj.filters.push(new f.Tint({
+				color: state.color
+			}));
 			break;
 		default:
 	}
@@ -29,11 +33,11 @@ export function apply(state) {
 
 		fabric.Image.fromURL(rasterizeImage, function(img) {
 			console.log('co', img);
-			applyFilter(img, state.toolSettings.filter);
+			applyFilter(img, state);
 			canvas.clear();
 			canvas.add(img);
 		});
 	} else {
-		applyFilter(currentObj, state.toolSettings.filter);
+		applyFilter(currentObj, state);
 	}
 };
