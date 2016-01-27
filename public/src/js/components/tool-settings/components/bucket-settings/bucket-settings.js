@@ -25,9 +25,7 @@ class BucketSettings extends BaseComponent {
 	}
 
 	_handleChange(color) {
-		console.log(color);
 		let color2 = '#' + color.hex;
-		console.log(color2);
 		this.props.actions.updateColor(color2);
 	}
 

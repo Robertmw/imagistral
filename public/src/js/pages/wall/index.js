@@ -24,7 +24,6 @@ class Wall extends BaseComponent {
 
 	fetchImages() {
 		let _images = LocalStorage.get('imagesDB');
-		console.log(_images);
 		this.setState({images: _images});
 	}
 

@@ -24,7 +24,6 @@ export default class FBAuth {
 
 	responseApi (authResponse) {
 		FB.api('/me', {fields: 'first_name, last_name, picture'}, (me) => {
-			console.log(me);
 			me.accessToken = authResponse.accessToken;
 			let payload = {
 				first_name: me.first_name,
