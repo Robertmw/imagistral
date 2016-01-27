@@ -12,6 +12,5 @@ Aplicația va avea și un perete unde vor fi expuse pozele cu opțiunea de filtr
 2. npm install -g gulp
 3. npm install
 4. bower install
-5. First console: node index.js
-6. Second console: gulp build
-7. Open browser at http://localhost
+6. In console: gulp build
+7. Open browser at http://localhost:3000
