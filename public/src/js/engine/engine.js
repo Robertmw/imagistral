@@ -66,7 +66,7 @@ export function getBlob(rawBlob) {
 		imageUrl = urlCreator.createObjectURL(returnBlob);
 	}
 
-	return imageUrl;
+	return dataURI;
 };
 
 const updateTool = () => {

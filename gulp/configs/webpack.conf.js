@@ -49,7 +49,8 @@ module.exports = {
     failOnError: true
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx'],
+    root: [path.resolve(__dirname, '../../')],
   },
   plugins: [
     //new ExtractTextPlugin('styles.css'),
