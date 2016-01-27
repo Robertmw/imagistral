@@ -105,8 +105,8 @@ class Header extends BaseComponent {
 					!isEmpty(this.props.user) && 
 					<div className="work-buttons">
 						<HeaderButton
-								icon = "icon-download"
 								handleClick = {this._saveLocal}
+								icon = "icon-download"
 						/>
 						<HeaderButton
 								content = "Import"

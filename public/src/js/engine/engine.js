@@ -1,4 +1,4 @@
-import tree from '../state';
+import tree from '../pages/editor/state';
 import fabricjs from '../../../../bower_components/fabric.js/dist/fabric.min.js';
 import * as draw from './draw';
 import * as importImage from './importImage';
@@ -66,7 +66,7 @@ export function getBlob(rawBlob) {
 		imageUrl = urlCreator.createObjectURL(returnBlob);
 	}
 
-	return imageUrl;
+	return dataURI;
 };
 
 const updateTool = () => {
