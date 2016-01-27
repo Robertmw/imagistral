@@ -1,4 +1,4 @@
-import tree from '../state';
+import tree from '../pages/editor/state';
 import {canvas} from './engine';
 
 export function pencil(state) {

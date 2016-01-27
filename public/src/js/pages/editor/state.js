@@ -1,10 +1,6 @@
 import Baobab from 'baobab';
 
 const tree = new Baobab({
-	// user: {
-	// 	avatar: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQdKRkyLQH3sEyqEsfBk3kRGylxXFJI-whKfYrziP7uKH89hIB3Qw',
-	// 	name: 'Zizou'
-	// },
 	user: {},
 	canvasTitle: 'Floating bird',
 	editTitle: false,
