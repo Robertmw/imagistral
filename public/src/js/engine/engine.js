@@ -1,6 +1,7 @@
 import tree from '../pages/editor/state';
 import fabricjs from '../../../../bower_components/fabric.js/dist/fabric.min.js';
 import * as draw from './draw';
+import * as filters from './filters';
 import * as importImage from './importImage';
 
 export let canvas = null;
@@ -71,12 +72,17 @@ export function getBlob(rawBlob) {
 
 const updateTool = () => {
 	const currentState = tree.get();
+	
 	switch (currentState.selectedTool) {
 		case 'pencil':
 			draw.pencil(currentState);
 			break;
 		case 'eraser':
 			draw.deleteLayer();
+			break;
+		case 'filters':
+			console.log('filters');
+			filters.applyFilter(currentState);
 			break;
 		default:
 			if (canvas !== null) {
