@@ -27,7 +27,6 @@ const applyFilter = (obj, state) => {
 export function apply(state) {
 	let currentObj = canvas.getActiveObject();
 	if (currentObj === null) {
-		console.log('to', typeof currentObj);
 		canvas.deactivateAll();
 		const rasterizeImage = canvas.toDataURL('png');
 
