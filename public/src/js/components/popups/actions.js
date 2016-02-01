@@ -1,8 +1,17 @@
+import {addNotif} from '../notifications/actions';
+
 export function closePopup(tree) {
 	tree.set(['popups', 'active'], '');
 }
 
 export function authUser(tree, data) {
+	let notif = {
+		content:  'Welcome back!',
+		type: 'info'
+	};
+
+	addNotif(tree,notif);
+
 	tree.set(['user'], data);
 }
 
@@ -15,5 +24,12 @@ export function createCanvas(tree, w, h) {
 }
 
 export function uploadImage(tree, value) {
+	let notif = {
+		content:  'Images was uploaded!',
+		type: 'success'
+	};
+
+	addNotif(tree,notif);
+
 	tree.set('uploadedImage', value);
 }

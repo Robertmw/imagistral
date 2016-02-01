@@ -1,0 +1,54 @@
+.notifications {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 15px;
+
+	&--show {
+		display: block;
+	}
+
+	.notification {
+		display: flex;
+
+		width: 250px;
+		padding: 10px;
+		margin: 5px 0;
+		border-radius: 2px;
+		background-color: fade(@blue, 50%);
+
+		color: white;
+		font-size: 14px;
+
+		transition: background-color 250ms linear;
+
+		&:hover {
+			background-color: fade(@blue, 100%);
+		}
+
+		&--alert {
+			background-color: fade(red, 50%);
+			&:hover {
+				background-color: fade(red, 100%);
+			}
+		}
+
+		&--success {
+			background-color: fade(@green, 50%);
+			&:hover {
+				background-color: fade(@green, 100%);
+			}
+		}
+
+		&__close {
+			align-self: center;
+			margin-left: auto;
+
+			font-size: 8px;
+			font-weight: 700;
+
+			cursor: pointer;
+		}
+	}
+}

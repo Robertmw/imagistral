@@ -1,4 +1,5 @@
 import LocalStorage from '../../services/localStorage/localStorage';
+import {addNotif} from '../notifications/actions';
 import * as engine from '../../engine/engine';
 
 export function openLoginPopup(tree) {
@@ -34,12 +35,14 @@ export function saveToLS(tree, payload) {
   };
 
   if (pushToImages(newElement, _images)) {
-    response.value = true;
-    response.title = 'Image was published';
+    response.content = 'Image was published';
+    response.type = 'success';
   } else {
-    response.value = false;
-    response.title = 'Image already exists';
+    response.content = 'Image already exists';
+    response.type = 'alert';
   }
+
+  addNotif(tree,response);
 
   return response;
   
