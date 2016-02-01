@@ -21,6 +21,7 @@ const tree = new Baobab({
 			show: false
 		}
 	},
+	notifications: [],
 	workspace: {
 		zoom: 100,
 		rotate: 0,

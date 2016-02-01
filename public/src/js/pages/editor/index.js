@@ -8,6 +8,7 @@ import Sidebar from '../../components/sidebar/sidebar';
 import ToolSettings from '../../components/tool-settings/tool-settings';
 import Workspace from '../../components/workspace/workspace';
 import Popups from '../../components/popups/popups';
+import Notifications from '../../components/notifications/notifications';
 
 import Cookie from '../../services/cookies';
 
@@ -35,6 +36,7 @@ class Editor extends Component {
 				<ToolSettings />
 				<Workspace />
 				<Popups />
+				<Notifications />
 			</section>
 		);
 	}
